@@ -123,9 +123,19 @@
 			</item>			
 			<item id="5">
 				<label>31012</label>
-				<include>BackgroundVarsPictures</include>				
-				<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+				<include>BackgroundVarsPictures</include>
+				<onclick>Skin.SetBool(pictures)</onclick>
+				<onclick>Skin.Reset(comics)</onclick>				
+				<onclick>XBMC.ActivateWindow(MyPictures,$INFO[Skin.String(picturespath)])</onclick>
 				<visible>!Skin.HasSetting(nopictures)</visible>
+			</item>
+			<item id="14">
+				<label>32001</label>
+				<include>BackgroundVarsComics</include>
+				<onclick>Skin.SetBool(comics)</onclick>
+				<onclick>Skin.Reset(pictures)</onclick>				
+				<onclick>XBMC.ActivateWindow(MyPictures,$INFO[Skin.String(comicspath)])</onclick>
+				<visible>!Skin.HasSetting(nocomics)</visible>
 			</item>
 			<item id="6">
 				<label>31013</label>
@@ -274,6 +284,13 @@
 				<onclick>Skin.SetString(custom,CustomPictures)</onclick>
 				<onclick>SetFocus(92)</onclick>
 				<visible>!Skin.HasSetting(nopictures)</visible>
+			</item>
+			<item id="14">
+				<label>32001</label>
+				<include>BackgroundVarsComics</include>						
+				<onclick>Skin.SetString(custom,CustomComics)</onclick>
+				<onclick>SetFocus(92)</onclick>
+				<visible>!Skin.HasSetting(nocomics)</visible>
 			</item>
 			<item id="6">
 				<label>31013</label>
@@ -445,6 +462,18 @@
 				<include>BackgroundVarsPictures</include>					
 				<onclick>Skin.Reset(nopictures)</onclick>
 				<visible>Skin.HasSetting(nopictures)</visible>
+			</item>
+			<item id="11">
+				<label>32001</label>
+				<include>BackgroundVarsPictures</include>					
+				<onclick>Skin.SetBool(nocomics)</onclick>
+				<visible>!Skin.HasSetting(nocomics)</visible>
+			</item>
+			<item id="11">
+				<label2>32001</label2>
+				<include>BackgroundVarsPictures</include>					
+				<onclick>Skin.Reset(nocomics)</onclick>
+				<visible>Skin.HasSetting(nocomics)</visible>
 			</item>
 			<item id="6">
 				<label>31013</label>

@@ -491,5 +491,11 @@
 	<string id="31936">TRACKS</string>
 	<string id="31937">SEASONS</string>
 	<string id="31938">EPISODES</string>
-	
+
+<!-- Comics -->
+
+	<string id="32000">CONTEXTUAL ARTWORK FOR COMICS</string>
+	<string id="32001">COMICS</string>
+	<string id="32002">ADDITIONAL TABS</string>
+	<string id="32003">PATH DEFINITIONS</string>
 </strings>

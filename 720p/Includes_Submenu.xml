@@ -49,14 +49,14 @@
 				<control type="button" id="40">
 					<include>Submenu_Button</include>
 					<include>MovieShortcutBools</include>
-					<label>31920</label>
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,recentlyaddedmovies,return)</onclick>
+					<label>Trailers</label>
+					<onclick>XBMC.ActivateWindow(25,plugin://video/apple movie trailers lite/,return)</onclick>
 				</control>
 				<control type="button" id="41">
 					<include>Submenu_Button</include>
 					<include>MovieShortcutBools</include>					
-					<label>31921</label>
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+					<label>31920</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,recentlyaddedmovies,return)</onclick>
 				</control>
 				<control type="button" id="42">
 					<include>Submenu_Button</include>
@@ -79,14 +79,14 @@
 				<control type="button" id="45">
 					<include>Submenu_Button</include>
 					<include>MovieShortcutBools</include>					
-					<label>31925</label>
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,moviedirectors,return)</onclick>
+					<label>Plugins</label>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,plugins,return)</onclick>
 				</control>
 				<control type="button" id="46">
 					<include>Submenu_Button</include>
 					<include>MovieShortcutBools</include>					
-					<label>31926</label>
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,moviestudios,return)</onclick>
+					<label>31932</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
 				</control>				
 			</control>
 	

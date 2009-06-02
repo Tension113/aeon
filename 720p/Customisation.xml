@@ -244,6 +244,13 @@
 			<selected>!Skin.HasSetting(nopicturefanart)</selected>
 		</control>
 
+		<control type="radiobutton" id="707">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>32000</label>
+			<onclick>Skin.ToggleSetting(nocomicfanart)</onclick>
+			<selected>!Skin.HasSetting(nocomicfanart)</selected>
+		</control>
+
 		<control type="radiobutton" id="703">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>31279</label>
@@ -265,8 +272,9 @@
 			<onclick>Skin.Reset(nomoviefanart)</onclick>
 			<onclick>Skin.Reset(notvfanart)</onclick>
 			<onclick>Skin.Reset(nopicturefanart)</onclick>
+			<onclick>Skin.Reset(nocomicfanart)</onclick>
 			<onclick>Skin.Reset(noinfofanart)</onclick>
-			<visible>Skin.HasSetting(nomusicfanart) | Skin.HasSetting(nomoviefanart) | Skin.HasSetting(notvfanart) | Skin.HasSetting(nopicturefanart) | Skin.HasSetting(noinfofanart)</visible>
+			<visible>Skin.HasSetting(nomusicfanart) | Skin.HasSetting(nomoviefanart) | Skin.HasSetting(notvfanart) | Skin.HasSetting(nopicturefanart) | Skin.HasSetting(nocomicfanart) | Skin.HasSetting(noinfofanart)</visible>
 		</control>
 
 		<control type="button" id="706">
@@ -276,10 +284,11 @@
 			<onclick>Skin.SetBool(nomoviefanart)</onclick>
 			<onclick>Skin.SetBool(notvfanart)</onclick>
 			<onclick>Skin.SetBool(nopicturefanart)</onclick>
+			<onclick>Skin.SetBool(nocomicfanart)</onclick>
 			<onclick>Skin.SetBool(noinfofanart)</onclick>
-			<visible>![Skin.HasSetting(nomusicfanart) | Skin.HasSetting(nomoviefanart) | Skin.HasSetting(notvfanart) | Skin.HasSetting(nopicturefanart) | Skin.HasSetting(noinfofanart)]</visible>
-		</control>				
-		
+			<visible>![Skin.HasSetting(nomusicfanart) | Skin.HasSetting(nomoviefanart) | Skin.HasSetting(notvfanart) | Skin.HasSetting(nopicturefanart) | Skin.HasSetting(nocomicfanart) | Skin.HasSetting(noinfofanart)]</visible>
+		</control>
+
 	</control>
 	
 	<control type="grouplist" id="14">
@@ -359,6 +368,28 @@
 			<onclick>Skin.ToggleSetting(nomediaflagsbutton)</onclick>
 			<selected>!Skin.HasSetting(nomediaflagsbutton)</selected>
 		</control>			
+		
+	</control>
+
+	<control type="grouplist" id="15">
+		<include>Objects_SettingsControlAreaVars</include>
+		<onup>15</onup>
+		<ondown>15</ondown>
+		<onleft>11</onleft>
+		<onright>11</onright>
+		<visible>Control.HasFocus(11) | ControlGroup(15).HasFocus</visible>
+
+		<control type="button" id="900">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>ENTER COMIC BOOK PATH   (Current: $INFO[Skin.String(comicspath)])</label>
+			<onclick>Skin.SetPath(comicspath)</onclick>
+		</control>
+		
+		<control type="button" id="901">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>ENTER PICTURES PATH         (Current: $INFO[Skin.String(picturespath)])</label>
+			<onclick>Skin.SetPath(picturespath)</onclick>
+		</control>		
 		
 	</control>	
 

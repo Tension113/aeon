@@ -74,6 +74,13 @@
 		<info>Skin.String(CustomPictures)</info>		
 	</include>
 
+	<include name="BackgroundVarsComics">
+		<icon>special://skin/media/backdrops/default_comics/default.png</icon>
+		<thumb>$INFO[Skin.String(CustomComics)]</thumb>
+		<imagepath>special://skin/media/backdrops/default_comics/default.png</imagepath>
+		<info>Skin.String(CustomComics)</info>		
+	</include>
+
 	<include name="BackgroundVarsMovies">
 		<icon>special://skin/media/backdrops/default_movies/default.png</icon>
 		<thumb>$INFO[Skin.String(CustomMovies)]</thumb>

@@ -775,7 +775,7 @@
 				<onclick>SetFocus(400)</onclick>
 				<onleft>400</onleft>
 				<onright>400</onright>
-				<onup>10</onup>
+				<onup>11</onup>
 				<ondown>7</ondown>
 				<visible allowhiddenfocus="true">![Control.HasFocus(6) | ControlGroup(20).HasFocus]</visible>
 			</control>
@@ -955,6 +955,44 @@
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(10) | ControlGroup(14).HasFocus</visible>
+			</control>
+			<control type="button" id="11">
+				<description>Purge</description>
+				<posy>290</posy>
+				<label>32002</label>
+				<include>Objects_SettingsSectionMenuButton</include>
+				<onup>10</onup>
+				<ondown>6</ondown>
+				<onleft>900</onleft>
+				<onright>900</onright>
+				<visible allowhiddenfocus="true">![Control.HasFocus(11) | ControlGroup(15).HasFocus]</visible>
+			</control>
+			<control type="button">
+				<description>Purge</description>
+				<posy>290</posy>
+				<label>32002</label>
+				<include>Objects_SettingsSectionMenuButtonFocused</include>
+				<onup>9</onup>
+				<ondown>6</ondown>
+				<onleft>40</onleft>
+				<onright>40</onright>
+				<visible>Control.HasFocus(11) | ControlGroup(15).HasFocus</visible>
+			</control>
+			<control type="label">
+				<description>My Weather Sub Unfocused</description>
+				<posy>322</posy>
+				<label>32003</label>
+				<textcolor>FFf5f5f5</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>![Control.HasFocus(11) | ControlGroup(15).HasFocus]</visible>
+			</control>
+			<control type="label">
+				<description>My Weather Sub Unfocused</description>
+				<posy>322</posy>
+				<label>32003</label>
+				<textcolor>FF262728</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>Control.HasFocus(11) | ControlGroup(15).HasFocus</visible>
 			</control>
 		</control>
 	</include>

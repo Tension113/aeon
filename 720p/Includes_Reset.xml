@@ -13,6 +13,7 @@
 		<onclick>Skin.SetString(gametrailerpath,Gametrailers)</onclick>
 		<onclick>Skin.SetString(movietrailerpath,Movietrailers)</onclick>
 		<onclick>Skin.SetString(comicspath,Comics)</onclick>
+		<onclick>Skin.SetString(picturespath,Pictures)</onclick>
 </include>
 
 <include name="keepusersettings">
@@ -32,6 +33,7 @@
 		<onclick>Skin.Reset(tvlibrary)</onclick>
 		<onclick>Skin.Reset(clips)</onclick>
 		<onclick>Skin.Reset(nopictures)</onclick>
+		<onclick>Skin.Reset(nocomics)</onclick>
 		<onclick>Skin.Reset(weather)</onclick>
 		<onclick>Skin.Reset(adult)</onclick>
 		<onclick>Skin.Reset(keepiconaspect)</onclick>

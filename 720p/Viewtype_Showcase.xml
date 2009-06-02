@@ -2376,16 +2376,63 @@
     </include>
 	
     <include name="Viewtype_Showcase">
+
+	<control type="group">
+
+                        <visible>Window.IsVisible(2) + Skin.HasSetting(comics) + !Container.OnNext + !Container.OnPrevious</visible>
+		<animation effect="fade" start="0" end="0" time="800" delay="0">Visible</animation>
+		<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
+
+	<control type="image">
+		<description>Image Thumb</description>
+		<posx>-350</posx>
+		<posy>-250</posy>
+		<width>1580</width>
+		<height>160</height>
+		<aspectratio>keep</aspectratio>
+		<info>ListItem.Thumb</info>
+	</control>
+
+	<control type="image">
+		<description>Image Thumb</description>
+		<posx>-350</posx>
+		<posy>-250</posy>
+		<width>1580</width>
+		<height>160</height>
+		<aspectratio>keep</aspectratio>
+		<info>ListItem(-1).Thumb</info>
+	</control>
+
+	<control type="image">
+		<description>Image Thumb</description>
+		<posx>-350</posx>
+		<posy>-250</posy>
+		<width>1580</width>
+		<height>160</height>
+		<aspectratio>keep</aspectratio>
+		<info>ListItem(-2).Thumb</info>
+	</control>
+
+	<control type="image">
+		<description>Image Thumb</description>
+		<posx>-350</posx>
+		<posy>-250</posy>
+		<width>1580</width>
+		<height>160</height>
+		<aspectratio>keep</aspectratio>
+		<info>ListItem(-3).Thumb</info>
+	</control>      
+	</control>
 		
         <control type="group">
-            <visible>Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1)</visible>
-            <include condition="Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)">ShowcaseMovies</include>
+            <visible>Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1) | Window.IsActive(2)</visible>
+            <include condition="Window.IsActive(1) | Window.IsActive(2) + Skin.HasSetting(comics) | Window.IsActive(24) | Window.IsActive(25)">ShowcaseMovies</include>
 			<include>Animation_HideShowcase</include>
         </control>
 		
         <control type="group">
             <visible>Window.IsActive(20) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(500) | Window.IsActive(2)</visible>
-            <include condition="Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">ShowcaseSquare</include>
+            <include condition="Window.IsActive(2) + Skin.HasSetting(pictures) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">ShowcaseSquare</include>
 			<include>Animation_HideShowcase</include>
         </control>
 		
@@ -2445,8 +2492,8 @@
         <control type="group">
             <visible>Control.IsVisible(57)</visible>
             <control type="wraplist" id="57">
-				<include condition="Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1)">MovieShowcaseGroupVars</include>
-				<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) | Window.IsActive(20)">MusicShowcaseGroupVars</include>
+				<include condition="Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(2) + Skin.HasSetting(comics) | Window.IsActive(1)">MovieShowcaseGroupVars</include>
+				<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) + Skin.HasSetting(pictures) | Window.IsActive(20)">MusicShowcaseGroupVars</include>
                 <onleft>57</onleft>
                 <onright>57</onright>
                 <onup>900</onup>

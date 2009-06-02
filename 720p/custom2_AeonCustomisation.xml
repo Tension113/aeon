@@ -307,7 +307,9 @@
 				<onclick>Skin.Reset(CustomGames)</onclick>
 				<onclick>Skin.Reset(CustomGamesFolder)</onclick>					
 				<onclick>Skin.Reset(CustomPictures)</onclick>
-				<onclick>Skin.Reset(CustomPicturesFolder)</onclick>					
+				<onclick>Skin.Reset(CustomPicturesFolder)</onclick>
+				<onclick>Skin.Reset(CustomComics)</onclick>
+				<onclick>Skin.Reset(CustomComicsFolder)</onclick>					
 				<onclick>Skin.Reset(CustomMovies)</onclick>
 				<onclick>Skin.Reset(CustomMoviesFolder)</onclick>					
 				<onclick>Skin.Reset(CustomTV)</onclick>
