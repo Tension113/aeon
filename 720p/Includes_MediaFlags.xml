@@ -152,6 +152,18 @@
 
 		<control type="image" id="91">
 			<include>Furniture_MovieInfoFlagSource</include>
+			<texture>flags/info/divx.png</texture>
+			<visible>substring(listitem.filename,divx)</visible>
+		</control>
+
+		<control type="image" id="91">
+			<include>Furniture_MovieInfoFlagSource</include>
+			<texture>flags/info/xvid.png</texture>
+			<visible>substring(listitem.filename,xvid)</visible>
+		</control>
+
+		<control type="image" id="91">
+			<include>Furniture_MovieInfoFlagSource</include>
 			<texture>flags/info/hdtv.png</texture>
 			<visible>substring(listitem.filename,hdtv)</visible>
 		</control>
@@ -715,6 +727,26 @@
     					<texture>flags/Twisted.png</texture>
     					<visible>substring(listitem.studio,Twisted Pictures)</visible>
 				</control>
+				<control type="image" id="81">
+    					<include>Furniture_ShowcaseMediaFlagsVars</include>
+    					<texture>flags/image_movers.png</texture>
+    					<visible>substring(listitem.studio,ImageMovers)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>Furniture_ShowcaseMediaFlagsVars</include>
+    					<texture>flags/mediapro.png</texture>
+    					<visible>substring(listitem.studio,Mediapro)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>Furniture_ShowcaseMediaFlagsVars</include>
+    					<texture>flags/goldcrestfilms.png</texture>
+    					<visible>substring(listitem.studio,Goldcrest Films)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>Furniture_ShowcaseMediaFlagsVars</include>
+    					<texture>flags/grosvenorpark.png</texture>
+    					<visible>substring(listitem.studio,Grosvenor Park)</visible>
+				</control>
 			</control>
 			<control type="group">
 				<posx>975</posx>
@@ -1154,6 +1186,26 @@
     					<include>Furniture_PanelMediaFlagsVars</include>
     					<texture>flags/Twisted.png</texture>
     					<visible>substring(listitem.studio,Twisted Pictures)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>Furniture_PanelMediaFlagsVars</include>
+    					<texture>flags/image_movers.png</texture>
+    					<visible>substring(listitem.studio,ImageMovers)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>Furniture_PanelMediaFlagsVars</include>
+    					<texture>flags/mediapro.png</texture>
+    					<visible>substring(listitem.studio,Mediapro)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>Furniture_PanelMediaFlagsVars</include>
+    					<texture>flags/goldcrestfilms.png</texture>
+    					<visible>substring(listitem.studio,Goldcrest Films)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>Furniture_PanelMediaFlagsVars</include>
+    					<texture>flags/grosvenorpark.png</texture>
+    					<visible>substring(listitem.studio,Grosvenor Park)</visible>
 				</control>
 			</control>
 			<control type="group">
