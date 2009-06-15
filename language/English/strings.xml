@@ -498,4 +498,11 @@
 	<string id="32001">COMICS</string>
 	<string id="32002">ADDITIONAL TABS</string>
 	<string id="32003">PATH DEFINITIONS</string>
+
+<!-- View Mods -->
+
+	<string id="32010">MOD</string>
+	<string id="32011">ORIGINAL</string>
+	<string id="32012">VIDEO</string>
+	<string id="32013">OLD</string>
 </strings>

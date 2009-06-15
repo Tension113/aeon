@@ -39,7 +39,8 @@
 		<include>ListFade</include>
 		<include>Viewtype_Wall</include>
 		<include>Furniture_WallTime</include>
-		<include>Furniture_WallRSS</include>		
+		<include>Furniture_WallRSS</include>
+			
 		
 		<control type="group">
 	
@@ -81,6 +82,8 @@
 				<include condition="!Skin.HasSetting(nomultiplexinfobuttons)">Objects_MultiplexInfoButtons</include>			
 				
 				<include condition="!Skin.HasSetting(nomultiplexstylebuttons)">Objects_MultiplexStyleButtons</include>
+
+				<include condition="!Skin.HasSetting(nomultiplexstylebuttons)">Objects_MultiplexModButtons</include>
 				
 				<control type="togglebutton" id="940">
 					<include>Objects_MediaMenuButton</include>				
@@ -159,8 +162,12 @@
 		
 		<include>Viewtype_Showcase</include>
 		<include>Viewtype_List</include>
-		<include condition="!Skin.HasSetting(oldmultiplex)">Viewtype_Multiplex</include>
+		
 		<include condition="Skin.HasSetting(oldmultiplex)">Viewtype_MultiplexOld</include>
+		<include condition="Skin.HasSetting(multiplexmodvideo)">Viewtype_MultiplexModVideo</include>
+		<include condition="Skin.HasSetting(multiplexorig)">Viewtype_Multiplex</include>
+		
+		
 		
 	</control>
 
