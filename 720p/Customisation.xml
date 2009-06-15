@@ -79,13 +79,6 @@
 			<label>UNLOCK ALL VIEWS FOR TV SHOWS</label>
 			<onclick>Skin.ToggleSetting(unlockTVviews)</onclick>
 			<selected>Skin.HasSetting(unlockTVviews)</selected>
-		</control>
-		
-		<control type="radiobutton" id="407">
-			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>USE LEGACY 'DARK' MULTIPLEX</label>
-			<onclick>Skin.ToggleSetting(oldmultiplex)</onclick>
-			<selected>Skin.HasSetting(oldmultiplex)</selected>
 		</control>		
 		
 	</control>
@@ -360,9 +353,16 @@
 			<label>31250</label>
 			<onclick>Skin.ToggleSetting(nomultiplexstylebuttons)</onclick>
 			<selected>!Skin.HasSetting(nomultiplexstylebuttons)</selected>
+		</control>
+
+		<control type="radiobutton" id="809">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>32014</label>
+			<onclick>Skin.ToggleSetting(nomultiplexmodbuttons)</onclick>
+			<selected>!Skin.HasSetting(nomultiplexmodbuttons)</selected>
 		</control>		
 		
-		<control type="radiobutton" id="809">
+		<control type="radiobutton" id="810">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>31249</label>
 			<onclick>Skin.ToggleSetting(nomediaflagsbutton)</onclick>
