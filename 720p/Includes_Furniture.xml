@@ -709,7 +709,21 @@
 			<include>ShowcaseSpotLight</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideShowcase</include>
-			<visible>Control.IsVisible(50)</visible>
+			<visible>Control.IsVisible(50) + Skin.HasSetting(listoriginal)</visible>
+		</control>
+
+		<control type="image">
+			<posx>140</posx>
+			<posy>503</posy>
+			<width>993</width>
+			<height>325</height>
+			<texture>showcase/showcase_spot.png</texture>
+			<include>Animation_CommonFade</include>
+			<include>Animation_HideShowcase</include>
+			<include>Animation_HighListSlide</include>
+			<visible>Control.IsVisible(50) + Skin.HasSetting(listrev2)</visible>
+			<animation effect="fade" start="100" end="60" time="50" condition="!Skin.HasSetting(listpanelthin)">Conditional</animation>
+			<animation effect="fade" start="100" end="10" time="50" condition="Skin.HasSetting(listpanelthin)">Conditional</animation>
 		</control>
 		
 		<control type="image">
@@ -718,7 +732,7 @@
 			<width>1280</width>
 			<height>405</height>
 			<texture>list/list_floor.png</texture>
-			<visible>Control.IsVisible(50)</visible>
+			<visible>Control.IsVisible(50) + Skin.HasSetting(listoriginal)</visible>
 
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideShowcase</include>

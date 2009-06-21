@@ -1,0 +1,2538 @@
+﻿<includes>
+
+	<!----------------------------- FONT COLORS ---------------------------------->
+
+	<include name="lowlistcolorfocus">
+		<textcolor>FFFFFFFF</textcolor>
+		<selectedcolor>FFFFFFFF</selectedcolor>
+	</include>
+	
+	<include name="lowlistcolornofocus">
+		<textcolor>FF939597</textcolor>
+		<selectedcolor>FF939597</selectedcolor>
+	</include>
+	
+	<include name="lowlistdetailcolornofocus">
+		<textcolor>FF939597</textcolor>
+	</include>
+	
+	<!----------------------------- ANIMATIONS ---------------------------------->
+	
+	<include name="Rev2Animation_MusicContentSlide">
+		<animation effect="slide" start="0,0" end="40,0" time="0" condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>
+	</include>
+	
+	<include name="Rev2Animation_HighListSlide">
+		<animation effect="slide" start="0,0" end="0,-110" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
+	</include>
+	
+	<include name="Animation_AntiHighListSlide">
+		<animation effect="slide" start="0,0" end="0,110" time="0" condition="Skin.HasSetting(highlist)">Conditional</animation>
+	</include>
+	
+	<include name="Animation_HighListHalfSlide">
+		<animation effect="slide" start="0,0" end="0,-40" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
+	</include>
+	
+	<include name="Animation_HighListShrink">
+		<animation effect="zoom" end="90" center="330,0" time="75" condition="Skin.HasSetting(highlist)">Conditional</animation>
+	</include>
+	
+	<include name="Rev2Animation_DetailMenuSlideForRSS">
+		<animation effect="slide" start="0,0" end="-550,0" time="150" condition="Skin.HasSetting(lowlistrsson) + !ControlGroup(7003).HasFocus() + !Control.IsVisible(7898)">Conditional</animation>
+	</include>
+	
+	<include name="Animation_SlideRightForIcons">
+		<animation effect="slide" start="0,0" end="60" time="150" condition="Container.Content(albums) + Skin.HasSetting(musiclistfull)">Conditional</animation>
+	</include>
+	
+	<!----------------------------- LOW LIST ICON ROLLER --------------------------->
+
+		<!-- Square icon variables -->
+		
+			<include name="ListIcon_SquarePos-3">
+				<posx>60</posx>
+				<posy>-20</posy>
+			</include>
+			
+			<include name="ListIcon_SquarePos-2">
+				<posx>50</posx>
+				<posy>-5</posy>
+			</include>
+			
+			<include name="ListIcon_SquarePos-1">
+				<posx>40</posx>
+				<posy>13</posy>
+			</include>
+			
+			<include name="ListIcon_SquarePos0">
+				<posx>30</posx>
+				<posy>45</posy>
+			</include>
+			
+			<include name="ListIcon_SquarePos1">
+				<posx>40</posx>
+				<posy>100</posy>
+			</include>
+			
+			<include name="ListIcon_SquarePos2">
+				<posx>50</posx>
+				<posy>140</posy>
+			</include>
+			
+			<include name="ListIcon_SquarePos3">
+				<posx>60</posx>
+				<posy>177</posy>
+			</include>
+			
+			<include name="ListIcon_SquareVars_Z4">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>170</width>
+				<height>170</height>
+				<visible>[Container.Content(artists) + !Skin.HasSetting(artistrolleroff)] | [Container.Content(albums) + !Skin.HasSetting(albumrolleroff)] | [Container.Content(songs) + !Skin.HasSetting(songrolleroff)] | Window.IsActive(500) | Window.IsActive(501)</visible>
+				<visible>!Player.HasAudio</visible>
+				<include>Animation_HighListHalfSlide</include>
+			</include>
+			
+			<include name="ListIcon_SquareVars_Z3">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>190</width>
+				<height>190</height>
+				<visible>[Container.Content(artists) + !Skin.HasSetting(artistrolleroff)] | [Container.Content(albums) + !Skin.HasSetting(albumrolleroff)] | [Container.Content(songs) + !Skin.HasSetting(songrolleroff)] | Window.IsActive(500) | Window.IsActive(501)</visible>
+				<visible>!Player.HasAudio</visible>
+				<include>Animation_HighListHalfSlide</include>
+			</include>
+		
+			<include name="ListIcon_SquareVars_Z2">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>210</width>
+				<height>210</height>
+				<visible>[Container.Content(artists) + !Skin.HasSetting(artistrolleroff)] | [Container.Content(albums) + !Skin.HasSetting(albumrolleroff)] | [Container.Content(songs) + !Skin.HasSetting(songrolleroff)] | Window.IsActive(500) | Window.IsActive(501)</visible>
+				<visible>!Player.HasAudio</visible>
+				<include>Animation_HighListHalfSlide</include>
+			</include>
+			
+			<include name="ListIcon_SquareVars_Z1">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>230</width>
+				<height>230</height>
+				<visible>[Container.Content(artists) + !Skin.HasSetting(artistrolleroff)] | [Container.Content(albums) + !Skin.HasSetting(albumrolleroff)] | [Container.Content(songs) + !Skin.HasSetting(songrolleroff)] | Window.IsActive(500) | Window.IsActive(501)</visible>
+				<visible>!Player.HasAudio</visible>
+				<include>Animation_HighListHalfSlide</include>
+			</include>
+				
+			<include name="ListIcon_SquareVars_Z0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>250</width>
+				<height>250</height>
+				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Window.IsActive(500) | Window.IsActive(501)</visible>
+				<include>Animation_HighListHalfSlide</include>
+			</include>
+	
+		<!-- Square icons -->
+		
+			<include name="ListIcon_Square_Z3">
+				<control type="image">
+					<include>ListIcon_SquareVars_Z3</include>
+					<bordertexture border="-13">thumbs/cd_shadow_light.png</bordertexture>
+					<texture>thumbs/cd_glass_noedge.png</texture>
+				</control>
+				<control type="image">
+					<include>ListIcon_SquareVars_Z3</include>
+					<include>MusicShowcaseOverlay</include>
+				</control>
+			</include>
+			
+			<include name="ListIcon_Square_Z2">
+				<control type="image">
+					<include>ListIcon_SquareVars_Z2</include>
+					<bordertexture border="-14">thumbs/cd_shadow_light.png</bordertexture>
+					<texture>thumbs/cd_glass_noedge.png</texture>
+				</control>
+				<control type="image">
+					<include>ListIcon_SquareVars_Z2</include>
+					<include>MusicShowcaseOverlay</include>
+				</control>
+			</include>
+			
+			<include name="ListIcon_Square_Z1">
+				<control type="image">
+					<include>ListIcon_SquareVars_Z1</include>
+					<bordertexture border="-16">thumbs/cd_shadow_light.png</bordertexture>
+					<texture>thumbs/cd_glass_noedge.png</texture>
+				</control>
+				<control type="image">
+					<include>ListIcon_SquareVars_Z1</include>
+					<include>MusicShowcaseOverlay</include>
+				</control>
+			</include>
+			
+			<include name="ListIcon_Square_Z0">
+				<control type="image">
+					<include>ListIcon_SquareVars_Z0</include>
+					<bordertexture border="-20">thumbs/cd_shadow_light.png</bordertexture>
+					<texture>thumbs/cd_glass_noedge.png</texture>
+					<visible>![Container.Content(artists) + Skin.HasSetting(artistrolleroff)]</visible>
+				</control>
+				<control type="image">
+					<include>ListIcon_SquareVars_Z0</include>
+					<include>MusicShowcaseOverlay</include>
+					<visible>![Container.Content(artists) + Skin.HasSetting(artistrolleroff)]</visible>
+				</control>
+			</include>
+		
+		<!-- Square icon roller -->
+		
+			<include name="LowList_SquareIconRoller">
+				
+			<!-- Static Icons -->
+			
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>[!Container.OnPrevious + !Container.OnNext] | [Container.Content(artists) + Skin.HasSetting(artistrolleroff)] | [Container.Content(albums) + Skin.HasSetting(albumrolleroff)] | [Container.Content(songs) + Skin.HasSetting(songrolleroff)] | Player.HasAudio</visible>
+					<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="0" delay="200">Visible</animation>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos-3</include>
+						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z3</include>
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(-3).Icon</info>
+						</control>
+						<include>ListIcon_Square_Z3</include>
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos3</include>
+						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z3</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(3).Icon</info>
+						</control>
+						<include>ListIcon_Square_Z3</include>
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos-2</include>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z2</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(-2).Icon</info>
+						</control>
+						<include>ListIcon_Square_Z2</include>
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos2</include>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z2</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(2).Icon</info>
+						</control>
+						<include>ListIcon_Square_Z2</include>
+					</control>
+										
+					<control type="group">
+						<include>ListIcon_SquarePos-1</include>						
+						<control type="image">
+							<include>ListIcon_SquareVars_Z1</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(-1).Icon</info>
+						</control>
+						<include>ListIcon_Square_Z1</include>
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos1</include>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z1</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(1).Icon</info>
+						</control>
+						<include>ListIcon_Square_Z1</include>
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos0</include>						
+						<control type="image">
+							<include>ListIcon_SquareVars_Z0</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem.Icon</info>
+							<visible>![Container.Content(artists) + Skin.HasSetting(artistrolleroff)]</visible>
+						</control>
+						<include>ListIcon_Square_Z0</include>
+						<control type="image">
+							<posy>259</posy>
+							<include>ListIcon_SquareVars_Z0</include>
+							<include>MusicShowcaseThumbReflection</include>
+							<info>ListItem.Icon</info>
+							<visible>[Container.Content(artists) + Skin.HasSetting(artistrolleroff)] | [Container.Content(albums) + Skin.HasSetting(albumrolleroff)] | [Container.Content(songs) + Skin.HasSetting(songrolleroff)] | Player.HasAudio</visible>
+						</control>
+					</control>
+					
+				</control>
+			
+			
+			<!-- Rolling Down -->
+			
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos2</include>			
+						<control type="image">
+							<include>ListIcon_SquareVars_Z2</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(3).Icon</info>
+							<visible>Container.OnPrevious</visible>
+							<animation type="Hidden">
+								<effect type="fade" start="100" end="60" time="200" />
+								<effect type="zoom" end="10,37,190,190" time="200" />
+							</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z2</include>
+							<bordertexture border="-14">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnPrevious</visible>
+							<animation type="Hidden">
+								<effect type="fade" start="100" end="60" time="200" />
+								<effect type="zoom" end="10,37,190,190" time="200" />
+							</animation>
+						</control>						
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos-3</include>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z3</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(-3).Icon</info>
+							<visible>Container.OnPrevious</visible>
+							<animation type="Hidden">
+								<effect type="fade" start="10" end="60" time="200" />
+							</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z3</include>
+							<bordertexture border="-10">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnPrevious</visible>
+							<animation type="Hidden">
+								<effect type="fade" start="10" end="60" time="200" />
+							</animation>
+						</control>						
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos-3</include>			
+						<control type="image">
+							<include>ListIcon_SquareVars_Z3</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(-2).Icon</info>
+							<visible>Container.OnPrevious</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="-10,15,210,210" time="200" />
+							</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z3</include>
+							<bordertexture border="-12">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnPrevious</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="-10,15,210,210" time="200" />
+							</animation>
+						</control>						
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos1</include>					
+						<control type="image">
+							<include>ListIcon_SquareVars_Z1</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(2).Icon</info>
+							<visible>Container.OnPrevious</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="10,40,210,210" time="200" />
+							</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z1</include>
+							<bordertexture border="-16">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnPrevious</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="10,40,210,210" time="200" />
+							</animation>
+						</control>						
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos-2</include>					
+						<control type="image">
+							<include>ListIcon_SquareVars_Z2</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(-1).Icon</info>
+							<visible>Container.OnPrevious</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="-10,18,230,230" time="200" />
+							</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z2</include>
+							<bordertexture border="-14">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnPrevious</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="-10,18,230,230" time="200" />
+							</animation>
+						</control>						
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos0</include>					
+						<control type="image">
+							<include>ListIcon_SquareVars_Z0</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(1).Icon</info>
+							<visible>Container.OnPrevious</visible>
+							<visible>!Player.HasAudio</visible>
+							<visible>[Container.Content(artists) + !Skin.HasSetting(artistrolleroff)] | [Container.Content(albums) + !Skin.HasSetting(albumrolleroff)] | [Container.Content(songs) + !Skin.HasSetting(songrolleroff)] | Window.IsActive(500) | Window.IsActive(501)</visible>
+							<animation effect="zoom" end="10,55,230,230" time="200">Hidden</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z0</include>
+							<bordertexture border="-20">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnPrevious</visible>
+							<visible>!Player.HasAudio</visible>
+							<visible>[Container.Content(artists) + !Skin.HasSetting(artistrolleroff)] | [Container.Content(albums) + !Skin.HasSetting(albumrolleroff)] | [Container.Content(songs) + !Skin.HasSetting(songrolleroff)] | Window.IsActive(500) | Window.IsActive(501)</visible>
+							<animation effect="zoom" end="10,55,230,230" time="200">Hidden</animation>
+						</control>
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos-1</include>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z1</include>
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem.Icon</info>
+							<visible>Container.OnPrevious</visible>
+							<animation effect="zoom" end="-10,32,250,250" time="200">Hidden</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z1</include>
+							<bordertexture border="-16">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnPrevious</visible>
+							<animation effect="zoom" end="-10,32,250,250" time="200">Hidden</animation>
+						</control>						
+					</control>
+										
+				</control>
+		
+		
+			<!-- Rolling Up -->
+			
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					
+
+					<control type="group">
+						<include>ListIcon_SquarePos3</include>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z3</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(3).Icon</info>
+							<visible>Container.OnNext</visible>
+							<animation type="Hidden">
+								<effect type="fade" start="10" end="60" time="200" />
+							</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z3</include>
+							<bordertexture border="-10">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnNext</visible>
+							<animation type="Hidden">
+								<effect type="fade" start="10" end="60" time="200" />
+							</animation>
+						</control>						
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos-2</include>			
+						<control type="image">
+							<include>ListIcon_SquareVars_Z2</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(-3).Icon</info>
+							<visible>Container.OnNext</visible>
+							<animation type="Hidden">
+								<effect type="fade" start="100" end="60" time="200" />
+								<effect type="zoom" end="10,-15,190,190" time="200" />
+							</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z2</include>
+							<bordertexture border="-14">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnNext</visible>
+							<animation type="Hidden">
+								<effect type="fade" start="100" end="60" time="200" />
+								<effect type="zoom" end="10,-15,190,190" time="200" />
+							</animation>
+						</control>						
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos3</include>			
+						<control type="image">
+							<include>ListIcon_SquareVars_Z3</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(2).Icon</info>
+							<visible>Container.OnNext</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="-10,-37,210,210" time="200" />
+							</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z3</include>
+							<bordertexture border="-12">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnNext</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="-10,-37,210,210" time="200" />
+							</animation>
+						</control>						
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos-1</include>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z1</include>
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(-2).Icon</info>
+							<visible>Container.OnNext</visible>
+							<animation effect="zoom" end="10,-18,210,210" time="200">Hidden</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z1</include>
+							<bordertexture border="-16">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnNext</visible>
+							<animation effect="zoom" end="10,-18,210,210" time="200">Hidden</animation>
+						</control>						
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos2</include>					
+						<control type="image">
+							<include>ListIcon_SquareVars_Z2</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(1).Icon</info>
+							<visible>Container.OnNext</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="-10,-40,230,230" time="200" />
+							</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z2</include>
+							<bordertexture border="-14">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnNext</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="-10,-40,230,230" time="200" />
+							</animation>
+						</control>						
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos0</include>					
+						<control type="image">
+							<include>ListIcon_SquareVars_Z0</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem(-1).Icon</info>
+							<visible>Container.OnNext</visible>
+							<visible>!Player.HasAudio</visible>
+							<visible>[Container.Content(artists) + !Skin.HasSetting(artistrolleroff)] | [Container.Content(albums) + !Skin.HasSetting(albumrolleroff)] | [Container.Content(songs) + !Skin.HasSetting(songrolleroff)] | Window.IsActive(500) | Window.IsActive(501)</visible>
+							<animation effect="zoom" end="10,-32,230,230" time="200">Hidden</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z0</include>
+							<bordertexture border="-20">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnNext</visible>
+							<visible>!Player.HasAudio</visible>
+							<visible>[Container.Content(artists) + !Skin.HasSetting(artistrolleroff)] | [Container.Content(albums) + !Skin.HasSetting(albumrolleroff)] | [Container.Content(songs) + !Skin.HasSetting(songrolleroff)] | Window.IsActive(500) | Window.IsActive(501)</visible>
+							<animation effect="zoom" end="10,-32,230,230" time="200">Hidden</animation>
+						</control>
+					</control>
+					
+					<control type="group">
+						<include>ListIcon_SquarePos1</include>					
+						<control type="image">
+							<include>ListIcon_SquareVars_Z1</include>		
+							<include>MusicShowcaseThumbMain</include>
+							<info>ListItem.Icon</info>
+							<visible>Container.OnNext</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="-10,-55,250,250" time="200" />
+							</animation>
+						</control>
+						<control type="image">
+							<include>ListIcon_SquareVars_Z1</include>
+							<bordertexture border="-16">thumbs/cd_shadow_light.png</bordertexture>
+							<texture>thumbs/cd_glass_noedge.png</texture>
+							<visible>Container.OnNext</visible>
+							<animation type="Hidden">
+								<effect type="zoom" end="-10,-55,250,250" time="200" />
+							</animation>
+						</control>					
+					</control>
+					
+				</control>
+		
+		</include>
+	
+	<!----------------------------- LOW LIST DETAIL LABELS --------------------->
+	
+	<include name="LowList_DetailInfoLabelPos1">
+		<posy>5</posy>
+		<include>LowList_DetailInfoLabelVars</include>
+	</include>
+	
+	<include name="LowList_DetailInfoValuePos1">
+		<posy>25</posy>
+		<include>LowList_DetailInfoValueVars</include>
+	</include>
+	
+	<include name="LowList_DetailInfoLabelPos2">
+		<posy>45</posy>
+		<include>LowList_DetailInfoLabelVars</include>
+	</include>
+	
+	<include name="LowList_DetailInfoValuePos2">
+		<posy>75</posy>
+		<include>LowList_DetailInfoValueVars</include>
+	</include>
+	
+	<include name="LowList_DetailInfoLabelPos3">
+		<posy>85</posy>
+		<include>LowList_DetailInfoLabelVars</include>
+	</include>
+	
+	<include name="LowList_DetailInfoValuePos3">
+		<posy>95</posy>
+		<include>LowList_DetailInfoValueVars</include>
+	</include>
+	
+	<include name="LowList_DetailInfoLabelPos4">
+		<posy>125</posy>
+		<include>LowList_DetailInfoLabelVars</include>
+	</include>
+	
+	<include name="LowList_DetailInfoValuePos4">
+		<posy>135</posy>
+		<include>LowList_DetailInfoValueVars</include>
+	</include>
+	
+	<include name="LowList_DetailInfoLabelPos5">
+		<posy>226</posy>
+		<posx>0r</posx>
+		<align>right</align>
+		<width>190</width>
+		<include>LowList_DetailInfoLabelVars</include>
+	</include>
+	
+	<include name="LowList_DetailInfoLabelPos5Right">
+		<posy>213</posy>
+		<posx>200</posx>
+		<width>160</width>
+		<include>LowList_DetailInfoLabelVars</include>
+	</include>
+	
+	<include name="LowList_DetailInfoValuePos5Right">
+		<posy>230</posy>
+		<posx>200</posx>
+		<width>160</width>
+		<include>LowList_DetailInfoValueVars</include>
+	</include>
+	
+	<include name="LowList_ShortMusicLabel">
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>360</width>
+			<height>200</height>
+			<visible>![!Skin.HasSetting(highlist) + [Control.IsVisible(7850) | Control.IsVisible(7814)]]</visible>
+			<!--<animation effect="slide" start="0,0" end="0,-52" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>-->
+			<animation effect="slide" start="0,0" end="0,-55" time="0" condition="true">Conditional</animation>
+				
+		<!-- Artist page -->
+			<control type="label">
+				<description>ARTIST / GENRE info label</description>
+				<include>LowList_DetailInfoLabelPos5</include>
+				<label>$INFO[ListItem.artist] [COLOR ffffffff]$INFO[ListItem.Property(Genre)][/COLOR]</label>
+				<visible>Container.Content(artists)</visible>
+			</control>
+			
+		<!-- Album & Song page -->
+			<control type="label">
+				<description>YEAR / GENRE info label</description>
+				<include>LowList_DetailInfoLabelPos5</include>
+				<label>[COLOR ffffffff]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Genre]</label>
+				<visible>Container.Content(albums) | Container.Content(songs)</visible>
+			</control>
+		</control>
+	</include>
+	
+	<include name="LowList_ShortMovieLabel">
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>360</width>
+			<height>200</height>
+			<visible>Skin.HasSetting(highlist)</visible>
+			<animation effect="slide" start="0,0" end="0,-52" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-55" time="0" condition="true">Conditional</animation>
+				
+				<!-- Slim info page -->
+					<!--<control type="label">
+						<description>DIRECTOR: info label</description>
+						<posx>5</posx>
+						<posy>5</posy>
+						<height>16</height>
+						<width>260</width>
+						<align>left</align>
+						<font>Font_MultiplexInfoLabel</font>
+						<textcolor>d0ffffff</textcolor>
+						<label>$LOCALIZE[31402] [COLOR ffffffff]$INFO[ListItem.Director][/COLOR]</label>
+						<visible>Container.Content(movies) + !IsEmpty(ListItem.Director)</visible>
+					</control>
+					
+					<control type="label">
+						<description>RUNTIME label</description>
+						<posx>0r</posx>
+						<posy>10</posy>
+						<align>right</align>
+						<height>16</height>
+						<width>70</width>
+						<font>Font_MultiplexInfoLabel</font>
+						<textcolor>d0ffffff</textcolor>
+						<include>LowList_DetailInfoLabelPos1</include>
+						<label>$INFO[ListItem.Duration]</label>
+						<visible>Container.Content(movies)</visible>
+					</control>-->
+					
+					<control type="label">
+						<description>TAGLINE label</description>
+						<posx>5</posx>
+						<posy>17</posy>
+						<width>350</width>
+						<align>center</align>
+						<height>16</height>
+						<font>Font_OSDMusicArtist</font>
+						<label>[COLOR ffffffff][B]$INFO[ListItem.tagline,","][/B][/COLOR]</label>
+						<visible>Container.Content(movies) + !IsEmpty(ListItem.tagline)</visible>
+					</control>
+		</control>
+	</include>
+	
+	<!----------------------------- LOW LIST DETAIL SEPARATORS --------------------->
+	
+	<include name="LowList_Detail_Separator">
+		<posx>15</posx>
+		<height>1</height>
+		<width>324</width>
+		<texture>lowlist/lowlistpanel_line.png</texture>
+		<include>Animation_CommonFade</include>
+	</include>
+	
+	<include name="LowList_Detail_Separators">
+		
+		<control type="image">
+			<include>LowList_Detail_Separator</include>
+			<posy>35</posy>
+			<visible>Control.IsVisible(7812) | [Skin.HasSetting(highlist) + Control.IsVisible(7813)] | [Skin.HasSetting(highlist) + Control.IsVisible(7850)]</visible>
+			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Skin.HasSetting(highlist) + Control.IsVisible(7850)">Conditional</animation>
+			<include>Rev2Animation_HighListSlide</include>
+		</control>
+		
+		<control type="image">
+			<include>LowList_Detail_Separator</include>
+			<posy>75</posy>
+			<visible>Control.IsVisible(7812)</visible>
+			<include>Rev2Animation_HighListSlide</include>
+		</control>
+		
+		<control type="image">
+			<include>LowList_Detail_Separator</include>
+			<posy>115</posy>
+			<visible>Control.IsVisible(7812)</visible>
+			<animation effect="slide" start="0,0" end="0,-110" time="200" condition="Skin.HasSetting(highlist) + Control.IsVisible(7812)">Conditional</animation>
+		</control>
+		
+		<control type="image">
+			<include>LowList_Detail_Separator</include>
+			<posy>155</posy>
+			<visible>!Control.IsVisible(7898) + [Skin.HasSetting(highlist) + Control.IsVisible(7850) + ![IsEmpty(Listitem.Property(Fanart_Image)) + !IsEmpty(container.property(fanart_image))]]</visible>
+			<animation effect="slide" start="0,0" end="0,-110" time="200" condition="Skin.HasSetting(highlist) + Control.IsVisible(7812)">Conditional</animation>
+		</control>
+		
+		<control type="image">
+			<include>LowList_Detail_Separator</include>
+			<posy>220</posy>
+			<animation effect="slide" start="0,0" end="0,-65" time="200" condition="Skin.HasSetting(highlist) + Control.IsVisible(7812)">Conditional</animation>
+		</control>
+		
+		<!--<control type="image">
+			<include>LowList_Detail_Separator</include>
+			<posy>51</posy>
+			<visible>Control.IsVisible(7802) | Control.IsVisible(7898)</visible>
+		</control>
+		<control type="image">
+			<include>LowList_Detail_Separator</include>
+			<posy>103</posy>
+			<visible>Control.IsVisible(7802) | Control.IsVisible(7898</visible>
+		</control>
+		
+		<control type="image">
+			<include>LowList_Detail_Separator</include>
+			<posy>207</posy>
+			<visible>Control.IsVisible(7802) | Control.IsVisible(7898</visible>
+			<visible>Skin.HasSetting(highlist) + false</visible>
+		</control>
+		<control type="image">
+			<include>LowList_Detail_Separator</include>
+			<posy>214</posy>
+			<visible>Control.IsVisible(7850) | Control.IsVisible(7801)</visible>
+			<visible>Skin.HasSetting(highlist)</visible>
+		</control>
+		<control type="image">
+			<include>LowList_Detail_Separator</include>
+			<posy>265</posy>
+			<visible>Skin.HasSetting(highlist)</visible>
+		</control>-->
+	</include>
+		
+	<!----------------------------- MENU BAR (7000) NEW BUTTONS ---------------------------------->
+	
+	<include name="LowList_HighLoButton">
+		<control type="togglebutton" id="9400">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[535]: $LOCALIZE[391]</label>
+			<altlabel>$LOCALIZE[535]: $LOCALIZE[393]</altlabel>
+			<usealttexture>Skin.HasSetting(highlist)</usealttexture>
+			<onclick>Skin.SetBool(highlist)</onclick>
+			<altclick>Skin.Reset(highlist)</altclick>
+			<visible>Control.IsVisible(50)</visible>
+		</control>	
+	</include>
+
+	<!----------------------------- LOW LIST MEDIA FLAGS ------------------------------------------>
+
+	<include name="LowList_MovieFlagVars">
+		<posx>890</posx>
+		<posy>660</posy>
+		<width>90</width>
+		<height>59</height>
+		<include>Animation_CommonFade</include>
+		<visible>Control.IsVisible(50) + Window.IsActive(25) + [[Container.Content(movies) + !Control.HasFocus(7720) + [Skin.HasSetting(movieinfopanelon) | !Skin.HasSetting(movieplotpaneloff)]] | Skin.HasSetting(highlist)]</visible>
+	</include>
+	
+	<include name="LowList_AudioFlagVars">
+		<posx>890</posx>
+		<posy>660</posy>
+		<width>90</width>
+		<height>59</height>
+		<include>Animation_CommonFade</include>
+		<visible>Container.Content(songs) + ![!Skin.HasSetting(highlist) + Skin.HasSetting(musicinfopaneloff)]</visible>
+	</include>
+	
+	<include name="LowList_MediaFlags">		
+		<control type="group">
+			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>Animation_HideMultiplex</include>
+			<control type="group">
+				<posx>0</posx>
+				<control type="image">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/default.png</texture>
+					<visible>!Control.IsVisible(81) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/SPC.png</texture>
+    					<visible>substring(listitem.studio,Sony) + substring(listitem.studio,Classic)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/P_Vantage.png</texture>
+    					<visible>substring(listitem.studio,Paramount) + substring(listitem.studio,Vantage)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/Manga.png</texture>
+					<visible>substring(listitem.studio,Manga)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/Bandai.png</texture>
+					<visible>substring(listitem.studio,Bandai)</visible>
+				</control>				
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/20thcenturyfox.png</texture>
+					<visible>substring(listitem.studio,Fox) + !substring(listitem.studio,searchlight)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/universal.png</texture>
+					<visible>substring(listitem.studio,Universal)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/filmfour.png</texture>
+					<visible>substring(listitem.studio,FilmFour) | substring(listitem.studio,Channel Four)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/disney.png</texture>
+					<visible>substring(listitem.studio,Disney)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/gaumont.png</texture>
+					<visible>substring(listitem.studio,Gaumont)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/unitedartists.png</texture>
+					<visible>substring(listitem.studio,Artists)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/newlinecinema.png</texture>
+					<visible>substring(listitem.studio,New Line)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/dimension.png</texture>
+					<visible>substring(listitem.studio,Dimension)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/touchstone.png</texture>
+					<visible>substring(listitem.studio,Touchstone)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/hollywood.png</texture>
+					<visible>substring(listitem.studio,Hollywood)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/carolco.png</texture>
+					<visible>substring(listitem.studio,Carolco)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/revolution.png</texture>
+					<visible>substring(listitem.studio,Revolution)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/lucasfilm.png</texture>
+					<visible>substring(listitem.studio,Lucasfilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/screengems.png</texture>
+					<visible>substring(listitem.studio,Screen Gems)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/warner.png</texture>
+					<visible>substring(listitem.studio,Warner) + !substring(listitem.studio,Warner independent)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/tristar.png</texture>
+					<visible>substring(listitem.studio,TriStar)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/castlerock.png</texture>
+					<visible>substring(listitem.studio,Castle Rock)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/paramount.png</texture>
+					<visible>substring(listitem.studio,Paramount) + !substring(listitem.studio,Vantage)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/dreamworks.png</texture>
+					<visible>substring(listitem.studio,DreamWorks) + !substring(listitem.studio,Animation)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/columbia.png</texture>
+					<visible>substring(listitem.studio,Columbia)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/mgm.png</texture>
+					<visible>substring(listitem.studio,Mayer) | substring(listitem.studio,MGM)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/sonypictures.png</texture>
+					<visible>substring(listitem.studio,Sony) + !substring(listitem.studio,Classic)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/artisan.png</texture>
+					<visible>substring(listitem.studio,Artisan)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/lionsgate.png</texture>
+					<visible>substring(listitem.studio,Lionsgate)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/miramax.png</texture>
+					<visible>substring(listitem.studio,Miramax) + !substring(listitem.studio,Universal)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/capcom.png</texture>
+    					<visible>substring(listitem.studio,capcom)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/summit.png</texture>
+    					<visible>substring(listitem.studio,summit)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/avnet-kerner.png</texture>
+    					<visible>substring(listitem.studio,Avnet Kerner)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/milkshake.png</texture>
+    					<visible>substring(listitem.studio,Milkshake)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/peace_arch.png</texture>
+    					<visible>substring(listitem.studio,Peace Arch)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/searchlight.png</texture>
+    					<visible>substring(listitem.studio,Searchlight)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/dc.png</texture>
+    					<visible>substring(listitem.studio,dc)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/pixar.png</texture>
+    					<visible>substring(listitem.studio,pixar)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/57_irving.png</texture>
+    					<visible>substring(listitem.studio,57th and Irving Productions)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/condemned.png</texture>
+    					<visible>substring(listitem.studio,Condemned)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/filmoteka_narodowa.png</texture>
+    					<visible>substring(listitem.studio,Filmoteka Narodowa)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/mtv.png</texture>
+    					<visible>substring(listitem.studio,MTV)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/oko.png</texture>
+    					<visible>substring(listitem.studio,Oko)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/storyline.png</texture>
+    					<visible>substring(listitem.studio,Storyline)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/tor2.png</texture>
+    					<visible>substring(listitem.studio,Zespół Filmowy Tor)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/zentropa.png</texture>
+					<visible>substring(listitem.studio,Zentropa)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/zdf.png</texture>
+					<visible>substring(listitem.studio,ZDF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/saul_zaentz.png</texture>
+					<visible>substring(listitem.studio,Zaentz)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/xfilme.png</texture>
+					<visible>substring(listitem.studio,Xfilme)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/working_title.png</texture>
+					<visible>substring(listitem.studio,Working Title)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/wfdif.png</texture>
+					<visible>substring(listitem.studio,WFDiF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/wdr.png</texture>
+					<visible>substring(listitem.studio,WDR)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/warner_independent_pictures.png</texture>
+					<visible>substring(listitem.studio,Warner Independent)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/village_roadshow.png</texture>
+					<visible>substring(listitem.studio,Village Roadshow)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/ugc.png</texture>
+					<visible>substring(listitem.studio,UGC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/tvp.png</texture>
+					<visible>substring(listitem.studio,TVP)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/tvn.png</texture>
+					<visible>substring(listitem.studio,Turner)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/turner.png</texture>
+					<visible>substring(listitem.studio,Turner)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/tor.png</texture>
+					<visible>substring(listitem.studio,tor,Left)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/thisisthat.png</texture>
+					<visible>substring(listitem.studio,This Is That)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/thinkfilm.png</texture>
+					<visible>substring(listitem.studio,ThinkFilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/telos.png</texture>
+					<visible>substring(listitem.studio,Telos)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/syrena.png</texture>
+					<visible>substring(listitem.studio,Syrena)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/sidney_kimmel.png</texture>
+					<visible>substring(listitem.studio,Sidney Kimmel)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/showtime.png</texture>
+					<visible>substring(listitem.studio,Showtime)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/shout factory.png</texture>
+					<visible>substring(listitem.studio,Shout)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/sfi.png</texture>
+					<visible>substring(listitem.studio,Swedish Film Institute)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/semafor.png</texture>
+					<visible>substring(listitem.studio,SeMaFor)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/screen_gems.png</texture>
+					<visible>substring(listitem.studio,Screen Gems)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/Screen_Australia.png</texture>
+					<visible>substring(listitem.studio,Screen Australia)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/scott_free.png</texture>
+					<visible>substring(listitem.studio,Scott)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/scifi.png</texture>
+					<visible>substring(listitem.studio,SciFi)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/sandrew.png</texture>
+					<visible>substring(listitem.studio,Sandrew)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/rogue.png</texture>
+					<visible>substring(listitem.studio,Rogue)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/roadside.png</texture>
+					<visible>substring(listitem.studio,Roadside Attractions)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/rko_radio.png</texture>
+					<visible>substring(listitem.studio,RKO Radio)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/rhombus.png</texture>
+					<visible>substring(listitem.studio,Rhombus)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/revolution.png</texture>
+					<visible>substring(listitem.studio,Revolution)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/relativity.png</texture>
+					<visible>substring(listitem.studio,Relativity)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/regency.png</texture>
+					<visible>substring(listitem.studio,Regency)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/redrum.png</texture>
+					<visible>substring(listitem.studio,Redrum)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/red_wagon.png</texture>
+					<visible>substring(listitem.studio,Red Wagon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/rankin.png</texture>
+					<visible>substring(listitem.studio,Rankin)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/rai.png</texture>
+					<visible>substring(listitem.studio,Rai)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/premiere.png</texture>
+					<visible>substring(listitem.studio,Premiere)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/polygram.png</texture>
+					<visible>substring(listitem.studio,PolyGram)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/film_polski.png</texture>
+					<visible>substring(listitem.studio,Polski)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/polsat.png</texture>
+					<visible>substring(listitem.studio,Polsat)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/platige.png</texture>
+					<visible>substring(listitem.studio,Platige)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/pisf.png</texture>
+					<visible>substring(listitem.studio,PISF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/picturehouse.png</texture>
+					<visible>substring(listitem.studio,Picturehouse)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/phoenix.png</texture>
+					<visible>substring(listitem.studio,Phoenix)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/pecf.png</texture>
+					<visible>substring(listitem.studio,PECF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/participant.png</texture>
+					<visible>substring(listitem.studio,Participant)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/overture.png</texture>
+					<visible>substring(listitem.studio,Overture)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/orion.png</texture>
+					<visible>substring(listitem.studio,ORiON)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/nuimage.png</texture>
+					<visible>substring(listitem.studio,NUIMAGE)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/nothing.png</texture>
+					<visible>substring(listitem.studio,nothing)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/nala.png</texture>
+					<visible>substring(listitem.studio,NALA)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/myriad.png</texture>
+					<visible>substring(listitem.studio,Myriad)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/mosfilm.png</texture>
+					<visible>substring(listitem.studio,Mosfilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/morgan_creek.png</texture>
+					<visible>substring(listitem.studio,Morgan Creek)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/monolith.png</texture>
+					<visible>substring(listitem.studio,Monolith)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/miramax.png</texture>
+					<visible>substring(listitem.studio,Miramax)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/millennium.png</texture>
+					<visible>substring(listitem.studio,Millennium)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/mibac.png</texture>
+					<visible>substring(listitem.studio,MiBAC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/maya.png</texture>
+					<visible>substring(listitem.studio,Maya)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/maverick.png</texture>
+					<visible>substring(listitem.studio,Maverick)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/marvel.png</texture>
+					<visible>substring(listitem.studio,MARVEL)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/mandate.png</texture>
+					<visible>substring(listitem.studio,Mandate Pictures)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/mandalay.png</texture>
+					<visible>substring(listitem.studio,Mandalay)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/magnolia.png</texture>
+					<visible>substring(listitem.studio,Magnolia)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/madman.png</texture>
+					<visible>substring(listitem.studio,Madman Entertainment)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/lionsgate.png</texture>
+					<visible>substring(listitem.studio,Lionsgate) | substring(listitem.studio,Lions)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/legendary.png</texture>
+					<visible>substring(listitem.studio,Legendary)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/bedford falls.png</texture>
+					<visible>substring(listitem.studio,Bedford Falls)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/brightlight.png</texture>
+					<visible>substring(listitem.studio,Brightlight Pictures)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/mikezossproductions.png</texture>
+					<visible>substring(listitem.studio,mike zoss productions)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/Silver pictures.png</texture>
+					<visible>substring(listitem.studio,Silver Pictures)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/alloy.png</texture>
+					<visible>substring(listitem.studio,Alloy Entertainment)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/KennedyMarshall.png</texture>
+					<visible>substring(listitem.studio,Kennedy)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/lakeshore.png</texture>
+					<visible>substring(listitem.studio,Lakeshore)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/ladd.png</texture>
+					<visible>substring(listitem.studio,Ladd)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/kadr.png</texture>
+					<visible>substring(listitem.studio,KADR)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/kadokawa.png</texture>
+					<visible>substring(listitem.studio,Kadokawa)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/jim henson.png</texture>
+					<visible>substring(listitem.studio,Jim Henson) | substring(listitem.studio,Henson)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/jerry_bruckheimer.png</texture>
+					<visible>substring(listitem.studio,Jerry Bruckheimer)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/jawa.png</texture>
+					<visible>substring(listitem.studio,Jawa)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/iti.png</texture>
+					<visible>substring(listitem.studio,ITI)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/interactual.png</texture>
+					<visible>substring(listitem.studio,interActual)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/infinifilm.png</texture>
+					<visible>substring(listitem.studio,infinifilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/infilm.png</texture>
+					<visible>substring(listitem.studio,Infilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/industrial_light.png</texture>
+					<visible>substring(listitem.studio,Industrial Light and Magic)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/imax.png</texture>
+					<visible>substring(listitem.studio,IMAX)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/imagine.png</texture>
+					<visible>substring(listitem.studio,Imagine)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/imaginary_forces.png</texture>
+					<visible>substring(listitem.studio,Imaginary Forces)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/icon.png</texture>
+					<visible>substring(listitem.studio,Icon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/hbo.png</texture>
+					<visible>substring(listitem.studio,HBO)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/happy_madison.png</texture>
+					<visible>substring(listitem.studio,Happy Madison)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/hand_made.png</texture>
+					<visible>substring(listitem.studio,Hand Made Films)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/halestorm.png</texture>
+					<visible>substring(listitem.studio,Halestorm Entertainment)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/gutek.png</texture>
+					<visible>substring(listitem.studio,Gutek)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/gramercy.png</texture>
+					<visible>substring(listitem.studio,Gramercy)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/gofilms.png</texture>
+					<visible>substring(listitem.studio,Go Films)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/ghosthouse.png</texture>
+					<visible>substring(listitem.studio,Ghost House)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/fuji.png</texture>
+					<visible>substring(listitem.studio,Fuji)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/franchise.png</texture>
+					<visible>substring(listitem.studio,Franchise)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/fox.png</texture>
+					<visible>substring(listitem.studio,FOX Network) + !substring(listitem.studio,searchlight)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/filmax.png</texture>
+					<visible>substring(listitem.studio,Filmax)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/film_media.png</texture>
+					<visible>substring(listitem.studio,Film Media)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/figaro.png</texture>
+					<visible>substring(listitem.studio,Figaro)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/fact.png</texture>
+					<visible>substring(listitem.studio,Fact)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/excel.png</texture>
+					<visible>substring(listitem.studio,Excel)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/Europa_Corp.png</texture>
+					<visible>substring(listitem.studio,Europa)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/eurimages.png</texture>
+					<visible>substring(listitem.studio,Eurimages)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/entertainment_tonight.png</texture>
+					<visible>substring(listitem.studio,Entertainment Tonight)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/eleven.png</texture>
+					<visible>substring(listitem.studio,eleven: a music company)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/premiere-direkt.png</texture>
+					<visible>substring(listitem.studio,Direkt)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/de_laurentiis.png</texture>
+					<visible>substring(listitem.studio,Dino De Laurentiis Company)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/digital_playground.png</texture>
+					<visible>substring(listitem.studio,Digital Playground)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/dfi.png</texture>
+					<visible>substring(listitem.studio,DFI)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/destination.png</texture>
+					<visible>substring(listitem.studio,Destination)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/czolowka.png</texture>
+					<visible>substring(listitem.studio,Czolowka)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/constantin.png</texture>
+					<visible>substring(listitem.studio,Constantin)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/comedy central.png</texture>
+					<visible>substring(listitem.studio,Comedy Central)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/cnc.png</texture>
+					<visible>substring(listitem.studio,CNC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/cheyenne.png</texture>
+					<visible>substring(listitem.studio,Cheyenne)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/celador.png</texture>
+					<visible>substring(listitem.studio,celador)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/cbs.png</texture>
+					<visible>substring(listitem.studio,CBS)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/cartoon.png</texture>
+					<visible>substring(listitem.studio,Cartoon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/carolco.png</texture>
+					<visible>substring(listitem.studio,Carolco)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/canalplus.png</texture>
+					<visible>substring(listitem.studio,Canal)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/blackdog.png</texture>
+					<visible>substring(listitem.studio,Black Dog)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/beacon.png</texture>
+					<visible>substring(listitem.studio,Beacon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/bbc.png</texture>
+					<visible>substring(listitem.studio,BBC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/bazmark.png</texture>
+					<visible>substring(listitem.studio,Bazmark)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/bandapart.png</texture>
+					<visible>substring(listitem.studio,Band Apart)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/bad_robot.png</texture>
+					<visible>substring(listitem.studio,Bad Robot)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/babylonian.png</texture>
+					<visible>substring(listitem.studio,Babylonian)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/artisan.png</texture>
+					<visible>substring(listitem.studio,Artisan)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/arte.png</texture>
+					<visible>substring(listitem.studio,Arte)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/ark.png</texture>
+					<visible>substring(listitem.studio,Ark Film Collective)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/apple.png</texture>
+					<visible>substring(listitem.studio,Apple Film Production)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/anchor_bay.png</texture>
+					<visible>substring(listitem.studio,Anchor Bay)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/amblin.png</texture>
+					<visible>substring(listitem.studio,Amblin)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/alliance atlantis.png</texture>
+					<visible>substring(listitem.studio,Alliance Atlantis)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/alcon.png</texture>
+					<visible>substring(listitem.studio,Alcon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/abc.png</texture>
+					<visible>substring(listitem.studio,ABC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/abandon.png</texture>
+					<visible>substring(listitem.studio,Abandon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/aandm.png</texture>
+					<visible>substring(listitem.studio,A and M)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/2929.png</texture>
+					<visible>substring(listitem.studio,2929)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/ceska_televize.png</texture>
+					<visible>substring(listitem.studio,ƒåesk√° televize)</visible>
+				</control>				
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/weinstein.png</texture>
+					<visible>substring(listitem.studio,weinstein)</visible>
+				</control>				
+				<control type="image" id="81">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/studios/Square-Enix.png</texture>
+					<visible>substring(listitem.studio,Enix)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/blue_sky.png</texture>
+    					<visible>substring(listitem.studio,Blue Sky)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/centropolis.png</texture>
+    					<visible>substring(listitem.studio,Centropolis)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/criterion.png</texture>
+    					<visible>substring(listitem.studio,Criterion)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/dreamworksSKG.png</texture>
+    					<visible>substring(listitem.studio,Dreamworks) + substring(listitem.studio,Animation)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/league_of_noble_peers.png</texture>
+    					<visible>substring(listitem.studio,League of Noble Peers)</visible>
+				</control>
+				<control type="image" id="81">
+   					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/mediapro.png</texture>
+    					<visible>substring(listitem.studio,Mediapro)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/view_askew.png</texture>
+   					<visible>substring(listitem.studio,View Askew)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>LowList_MovieFlagVars</include>
+    					<texture>flags/studios/twisted.png</texture>
+   					<visible>substring(listitem.studio,Twisted Pictures)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<control type="image">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/defaultscreen.png</texture>
+					<visible>!Control.IsVisible(83) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>
+				<control type="image" id="83">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/sd.png</texture>
+					<visible>substring(listitem.studio,sd)</visible>
+				</control>
+				<control type="image" id="83">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/480p.png</texture>
+					<visible>substring(listitem.studio,480p)</visible>
+				</control>
+				<control type="image" id="83">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/576p.png</texture>
+					<visible>substring(listitem.studio,576p)</visible>
+				</control>				
+				<control type="image" id="83">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/720p.png</texture>
+					<visible>substring(listitem.studio,720p)</visible>
+				</control>
+				<control type="image" id="83">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/1080p.png</texture>
+					<visible>substring(listitem.studio,1080p)</visible>
+				</control>
+				<control type="image" id="83">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/480i.png</texture>
+					<visible>substring(listitem.studio,480i)</visible>
+				</control>
+				<control type="image" id="83">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/576i.png</texture>
+					<visible>substring(listitem.studio,576i)</visible>
+				</control>				
+				<control type="image" id="83">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/720i.png</texture>
+					<visible>substring(listitem.studio,720i)</visible>
+				</control>
+				<control type="image" id="83">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/1080i.png</texture>
+					<visible>substring(listitem.studio,1080i)</visible>
+				</control>				
+			</control>
+			<control type="group">
+				<posx>270</posx>
+				<control type="image">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/defaultsound.png</texture>
+					<visible>!Control.IsVisible(84) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>					
+				<control type="image" id="84">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/dts.png</texture>
+					<visible>substring(listitem.studio,dts) + !substring(listitem.studio,ac-3)</visible>
+				</control>			
+				<control type="image" id="84">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/dolbydigital.png</texture>
+					<visible>substring(listitem.studio,ac-3)</visible>
+				</control>
+				<!--<control type="image" id="84">
+					<include>LowList_AudioFlagVars</include>
+					<texture>flags/music/audiocodec/mp3.png</texture>
+					<visible>substring(listitem.filename,.mp3)</visible>
+				</control>
+				<control type="image" id="84">
+					<include>LowList_AudioFlagVars</include>
+					<texture>flags/music/audiocodec/flac.png</texture>
+					<visible>substring(listitem.filename,.flac)</visible>
+				</control>
+				<control type="image" id="84">
+					<include>LowList_AudioFlagVars</include>
+					<texture>flags/music/audiocodec/aac.png</texture>
+					<visible>substring(listitem.filename,.aac)</visible>
+				</control>
+				<control type="image" id="84">
+					<include>LowList_AudioFlagVars</include>
+					<texture>flags/music/audiocodec/ogg.png</texture>
+					<visible>substring(listitem.filename,.ogg)</visible>
+				</control>
+				<control type="image" id="84">
+					<include>LowList_AudioFlagVars</include>
+					<texture>flags/music/audiocodec/apple_chrome.png</texture>
+					<visible>substring(listitem.filename,.m4a)</visible>
+				</control>-->
+			</control>
+			<control type="group">
+				<posx>90</posx>
+				<control type="image">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/defaultsource.png</texture>
+					<visible>!Control.IsVisible(82) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>				
+				<control type="image" id="82">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/hddvd.png</texture>
+					<visible>substring(listitem.filename,hddvd)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/bluray.png</texture>
+					<visible>substring(listitem.filename,bluray)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/dvd.png</texture>
+					<visible>substring(listitem.filename,dvdrip)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/hdtv.png</texture>
+					<visible>substring(listitem.filename,hdtv)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/xvid.png</texture>
+					<visible>substring(listitem.filename,xvid)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>LowList_MovieFlagVars</include>
+					<texture>flags/divx.png</texture>
+					<visible>substring(listitem.filename,divx)</visible>
+				</control>			
+			</control>
+		</control>		
+	</include>
+
+	<!----------------------------- LOW LIST MEDIA LABELS ---------------------------------->
+	
+	<include name="LowList_CodecLabel">
+		<posx>0</posx>
+		<posy>0</posy>
+		<align>right</align>
+		<height>16</height>
+		<width>360</width>
+		<font>Font_ListDetailTV</font>	
+		<textcolor>abffffff</textcolor>
+	</include>
+	
+	<include name="LowList_VideoCodecLabels">
+		<control type="group">
+			<posx>0r</posx>
+			<posy>149</posy>
+			<height>16</height>
+			<width>360</width>
+			<font>Font_ListDetailTV</font>	
+			<textcolor>abffffff</textcolor>
+
+			<control type="label">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[444] $LOCALIZE[31700]: [COLOR ffffffff]$LOCALIZE[31425][/COLOR]</label>
+				<visible>!Control.IsVisible(881)</visible>
+				<visible>Skin.HasSetting(highlist)</visible>
+			</control>
+			<control type="label" id="880">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[444] $LOCALIZE[31700]: [COLOR ffffffff]X264[/COLOR]</label>
+				<visible>substring(listitem.studio,V_MPEG4)</visible>
+				<visible>Skin.HasSetting(highlist)</visible>
+			</control>
+			<control type="label" id="880">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[444] $LOCALIZE[31700]: [COLOR ffffffff]DIVX[/COLOR]</label>
+				<visible>substring(listitem.studio,DX50)</visible>
+				<visible>Skin.HasSetting(highlist)</visible>
+			</control>
+			<control type="label" id="880">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[444] $LOCALIZE[31700]: [COLOR ffffffff]XVID[/COLOR]</label>
+				<visible>substring(listitem.studio,XVID)</visible>
+				<visible>Skin.HasSetting(highlist)</visible>
+			</control>
+			<control type="label" id="880">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[444] $LOCALIZE[31700]: [COLOR ffffffff]WMV-HD[/COLOR]</label>
+				<visible>substring(listitem.studio,WVC1)</visible>
+				<visible>Skin.HasSetting(highlist)</visible>
+			</control>
+			<control type="label" id="880">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[444] $LOCALIZE[31700]: [COLOR ffffffff]Quicktime[/COLOR]</label>
+				<visible>substring(listitem.studio,SVQ3)</visible>
+				<visible>Skin.HasSetting(highlist)</visible>
+			</control>
+		</control>
+	</include>
+	
+	<include name="LowList_AudioCodecLabels">
+		<control type="group">
+			<posx>0r</posx>
+			<posy>223</posy>
+			<height>16</height>
+			<width>360</width>
+			<font>Font_ListDetailTV</font>	
+			<textcolor>abffffff</textcolor>
+			<animation effect="slide" start="0,0" end="0,-145" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Skin.HasSetting(musicinfopaneloff)">Conditional</animation>
+
+			<control type="label">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[445] $LOCALIZE[31700]: [COLOR ffffffff]$LOCALIZE[31425][/COLOR]</label>
+				<visible>!Control.IsVisible(881)</visible>
+				<visible>Container.Content(songs)</visible>
+			</control>
+			<control type="label" id="881">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[445] $LOCALIZE[31700]: [COLOR ffffffff]MP3[/COLOR]</label>
+				<visible>substring(listitem.filename,.MP3)</visible>
+				<visible>Container.Content(songs)</visible>
+			</control>
+			<control type="label" id="881">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[445] $LOCALIZE[31700]: [COLOR ffffffff]AAC[/COLOR]</label>
+				<visible>substring(listitem.filename,.mpa)</visible>
+				<visible>Container.Content(songs)</visible>
+			</control>
+			<control type="label" id="881">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[445] $LOCALIZE[31700]: [COLOR ffffffff]iTunes[/COLOR]</label>
+				<visible>substring(listitem.filename,.mp4)</visible>
+				<visible>Container.Content(songs)</visible>
+			</control>
+			<control type="label" id="881">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[445] $LOCALIZE[31700]: [COLOR ffffffff]FLAC[/COLOR]</label>
+				<visible>substring(listitem.filename,.flac)</visible>
+				<visible>Container.Content(songs)</visible>
+			</control>
+			<control type="label" id="881">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[445] $LOCALIZE[31700]: [COLOR ffffffff]AAC[/COLOR]</label>
+				<visible>substring(listitem.filename,.aac)</visible>
+				<visible>Container.Content(songs)</visible>
+			</control>
+			<control type="label" id="881">
+				<include>LowList_CodecLabel</include>
+				<label>$LOCALIZE[445] $LOCALIZE[31700]: [COLOR ffffffff]OGG VORBIS[/COLOR]</label>
+				<visible>substring(listitem.filename,.ogg)</visible>
+				<visible>Container.Content(songs)</visible>
+			</control>
+		</control>
+	</include>
+	
+	<!----------------------------- LOW LIST DETAIL PANELS ---------------------------------->
+	
+	<include name="LowList_MovieDetailPanels">
+	
+		<!-- Movie plot detail panel-->
+			
+				<control type="group" id="7811">
+					<description>MOVIE PLOT detail panel</description>
+					<include>Rev2ListDetail_PanelVars</include>
+					<visible>Control.IsVisible(50) + Container.Content(movies) + !Control.HasFocus(7720) + !Skin.HasSetting(movieplotpaneloff) + !Control.IsVisible(7898)</visible>
+						
+									
+						<control type="textbox">
+							<description>PLOT OUTLINE NO FANART text box</description>
+							<posy>8</posy>
+							<posx>10</posx>
+							<height>134</height>
+							<width>350</width>
+							<font>Font_MultiplexPlotSmall</font>	
+							<textcolor>d0ffffff</textcolor>
+							<label>$INFO[ListItem.PlotOutline,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[31064] $LOCALIZE[161][/COLOR][/UPPERCASE][CR]]</label>
+							<visible>!IsEmpty(ListItem.PlotOutline) + [Skin.HasSetting(movieplotpaneloff) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+							<animation type="Conditional" condition="Skin.HasSetting(highlist)">
+								<effect type="fade" start="100" end="0" time="200" />
+							</animation>
+							<include>Rev2ListDetail_Autoscroll</include>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+						
+						<control type="textbox">
+							<description>PLOT NO FANART text box</description>
+							<posy>8</posy>
+							<posx>10</posx>
+							<height>134</height>
+							<width>350</width>
+							<font>Font_MultiplexPlotSmall</font>	
+							<textcolor>d0ffffff</textcolor>
+							<label fallback="-">$INFO[ListItem.Plot,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[31064] $LOCALIZE[161][/COLOR][/UPPERCASE][CR]]</label>
+							<visible>IsEmpty(ListItem.PlotOutline) + [Skin.HasSetting(movieplotpaneloff) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+							<animation type="Conditional" condition="Skin.HasSetting(highlist)">
+								<effect type="fade" start="100" end="0" time="200" />
+							</animation>
+							<include>Rev2ListDetail_Autoscroll</include>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+						
+						<control type="textbox">
+							<description>PLOT OUTLINE SHORT text box</description>
+							<posy>8</posy>
+							<posx>10</posx>
+							<height>134</height>
+							<width>350</width>
+							<font>Font_MultiplexPlotSmall</font>	
+							<textcolor>d0ffffff</textcolor>
+							<label fallback="31425">$INFO[ListItem.PlotOutline]</label>
+							<visible>!IsEmpty(ListItem.PlotOutline) + ![Skin.HasSetting(movieplotpaneloff) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+							<animation type="Conditional" condition="Skin.HasSetting(highlist)">
+								<effect type="fade" start="100" end="0" time="200" />
+							</animation>
+							<include>Rev2ListDetail_Autoscroll</include>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+						
+						<control type="textbox">
+							<description>PLOT SHORT text box</description>
+							<posy>8</posy>
+							<posx>10</posx>
+							<height>134</height>
+							<width>350</width>
+							<font>Font_MultiplexPlotSmall</font>	
+							<textcolor>d0ffffff</textcolor>
+							<label fallback="31425">$INFO[ListItem.Plot]</label>
+							<visible>IsEmpty(ListItem.PlotOutline) + ![Skin.HasSetting(movieplotpaneloff) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+							<animation type="Conditional" condition="Skin.HasSetting(highlist)">
+								<effect type="fade" start="100" end="0" time="200" />
+							</animation>
+							<include>Rev2ListDetail_Autoscroll</include>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+						
+						<control type="textbox">
+							<description>PLOT NO FANART TALL text box</description>
+							<posy>8</posy>
+							<posx>10</posx>
+							<height>245</height>
+							<width>350</width>
+							<font>Font_MultiplexPlotSmall</font>	
+							<textcolor>d0ffffff</textcolor>
+							<label fallback="31414">$INFO[ListItem.Plot]</label>
+							<visible>Skin.HasSetting(highlist) + [Skin.HasSetting(movieplotpaneloff) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+							<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+							<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+							<include>Rev2ListDetail_Autoscroll</include>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+						
+						<control type="textbox">
+							<description>PLOT TALL text box</description>
+							<posy>8</posy>
+							<posx>10</posx>
+							<height>245</height>
+							<width>350</width>
+							<font>Font_MultiplexPlotSmall</font>	
+							<textcolor>d0ffffff</textcolor>
+							<label fallback="31414">$INFO[ListItem.Plot]</label>
+							<visible>Skin.HasSetting(highlist) + ![Skin.HasSetting(movieplotpaneloff) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+							<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+							<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+							<include>Rev2ListDetail_Autoscroll</include>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>		
+									
+					<include>LowList_Detail_Separators</include>
+						
+				</control>
+			
+		
+		<!-- Movie info panel -->
+			
+				<control type="group" id="7812">
+					<description>MOVIE INFO detail panel</description>
+					<include>Rev2ListDetail_PanelVars</include>
+					<visible>Control.IsVisible(50) + Container.Content(movies) + !Control.HasFocus(7720) + Skin.HasSetting(movieinfopanelon) + !Control.IsVisible(7898)</visible>
+										
+						<control type="label">
+							<description>RUNTIME: info label</description>
+							<include>LowList_DetailInfoLabelPos1</include>
+							<label>$LOCALIZE[2050]: [COLOR ffffffff]$INFO[ListItem.duration][/COLOR]</label>
+							<visible>Window.IsActive(25)</visible>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+						
+						<control type="label">
+							<description>GENRE: info label</description>
+							<include>LowList_DetailInfoLabelPos2</include>
+							<label>$LOCALIZE[515]: [COLOR ffffffff]$INFO[ListItem.genre][/COLOR]</label>
+							<visible>Window.IsActive(25)</visible>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+						
+						<control type="label">
+							<description>DIRECTED BY: info label</description>
+							<include>LowList_DetailInfoLabelPos3</include>
+							<label>$LOCALIZE[31402]: [COLOR ffffffff]$INFO[ListItem.director][/COLOR]</label>
+							<visible>Window.IsActive(25)</visible>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+						
+						<control type="label">
+							<description>MPAA: info label</description>
+							<include>LowList_DetailInfoLabelPos4</include>
+							<label>$LOCALIZE[20074]: [COLOR ffffffff]$INFO[ListItem.mpaa][/COLOR]</label>
+							<visible>Window.IsActive(25)</visible>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+										
+					<control type="textbox">
+						<posy>50</posy>
+						<posx>10</posx>
+						<height>87</height>
+						<width>350</width>
+						<font>Font_MultiplexPlotSmall</font>	
+						<textcolor>d0ffffff</textcolor>
+						<label fallback="-">$INFO[ListItem.plotoutline]</label>
+						<visible>Skin.HasSetting(highlist)</visible>
+						<include>Rev2ListDetail_Autoscroll</include>
+					</control>
+					
+					
+					<include>LowList_Detail_Separators</include>
+					
+				</control>
+			
+			
+		<!-- Movie Gallery/Slideshow detail panel -->
+			
+				<control type="group" id="7813">
+					<description>SLIDESHOW detail panel</description>
+					<include>Rev2ListDetail_PanelVars</include>
+					<visible>Control.IsVisible(50) + !Control.HasFocus(7720) + Skin.HasSetting(moviegallerypanelon) + !Skin.HasSetting(moviethumborfanart) + Window.IsActive(25) + !Control.IsVisible(7898)</visible>
+
+					<control type="multiimage">
+						<posx>5</posx>
+						<posy>10</posy>
+						<width>360</width>
+						<height>196</height>
+						<fadetime>400</fadetime>
+						<aspectratio>scale</aspectratio>
+						<timeperimage>6000</timeperimage>
+						<imagepath fallback="common/black.png" background="true">$INFO[Container(50).ListItem.Path,,extrathumbs]</imagepath>
+						<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+						<animation effect="slide" start="0,0" end="0,-65" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
+						<include>Animation_BackgroundFade</include>
+					</control>
+					
+					<include>LowList_ShortMovieLabel</include>
+					<include>LowList_Detail_Separators</include>
+					
+				</control>
+			
+		<!-- Movie trailer detail panel -->
+		
+			<control type="group" id="7814">
+				<description>TRAILER detail panel</description>
+				<include>Rev2ListDetail_PanelVars</include>
+				<visible>Control.IsVisible(50) + Control.HasFocus(7720) + Window.IsActive(25)] + !Control.IsVisible(7898)</visible>
+			
+				<control type="label">
+					<posx>5</posx>
+					<posy>10</posy>
+					<width>360</width>
+					<height>196</height>
+					<fadetime>400</fadetime>
+					<textcolor>d0ffffff</textcolor>
+					<font>Font_OSDMusicTitle</font>	
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Press 'A' (click) to[CR]start trailer</label>
+					<visible>!Player.HasVideo + !IsEmpty(ListItem.Trailer)</visible>
+					<animation effect="slide" start="0,0" end="0,-65" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>10</posy>
+					<width>360</width>
+					<height>196</height>
+					<fadetime>400</fadetime>
+					<textcolor>abffffff</textcolor>
+					<font>Font_OSDMusicTitle</font>	
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>No trailer[CR]for this video</label>
+					<visible>!Player.HasVideo + IsEmpty(ListItem.Trailer)</visible>
+					<animation effect="slide" start="0,0" end="0,-65" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
+				</control>
+
+				<control type="videowindow" id="2">
+					<posx>5</posx>
+					<posy>10</posy>
+					<width>360</width>
+					<height>196</height>
+					<visible>Player.HasVideo</visible>
+					<animation effect="slide" start="0,0" end="0,-65" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
+				</control>
+				
+				<include>LowList_ShortMovieLabel</include>
+				<include>LowList_Detail_Separators</include>
+					
+			</control>
+	
+	</include>
+	
+	<!-- Music Detail Panels -->
+		
+		<include name="LowList_MusicDetailPanels">
+		
+			<!-- Music description/comment panel -->
+		
+				<control type="group" id="7801">
+					<description>MUSIC DESCRIPTION detail panel</description>
+					<include>Rev2ListDetail_PanelVars</include>
+					<visible>Control.IsVisible(50) + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + [Skin.HasSetting(musicdescpanelon) | [Skin.HasSetting(musicfanartpanelon) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]] + !Control.IsVisible(7898)</visible>
+					<animation effect="fade" start="100" end="0" time="0" condition="Skin.HasSetting(musicfanartpanelon) + ![IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]">Conditional</animation>
+					<animation effect="fade" start="100" end="100" time="0" condition="Skin.HasSetting(musicfanartpanelon) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))">Conditional</animation>
+					
+					<control type="textbox">
+						<description>DESCRIPTION NO FANART text box</description>
+						<posy>8</posy>
+						<posx>10</posx>
+						<height>134</height>
+						<width>350</width>
+						<font>Font_MultiplexPlotSmall</font>	
+						<textcolor>d0ffffff</textcolor>
+						<label fallback="-">$INFO[ListItem.Property(description),[UPPERCASE][COLOR 66ffffff]$LOCALIZE[31064] $LOCALIZE[161][/COLOR][/UPPERCASE][CR]]</label>
+						<visible>!IsEmpty(ListItem.Property(description)) + [Skin.HasSetting(musicfanartpanelon) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+						<animation type="Conditional" condition="Skin.HasSetting(highlist)">
+							<effect type="fade" start="100" end="0" time="200" />
+						</animation>
+						<include>Rev2ListDetail_Autoscroll</include>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+					
+					<control type="textbox">
+						<description>COMMENT NO FANART text box</description>
+						<posy>8</posy>
+						<posx>10</posx>
+						<height>134</height>
+						<width>350</width>
+						<font>Font_MultiplexPlotSmall</font>	
+						<textcolor>d0ffffff</textcolor>
+						<label fallback="-">$INFO[ListItem.comment,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[31064] $LOCALIZE[161][/COLOR][/UPPERCASE][CR]]</label>
+						<visible>IsEmpty(ListItem.Property(description)) + [Skin.HasSetting(musicfanartpanelon) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+						<animation type="Conditional" condition="Skin.HasSetting(highlist)">
+							<effect type="fade" start="100" end="0" time="200" />
+						</animation>
+						<include>Rev2ListDetail_Autoscroll</include>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+					
+					<control type="textbox">
+						<description>DESCRIPTION SHORT text box</description>
+						<posy>8</posy>
+						<posx>10</posx>
+						<height>134</height>
+						<width>350</width>
+						<font>Font_MultiplexPlotSmall</font>	
+						<textcolor>d0ffffff</textcolor>
+						<label fallback="31425">$INFO[ListItem.Property(description)]</label>
+						<visible>!IsEmpty(ListItem.Property(description)) + ![Skin.HasSetting(musicfanartpanelon) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+						<animation type="Conditional" condition="Skin.HasSetting(highlist)">
+							<effect type="fade" start="100" end="0" time="200" />
+						</animation>
+						<include>Rev2ListDetail_Autoscroll</include>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+					
+					<control type="textbox">
+						<description>COMMENT SHORT text box</description>
+						<posy>8</posy>
+						<posx>10</posx>
+						<height>134</height>
+						<width>350</width>
+						<font>Font_MultiplexPlotSmall</font>	
+						<textcolor>d0ffffff</textcolor>
+						<label fallback="31425">$INFO[ListItem.comment]</label>
+						<visible>IsEmpty(ListItem.Property(description)) + ![Skin.HasSetting(musicfanartpanelon) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+						<animation type="Conditional" condition="Skin.HasSetting(highlist)">
+							<effect type="fade" start="100" end="0" time="200" />
+						</animation>
+						<include>Rev2ListDetail_Autoscroll</include>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+					
+					<control type="textbox">
+						<description>DESCRIPTION NO FANART TALL text box</description>
+						<posy>8</posy>
+						<posx>10</posx>
+						<height>245</height>
+						<width>350</width>
+						<font>Font_MultiplexPlotSmall</font>	
+						<textcolor>d0ffffff</textcolor>
+						<label fallback="-">$INFO[ListItem.Property(description),[UPPERCASE][COLOR 66ffffff]$LOCALIZE[31064] $LOCALIZE[161][/COLOR][/UPPERCASE][CR]]</label>
+						<visible>Skin.HasSetting(highlist) + !IsEmpty(ListItem.Property(description)) + [Skin.HasSetting(musicfanartpanelon) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+						<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+						<include>Rev2ListDetail_Autoscroll</include>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+					<control type="textbox">
+						<description>COMMENT NO FANART TALL text box</description>
+						<posy>8</posy>
+						<posx>10</posx>
+						<height>245</height>
+						<width>350</width>
+						<font>Font_MultiplexPlotSmall</font>	
+						<textcolor>d0ffffff</textcolor>
+						<label fallback="-">$INFO[ListItem.Comment,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[31064] $LOCALIZE[161][/COLOR][/UPPERCASE][CR]]</label>
+						<visible>Skin.HasSetting(highlist) + IsEmpty(ListItem.Property(description)) + [Skin.HasSetting(musicfanartpanelon) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+						<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+						<include>Rev2ListDetail_Autoscroll</include>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+					
+					<control type="textbox">
+						<description>DESCRIPTION TALL text box</description>
+						<posy>8</posy>
+						<posx>10</posx>
+						<height>245</height>
+						<width>350</width>
+						<font>Font_MultiplexPlotSmall</font>	
+						<textcolor>d0ffffff</textcolor>
+						<label>$INFO[ListItem.Property(description),[UPPERCASE][COLOR 66ffffff]$LOCALIZE[21887]/$LOCALIZE[21821]:[/COLOR][/UPPERCASE][CR]]</label>
+						<visible>Skin.HasSetting(highlist) + !IsEmpty(ListItem.Property(description)) + ![Skin.HasSetting(musicfanartpanelon) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+						<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+						<include>Rev2ListDetail_Autoscroll</include>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+					<control type="textbox">
+						<description>COMMENT TALL text box</description>
+						<posy>8</posy>
+						<posx>10</posx>
+						<height>245</height>
+						<width>350</width>
+						<font>Font_MultiplexPlotSmall</font>	
+						<textcolor>d0ffffff</textcolor>
+						<label fallback="31425">$INFO[ListItem.Comment,[UPPERCASE][COLOR 66ffffff]$LOCALIZE[21806]:[/COLOR][/UPPERCASE][CR]]</label>
+						<visible>Skin.HasSetting(highlist) + IsEmpty(ListItem.Property(description)) + ![Skin.HasSetting(musicfanartpanelon) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+						<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+						<include>Rev2ListDetail_Autoscroll</include>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+									
+					<include>LowList_ShortMusicLabel</include>				
+					<include>Rev2ListDetail_Stars</include>
+					<include>LowList_Detail_Separators</include>
+					
+				</control>
+		
+		</include>
+	
+	
+</includes>

@@ -1,0 +1,1796 @@
+<includes>
+
+	<include name="Rev2ListFade">
+		<control type="image" id="102">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>0</width>
+			<height>0</height>
+			<texture>-</texture>
+			<visible>Control.HasFocus(50) + [!Container(50).OnNext + !Container(50).OnPrevious]</visible>
+			<animation effect="fade" start="0" end="100" time="150" >Visible</animation>
+		</control>
+	</include>
+
+	<include name="Rev2ListLabel_Width">
+		<width>354</width>	
+	</include>
+	
+	<include name="Rev2ListLabel_WidthMusic">
+		<width>354</width>	
+	</include>	
+
+	<include name="Rev2ListLabel_Main">
+		<posx>45</posx>
+		<posy>0</posy>
+		<include condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">Rev2ListLabel_WidthMusic</include>
+		<include condition="![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">Rev2ListLabel_Width</include>		
+		<height>41</height>
+		<font>Font_ListDetailTV</font>
+		<aligny>center</aligny>
+		<animation effect="slide" start="60,0" end="60,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(25)]">Conditional</animation>			
+		<animation effect="slide" start="0,10" end="0,10" time="0" condition="[[Window.IsActive(501) | Window.IsActive(502)] + IsEmpty(ListItem.Artist)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Container.Content(movies)] | [Window.IsActive(2) + IsEmpty(ListItem.PictureDateTime)] | [Container.Content(seasons) + !IsEmpty(ListItem.Episode)] | [Container.Content(episodes) + [[IsEmpty(ListItem.Writer) + !IsEmpty(ListItem.Plot)] | [!IsEmpty(ListItem.Writer) + IsEmpty(ListItem.Plot)]]]">Conditional</animation>				
+		<animation effect="slide" start="0,20" end="0,20" time="0" condition="[Window.IsActive(25) + Skin.HasSetting(videotv) + ![Container.Content(seasons) | Container.Content(episodes) | Container.Content(tvshows)]] | [Container.Content(seasons) + IsEmpty(ListItem.Episode)] | [Container.Content(episodes) + IsEmpty(ListItem.Writer) + IsEmpty(ListItem.Plot)]">Conditional</animation>			
+	</include>
+	
+	<include name="Rev2ListLabel_MainSmall">
+		<posx>45</posx>
+		<posy>0</posy>
+		<include condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">Rev2ListLabel_WidthMusic</include>
+		<include condition="![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">Rev2ListLabel_Width</include>		
+		<height>39</height>
+		<font>Font_ListSmall</font>
+		<aligny>center</aligny>
+		<animation effect="slide" start="60,0" end="60,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(25)]">Conditional</animation>			
+	</include>	
+	
+	<include name="Rev2ListLabel_MainMusic">
+		<posx>105</posx>
+		<posy>0</posy>
+		<include>Rev2ListLabel_WidthMusic</include>
+		<height>41</height>
+		<font>Font_ListDetailTV</font>
+		<aligny>center</aligny>
+		<animation effect="slide" start="0,10" end="0,10" time="0" condition="IsEmpty(ListItem.Artist) | Container.Content(artists)">Conditional</animation>		
+	</include>	
+
+	<include name="Rev2ListLabel_Sub">
+		<posx>45</posx>
+		<posy>22</posy>
+		<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)">Rev2ListLabel_WidthMusic</include>
+		<include condition="![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">Rev2ListLabel_Width</include>
+		<height>41</height>
+		<font>Font_ListDetailTV</font>
+		<align>left</align>
+		<aligny>center</aligny>
+		<animation effect="slide" start="45,0" end="45,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">Conditional</animation>			
+	</include>
+	
+	<include name="Rev2ListLabel_SubMusic">
+		<posx>105</posx>
+		<posy>20</posy>
+		<include>Rev2ListLabel_WidthMusic</include>
+		<height>41</height>
+		<font>Font_ListDetailTV</font>
+		<align>left</align>
+		<aligny>center</aligny>
+	</include>
+
+	<include name="Rev2ListLabel_SubTV">
+		<posx>105</posx>
+		<posy>30</posy>
+		<width>400</width>
+		<height>41</height>
+		<font>Font_ListDetailTV</font>
+		<align>left</align>
+		<aligny>center</aligny>
+	</include>	
+	
+	<include name="Rev2ListLabel_Main_Playlist">
+		<posx>70</posx>
+		<posy>0</posy>
+		<include>Rev2ListLabel_WidthMusic</include>
+		<height>41</height>
+		<font>Font_ListDetailTV</font>
+		<aligny>center</aligny>
+	</include>	
+	
+	<include name="Rev2ListLabel_Detail">
+		<posx>492</posx>
+		<posy>0</posy>
+		<width>44</width>
+		<height>41</height>
+		<font>Font_ListDetail</font>
+		<align>center</align>
+		<aligny>center</aligny>	
+	</include>
+	
+	<include name="Rev2ListLabel_DetailFull">
+		<posx>536</posx>
+		<posy>0</posy>
+		<width>85</width>
+		<height>41</height>
+		<font>Font_ListDetail</font>
+		<align>center</align>
+		<aligny>center</aligny>	
+	</include>
+
+	<include name="Rev2ListLabel_DetailSmall">
+		<posx>564</posx>
+		<posy>0</posy>
+		<width>75</width>
+		<height>41</height>
+		<font>Font_FileBrowserDetail</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<animation effect="slide" start="-25,0" end="-25,0" time="0" condition="Window.IsActive(2)">Conditional</animation>
+	</include>
+	
+	<include name="Rev2ListLabel_DetailTV">
+		<posx>536</posx>
+		<posy>10</posy>
+		<width>75</width>
+		<height>41</height>
+		<font>Font_FileBrowserDetail</font>
+		<align>center</align>
+		<aligny>center</aligny>	
+	</include>	
+	
+	<include name="Rev2ListLabel_Track">
+		<posx>68</posx>
+		<posy>0</posy>
+		<width>45</width>
+		<height>61</height>
+		<font>Font_ListTrack</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<animation effect="slide" start="0,-11" end="0,-11" time="0" condition="!Skin.HasSetting(musiclistfull)">Conditional</animation>
+		<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(25) + Skin.HasSetting(videotv)">Conditional</animation>		
+	</include>
+	
+	<include name="Rev2ListLabel_TrackSmall">
+		<posx>68</posx>
+		<posy>0</posy>
+		<width>45</width>
+		<height>61</height>
+		<font>Font_ListDetail</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<animation effect="slide" start="0,-11" end="0,-11" time="0" condition="!Skin.HasSetting(musiclistfull)">Conditional</animation>
+		<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(25) + Skin.HasSetting(videotv)">Conditional</animation>		
+	</include>
+	
+	<include name="Rev2ListLabel_ArtistSubLabel">
+		<control type="label" id="623">
+			<description>ARTIST FORMED music sub label</description>
+			<include>Rev2ListLabel_SubMusic</include>
+			<include>subcolornofocus</include>	
+			<label>$LOCALIZE[21894] in $INFO[ListItem.Property(Formed)]</label>
+			<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(artists) + !IsEmpty(ListItem.Property(Formed))</visible>
+			<animation effect="slide" start="0,0" end="40,0" time="0" condition="Container.Content(songs)">Conditional</animation>
+		</control>
+		<control type="label" id="623">
+			<description>ARTIST BORN music sub label</description>
+			<include>Rev2ListLabel_SubMusic</include>
+			<include>subcolornofocus</include>	
+			<label>$LOCALIZE[21893] $INFO[ListItem.Property(Born)]</label>
+			<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(artists) + IsEmpty(ListItem.Property(Formed))+ !IsEmpty(ListItem.Property(Born))</visible>
+			<animation effect="slide" start="0,0" end="40,0" time="0" condition="Container.Content(songs)">Conditional</animation>
+		</control>
+	</include>
+	
+	
+	<include name="Rev2ListLabel_DetailAlbumCover">
+		<control type="group">
+			<posx>507</posx>
+			<posy>3</posy>
+			<visible>[Container.Content(albums) + !Skin.HasSetting(hidelistalbumicons)] | [Container.Content(artists) + !Skin.HasSetting(hidelistartisticons)] | [Container.Content(songs) + !Skin.HasSetting(hidelistsongicons)]</visible>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>58</width>
+				<height>58</height>
+				<include>MusicShowcaseThumbMain</include>
+				<info>ListItem.Icon</info>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>58</width>
+				<height>58</height>
+				<bordertexture border="-2">thumbs/cd_shadow_light.png</bordertexture>
+				<texture>thumbs/cd_glass_noedge.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>58</width>
+				<height>58</height>
+				<include>MusicShowcaseOverlay</include>
+			</control>
+		</control>
+	</include>
+
+	<include name="Rev2ListIcon_NowPlayingCover">
+		<texture fallback="defaultAlbumCover.png" diffuse="thumbs/cdcover_mask.png">$INFO[MusicPlayer.Cover]</texture>
+	</include>
+	
+	<include name="Rev2ListIcon_NowPlayingReflection">
+		<texture flipy="true" fallback="defaultAlbumCover.png" diffuse="thumbs/cdcover_mask_reflect.png">$INFO[MusicPlayer.Cover]</texture>
+	</include>
+	
+	<include name="Rev2ListIcon_ListItemSquare">
+		<texture fallback="defaultAlbumCover.png" diffuse="thumbs/cdcover_mask.png">$INFO[ListItem.Icon]</texture>
+	</include>
+	
+	<include name="Rev2ListIcon_ListItemSquareReflection">
+		<texture flipy="true" fallback="defaultAlbumCover.png" diffuse="thumbs/cdcover_mask_reflect.png">$INFO[ListItem.Icon]</texture>
+	</include>
+	
+	<include name="Rev2ListIcon_ListItemNoMask">
+		<texture>$INFO[ListItem.Icon]</texture>
+	</include>
+	
+	<include name="Rev2ListIcon_ListItemNoMaskReflection">
+		<texture flipy="true">$INFO[ListItem.Icon]</texture>
+	</include>
+	
+	<include name="Rev2ListIcon_Folder.jpg">
+		<texture>$INFO[listitem.path,,folder.jpg]</texture>
+	</include>
+	
+	<include name="Rev2ListIcon_Folder.jpgReflection">
+		<texture flipy="true">$INFO[listitem.path,,folder.jpg]</texture>
+	</include>
+	
+	<include name="Rev2ListIcon_PosterVars">
+		<posx>22</posx>
+		<posy>-87</posy>
+		<width>266</width>
+		<height>400</height>
+		<visible>Container.Content(movies)</visible>
+		<include>Animation_CommonFade</include>
+	</include>
+
+	
+	
+	<include name="Rev2ListIcon_LandscapeVars">
+		<posx>20</posx>
+		<posy>113</posy>
+		<width>275</width>
+		<height>154</height>
+		<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+		<include>Animation_HighListHalfSlide</include>
+	</include>
+	
+	<include name="Rev2ListIcon_FreeformVars">
+		<posx>30</posx>
+		<posy>-50</posy>
+		<posy>13</posy>
+		<width>255</width>
+		<height>346</height>
+		<visible>Container.Content(artists)</visible>
+		<include>Animation_HighListHalfSlide</include>
+	</include>
+	
+	<include name="LowList_Detail_LabelVars"><!-- DEPRECATE -->
+		<posx>50</posx>
+		<height>16</height>
+		<width>310</width>
+		<font>Font_ListDetailTV</font>	
+		<textcolor>abffffff</textcolor>
+	</include>
+	
+	<include name="LowList_DetailInfoLabelVars">
+		<posx>10</posx>
+		<height>16</height>
+		<width>350</width>
+		<font>Font_ContextMenuButton</font>	
+		<textcolor>abffffff</textcolor>
+	</include>
+	
+	<include name="LowList_DetailInfoValueVars">
+		<posx>10</posx>
+		<height>16</height>
+		<width>350</width>
+		<font>Font_MultiplexInfoLabel</font>	
+		<textcolor>ffffffff</textcolor>
+	</include>
+	
+	<include name="ListDetail_NoFanartDescription">
+		<label fallback="-">$INFO[ListItem.Property(description),[UPPERCASE][COLOR 44ffffff]$LOCALIZE[31064] $LOCALIZE[161][/COLOR][/UPPERCASE][CR]]</label>
+	</include>
+	
+	<include name="ListDetail_NoFanartComment">
+		<label fallback="-">$INFO[ListItem.comment,[UPPERCASE][COLOR 44ffffff]$LOCALIZE[31064] $LOCALIZE[161][/COLOR][/UPPERCASE][CR]]</label>
+	</include>
+	
+	<include name="Rev2ListDetail_PanelVars">
+		<posx>890</posx>
+		<posy>503</posy>
+		<width>360</width>
+		<height>217</height>
+		<animation effect="fade" start="0" end="100" time="350">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+		<!--<animation effect="slide" start="0,0" end="400,0" time="150" tween="quadratic" easing="out">Hidden</animation>-->
+		<animation>Animation_CommonFade</animation>
+	</include>
+	
+	<include name="Rev2ListDetail_MenuButtonVars">
+		<font>Font_SettingsMainLabelBig</font>
+		<textcolor>aa2e2e2e</textcolor>
+		<focusedcolor>aa2e2e2e</focusedcolor>
+		<disabledcolor>552e2e2e</disabledcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+		<posx>75</posx>
+		<posy>47</posy>
+		<height>41</height>
+		<width>345</width>
+		<ondown>SetFocus(50)</ondown>
+	</include>
+	
+	<include name="Rev2ListDetail_Autoscroll">
+		<autoscroll delay="10000" time="2000" repeat="8000">Skin.HasSetting(allowscroll)</autoscroll>
+	</include>
+	
+	<include name="Rev2ListDetail_Stars">
+		<control type="image">
+			<posx>5</posx>
+			<posy>166</posy>
+			<width>141</width>
+			<height>30</height>
+			<info>ListItem.StarRating</info>
+			<colordiffuse>dcbdbdbd</colordiffuse>
+			<visible>[Container.Content(songs) | Container.Content(albums)]</visible>
+		</control>
+	</include>
+	
+	<include name="Rev2List_Separator">
+		<control type="image">
+			<posx>69</posx>
+			<posy>39</posy>
+			<height>1</height>
+			<width>536</width>
+			<texture>lowlist/lowlistpanel_line.png</texture>
+			<animation effect="slide" start="0,0" end="0,26" time="0" condition="[Window.IsActive(25) + Skin.HasSetting(movieslistfull)] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)]">Conditional</animation>
+			<animation effect="slide" start="30,0" end="30,0" time="0" condition="Container.Content(tvshows) | Container.Content(series)">Conditional</animation>
+			<!--<animation type="Conditional" condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(25)">
+				<effect type="slide" start="0,0" end="0,39" time="0" />
+				<effect type="zoom" start="0,0" end="92,0" center="585,0" time="50" />
+			</animation>-->
+		</control>
+	</include>
+	
+	<include name="Rev2List_ItemCountVars">
+		<posx>105</posx>
+		<posy>670</posy>
+		<width>180</width>
+		<height>41</height>
+		<font>Font_ListObjects</font>
+		<align>left</align>
+		<aligny>center</aligny>
+		<include>listobjects</include>
+		<visible>Control.IsVisible(50)</visible>
+		<animation effect="slide" start="60,0" end="60,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | [Window.IsActive(25) + Skin.HasSetting(videotv)]]">Conditional</animation>		
+	</include>
+	
+	<include name="Rev2List_NowPlaying">
+		<posx>860</posx>
+		<width>336</width>
+		<height>18</height>
+		<font>Font_ListPlaying</font>
+	</include>
+	
+	<include name="LowList_LoFocusPosition">
+		<focusposition>2</focusposition>
+	</include>
+	
+	<include name="LowList_HiFocusPosition">
+		<focusposition>3</focusposition>
+	</include>
+	
+<!-- Beginning of main Viewtype controls -->
+	
+	<include name="Viewtype_ListRev2">
+		
+		<control type="group">
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>503</posy>
+				<width>1280</width>
+				<height>404</height>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<texture>lowlist/lowlist_full_base.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Control.IsVisible(50)</visible>
+				<include>Rev2Animation_HighListSlide</include>
+				<animation effect="fade" start="100" end="90" time="50" condition="!Skin.HasSetting(listpanelthin)">Conditional</animation>
+				<animation effect="fade" start="100" end="30" time="50" condition="Skin.HasSetting(listpanelthin)">Conditional</animation>
+			</control>
+							
+			<control type="image">
+				<description>Left list background texture (track number)</description>
+				<posx>310</posx>
+				<posy>503</posy>
+				<width>35</width>
+				<height>327</height>
+				<texture>list/listpanel_detailwide.png</texture>
+				<visible>[Container.Content(songs) | Container.Content(episodes)]</visible>
+				<include>Rev2Animation_HighListSlide</include>
+				<include>Rev2Animation_MusicContentSlide</include>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+			<control type="image">
+				<description>Right list background texture (detailslim)</description>
+				<posx>802</posx>
+				<posy>503</posy>
+				<width>44</width>
+				<height>327</height>
+				<texture>list/listpanel_detailwide.png</texture>
+				<visible>[Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(movieslistfull)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(movieslistfull)] | [[Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(years)]] + !Skin.HasSetting(musiclistfull)]</visible>
+				<visible>Control.IsVisible(50)</visible>
+				<include>Rev2Animation_HighListSlide</include>
+			</control>			
+			<control type="image">
+				<description>Right list background texture (detailfull)</description>
+				<posx>749</posx>
+				<posy>503</posy>
+				<width>97</width>
+				<height>327</height>
+				<texture>list/listpanel_detailwide.png</texture>
+				<visible>Window.IsActive(2) | [Window.IsActive(25) + Skin.HasSetting(videotv)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + Skin.HasSetting(movieslistfull)] | [[Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + [!Container.Content(artists) + Skin.HasSetting(hidelistartisticons)] + !Container.Content(years) + !Container.Content(genres)]] + Skin.HasSetting(musiclistfull)]</visible>			
+				<visible>Control.IsVisible(50)</visible>
+				<include>Rev2Animation_HighListSlide</include>
+			</control>
+			
+		
+						
+		<!-- Beginning of List control -->
+		
+			<control type="fixedlist" id="50"> 
+				<viewtype label="31752">list</viewtype>
+				<posx>260</posx>
+				<posy>503</posy>
+				<width>651</width>
+				<height>327</height>
+				<pagecontrol>61</pagecontrol>
+				<focusposition>1</focusposition>
+				<!--<include condition="!Skin.HasSetting(highlist)">LowList_LoFocusPosition</include>-->
+				<!--<include condition="Skin.HasSetting(highlist)">LowList_HiFocusPosition</include>-->
+				<onleft>61</onleft>
+				<onright>7003</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<include>Rev2Animation_HighListSlide</include>
+				<visible>![Window.IsActive(25) + Skin.HasSetting(videotv)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + Skin.HasSetting(unlockTVviews)]</visible>
+			
+			<!-- Slim item layout -->
+				
+				<itemlayout condition="[Window.IsActive(2) + !Skin.HasSetting(pictureslistfull)] | Window.IsActive(24) | [Window.IsActive(25) + !Skin.HasSetting(movieslistfull) + !Skin.HasSetting(videotv)] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Skin.HasSetting(musiclistfull)]" height="40">
+					<include>Rev2List_Separator</include>			
+					<control type="label">
+						<include>Rev2ListLabel_TrackSmall</include>
+						<include>lowlistcolornofocus</include>
+						<label>$INFO[ListItem.TrackNumber]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Container.Content(songs)]</visible>
+						<include>Rev2Animation_MusicContentSlide</include>
+					</control>					
+					<control type="label">
+						<description>TITLE label</description>
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>lowlistcolornofocus</include>
+						<label>$INFO[ListItem.Title]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Container.Content(songs)] + !IsEmpty(ListItem.Artist)</visible>
+						<include>Rev2Animation_MusicContentSlide</include>
+					</control>					
+					<control type="label">
+						<description>LABEL label</description>
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>lowlistcolornofocus</include>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<description>ALBUM TITLE label</description>
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>lowlistcolornofocus</include>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Container.Content(albums) + !IsEmpty(ListItem.Label2)</visible>
+					</control>					
+					<control type="label">
+						<include>Rev2ListLabel_DetailSmall</include>
+						<include>lowlistdetailcolornofocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+						<visible>Container.Content(movies)</visible>
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailSmall</include>
+						<include>detailcolornofocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+						<visible>![Container.Content(movies) | Container.Content(albums)]</visible>
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailSmall</include>
+						<include>detailcolornofocus</include>						
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>				
+						<visible>[!Control.IsVisible(76) + Container.Content(movies)] | Container.Content(albums)</visible>
+					</control>					
+				</itemlayout>
+			
+			<!-- Slim focused layout -->
+			
+				<focusedlayout condition="[Window.IsActive(2) + !Skin.HasSetting(pictureslistfull)] | Window.IsActive(24) | [Window.IsActive(25) + !Skin.HasSetting(movieslistfull) + !Skin.HasSetting(videotv)] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Skin.HasSetting(musiclistfull)]" height="40">
+					<include>Rev2List_Separator</include>	
+					<control type="image">
+						<posx>89</posx>
+						<posy>0</posy>
+						<width>498</width>
+						<height>39</height>
+						<texture>dialogs/setcontent_button_focus.png</texture>
+						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+					</control>
+					<control type="label">
+						<description>TRACK TITLE label</description>
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>lowlistcolorfocus</include>						
+						<label>$INFO[ListItem.Title]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Container.Content(songs)] + !IsEmpty(ListItem.Artist)</visible>
+						<include>Rev2Animation_MusicContentSlide</include>
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_TrackSmall</include>
+						<include>lowlistcolorfocus</include>						
+						<label>$INFO[ListItem.TrackNumber]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Container.Content(songs)]</visible>
+						<include>Rev2Animation_MusicContentSlide</include>
+					</control>						
+					<control type="label">
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>lowlistcolorfocus</include>
+						<info>ListItem.Label</info>						
+						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<description>ALBUM TITLE label</description>
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>lowlistcolorfocus</include>
+						<label>$INFO[ListItem.Label]</label>						
+						<visible>Container.Content(albums) + !IsEmpty(ListItem.Label2)</visible>
+					</control>					
+					<control type="label">
+						<include>Rev2ListLabel_DetailSmall</include>
+						<include>lowlistcolorfocus</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>				
+						<visible>[!Control.IsVisible(76) + Container.Content(movies)] | Container.Content(albums)</visible>
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailSmall</include>
+						<include>lowlistcolorfocus</include>						
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>				
+						<visible>!Control.IsVisible(76) + ![Container.Content(movies) | Container.Content(albums)]</visible>
+					</control>
+					
+				</focusedlayout>
+			
+			<!-- Full item layout -->
+			
+				<itemlayout condition="[Window.IsActive(2) + Skin.HasSetting(pictureslistfull)] | [Window.IsActive(25) + Skin.HasSetting(movieslistfull) + !Skin.HasSetting(videotv)] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)]" height="65">
+					<include>Rev2List_Separator</include>				
+					<control type="label">
+						<include>Rev2ListLabel_Track</include>
+						<include>lowlistcolornofocus</include>
+						<label>$INFO[ListItem.TrackNumber]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + Container.Content(songs)]]</visible>
+						<include>Rev2Animation_MusicContentSlide</include>
+					</control>						
+					<control type="label">
+						<include>Rev2ListLabel_MainMusic</include>
+						<include>lowlistcolornofocus</include>
+						<info>ListItem.Title</info>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+						<include>Rev2Animation_MusicContentSlide</include>
+					</control>	
+					<control type="label">
+						<include>Rev2ListLabel_Main</include>
+						<include>lowlistcolornofocus</include>
+						<info>ListItem.Label</info>
+						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="label" id="623">
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolornofocus</include>	
+						<label>DIRECTOR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
+						<visible>!IsEmpty(ListItem.Director) + Container.Content(movies)</visible>					
+					</control>
+					<control type="label" id="623">
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolornofocus</include>	
+						<label>$INFO[ListItem.PictureDateTime]</label>
+						<visible>!IsEmpty(ListItem.PictureDateTime) + Window.IsActive(2)</visible>					
+					</control>					
+					<control type="label" id="623">
+						<description>!ARTIST music sub label</description>
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolornofocus</include>	
+						<label>$INFO[ListItem.Artist]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Container.Content(artists)</visible>
+						<animation effect="slide" start="0,0" end="40,0" time="0" condition="Container.Content(songs)">Conditional</animation>
+					</control>
+					<control type="label" id="623">
+						<description>ARTIST FORMED music sub label</description>
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolornofocus</include>	
+						<label>$LOCALIZE[21894] in $INFO[ListItem.Property(Formed)]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(artists) + !IsEmpty(ListItem.Property(Formed))</visible>
+						<animation effect="slide" start="0,0" end="40,0" time="0" condition="Container.Content(songs)">Conditional</animation>
+					</control>
+					<control type="label" id="623">
+						<description>ARTIST BORN music sub label</description>
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolornofocus</include>	
+						<label>$LOCALIZE[21893] $INFO[ListItem.Property(Born)]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(artists) + IsEmpty(ListItem.Property(Formed)) + !IsEmpty(ListItem.Property(Born))</visible>
+						<animation effect="slide" start="0,0" end="40,0" time="0" condition="Container.Content(songs)">Conditional</animation>
+					</control>
+					<control type="label" id="623">
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolornofocus</include>	
+						<label>$LOCALIZE[21900] $LOCALIZE[161]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(artists) + IsEmpty(ListItem.Property(Formed)) + IsEmpty(ListItem.Property(Born))</visible>
+						<animation effect="slide" start="0,0" end="40,0" time="0" condition="Container.Content(songs)">Conditional</animation>
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>lowlistcolornofocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+						<visible>Container.Content(movies) | Container.Content(albums)</visible>
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>lowlistcolornofocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.Premiered][/UPPERCASE]</label>
+						<visible>Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>lowlistcolornofocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+						<visible>Window.IsActive(2)</visible>
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>lowlistcolornofocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
+						<visible>Window.IsActive(2)</visible>
+						<animation type="Conditional" condition="true">
+							<effect type="slide" start="0,22" end="0,22" time="0" />
+							<effect type="fade" start="70" end="70" time="0" />
+						</animation>
+					</control>						
+					<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>lowlistcolornofocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+					</control>
+					<control type="image">
+						<description>IMDB rating</description>
+						<posx>503</posx>
+						<posy>37</posy>
+						<width>65</width>
+						<height>13</height>
+						<info>ListItem.StarRating</info>
+						<colordiffuse>dcbdbdbd</colordiffuse>
+						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres))]</visible>
+					</control>
+					<include>Rev2ListLabel_DetailAlbumCover</include>
+				</itemlayout>
+				
+			<!-- Full focused layout -->
+			
+				<focusedlayout condition="[Window.IsActive(2) + Skin.HasSetting(pictureslistfull)] | [Window.IsActive(25) + Skin.HasSetting(movieslistfull) + !Skin.HasSetting(videotv)] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)]" height="65">
+					<include>Rev2List_Separator</include>
+					<control type="image">
+						<posx>89</posx>
+						<posy>1</posy>
+						<width>498</width>
+						<height>66</height>
+						<texture>dialogs/setcontent_button_focus.png</texture>
+						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_Track</include>
+						<textcolor>ddFFFFFF</textcolor>
+						<label>$INFO[ListItem.TrackNumber]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + Container.Content(songs)]]</visible>		
+						<include>Rev2Animation_MusicContentSlide</include>
+					</control>						
+					<control type="label">
+						<include>Rev2ListLabel_MainMusic</include>
+						<include>lowlistcolorfocus</include>
+						<info>ListItem.Title</info>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+						<include>Rev2Animation_MusicContentSlide</include>
+					</control>	
+					<control type="label">
+						<include>Rev2ListLabel_Main</include>
+						<include>lowlistcolorfocus</include>
+						<info>ListItem.Label</info>
+						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | IsEmpty(ListItem.Title)</visible>						
+					</control>		
+					<control type="label" id="623">
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolorfocus</include>
+						<label>DIRECTOR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
+						<visible>!IsEmpty(ListItem.Director) + Container.Content(movies)</visible>						
+					</control>
+					<control type="label" id="623">
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolorfocus</include>
+						<label>$INFO[ListItem.PictureDateTime]</label>
+						<visible>!IsEmpty(ListItem.PictureDateTime) + Window.IsActive(2)</visible>						
+					</control>					
+					<control type="label" id="623">
+						<description>!ARTIST music sub label</description>
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolorfocus</include>	
+						<label>$INFO[ListItem.Artist]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + !Container.Content(artists)</visible>
+						<animation effect="slide" start="0,0" end="40,0" time="0" condition="Container.Content(songs)">Conditional</animation>
+					</control>
+					<control type="label" id="623">
+						<description>ARTIST FORMED music sub label</description>
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolorfocus</include>	
+						<label>$LOCALIZE[21894] in $INFO[ListItem.Property(Formed)]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(artists) + !IsEmpty(ListItem.Property(Formed))</visible>
+						<animation effect="slide" start="0,0" end="40,0" time="0" condition="Container.Content(songs)">Conditional</animation>
+					</control>
+					<control type="label" id="623">
+						<description>ARTIST BORN music sub label</description>
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolorfocus</include>	
+						<label>$LOCALIZE[21893] $INFO[ListItem.Property(Born)]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(artists) + IsEmpty(ListItem.Property(Formed))+ !IsEmpty(ListItem.Property(Born))</visible>
+						<animation effect="slide" start="0,0" end="40,0" time="0" condition="Container.Content(songs)">Conditional</animation>
+					</control>
+					<control type="label" id="623">
+						<include>Rev2ListLabel_SubMusic</include>
+						<include>lowlistcolorfocus</include>	
+						<label>$LOCALIZE[21900] $LOCALIZE[161]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Container.Content(artists) + IsEmpty(ListItem.Property(Formed)) + IsEmpty(ListItem.Property(Born))</visible>
+						<animation effect="slide" start="0,0" end="40,0" time="0" condition="Container.Content(songs)">Conditional</animation>
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>lowlistcolorfocus</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+						<visible>[!Control.IsVisible(76) + Container.Content(movies)] | Container.Content(albums)</visible>						
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>lowlistcolorfocus</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Premiered][/UPPERCASE]</label>
+						<visible>!Control.IsVisible(76) + Container.Content(episodes)</visible>						
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>lowlistcolorfocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>						
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>lowlistcolorfocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+						<visible>Window.IsActive(2)</visible>						
+					</control>
+					<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>lowlistcolorfocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
+						<visible>Window.IsActive(2)</visible>						
+						<animation type="Conditional" condition="true">
+							<effect type="slide" start="0,22" end="0,22" time="0" />
+							<effect type="fade" start="70" end="70" time="0" />
+						</animation>
+					</control>			
+					<control type="image">
+						<description>IMDB rating</description>
+						<posx>503</posx>
+						<posy>37</posy>
+						<width>65</width>
+						<height>13</height>
+						<info>ListItem.StarRating</info>
+						<colordiffuse>dcbdbdbd</colordiffuse>
+						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | substring(listitem.label,..)]</visible>						
+					</control>
+					<include>Rev2ListLabel_DetailAlbumCover</include>
+				</focusedlayout>
+				
+			<!-- TV layout -->
+				<itemlayout condition="[Window.IsActive(25) + Skin.HasSetting(videotv)]" height="40">
+					<include>Rev2List_Separator</include>
+					<control type="label">
+						<include>Rev2ListLabel_Track</include>
+						<include>listcolornofocus</include>
+						<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+						<visible>Container.Content(episodes)</visible>
+					</control>						
+					<control type="label">
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Title</info>
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>	
+					<control type="label">
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Label</info>
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="label">
+						<font>Font_ListObjects</font>
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>detailcolornofocus</include>
+						<label>$INFO[ListItem.director]</label>
+						<visible>!IsEmpty(ListItem.Episode) + !Container.Content(episodes)</visible>
+					</control>					
+				</itemlayout>
+				<focusedlayout condition="[Window.IsActive(25) + Skin.HasSetting(videotv)]" height="40">
+					<include>Rev2List_Separator</include>
+					<control type="label">
+						<include>Rev2ListLabel_Track</include>
+						<include>listcolornofocus</include>						
+						<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+						<visible>Container.Content(episodes)</visible>
+					</control>						
+					<control type="label">
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Title</info>						
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>	
+					<control type="label">
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Label</info>						
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>						
+					<!--<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>detailcolornofocus</include>						
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+						<visible>!Control.IsVisible(76) + [Container.Content(movies) | Container.Content(albums)]</visible>
+					</control>-->
+					<!--<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>detailcolornofocus</include>						
+						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)</visible>
+					</control>-->				
+				
+					
+					
+					<control type="label">
+						<include>Rev2ListLabel_Track</include>
+						<include>lowlistcolorfocus</include>						
+						<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+						<visible>Container.Content(episodes)</visible>
+					</control>						
+					<control type="label">
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>lowlistcolorfocus</include>
+						<info>ListItem.Title</info>						
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>	
+					<control type="label">
+						<include>Rev2ListLabel_MainSmall</include>
+						<include>lowlistcolorfocus</include>
+						<info>ListItem.Label</info>						
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>							
+					<!--<control type="label">
+						<include>Rev2ListLabel_DetailFull</include>
+						<include>detailcolorfocus</include>						
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+						<visible>!Control.IsVisible(76) + [Container.Content(movies) | Container.Content(albums)]</visible>
+					</control>-->					
+					<!--<control type="image">
+						<description>IMDB rating</description>
+						<posx>623</posx>
+						<posy>46</posy>
+						<width>65</width>
+						<height>13</height>
+						<info>ListItem.StarRating</info>						
+						<colordiffuse>FF585858</colordiffuse>
+						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)]</visible>						
+					</control>-->			
+				</focusedlayout>					
+			</control>
+
+			<!---------------- NUM ITEMS COUNT ---------------->
+			<!--<control type="label" id="161">
+				<include>Rev2List_ItemCountVars</include>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[31938]</label>
+				<visible>Container.Content(episodes)</visible>
+			</control>				
+			<control type="label" id="161">
+				<include>Rev2List_ItemCountVars</include>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[31934]</label>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<control type="label" id="161">
+				<include>Rev2List_ItemCountVars</include>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[31928]</label>
+				<visible>Container.Content(albums)</visible>
+			</control>
+			<control type="label" id="161">
+				<include>Rev2List_ItemCountVars</include>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[31927]</label>
+				<visible>Container.Content(artists)</visible>
+			</control>
+			<control type="label" id="161">
+				<include>Rev2List_ItemCountVars</include>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[31937]</label>
+				<visible>Container.Content(seasons)</visible>
+			</control>				
+			<control type="label" id="161">
+				<include>Rev2List_ItemCountVars</include>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[31933]</label>
+				<visible>Container.Content(tvshows)</visible>
+			</control>				
+			<control type="label">
+				<include>Rev2List_ItemCountVars</include>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[31935]</label>
+				<visible>!Control.IsVisible(161)</visible>				
+			</control>
+			<control type="label" id="161">
+				<include>Rev2List_ItemCountVars</include>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[31936]</label>
+				<visible>Container.Content(songs)</visible>				
+			</control>
+			<control type="label" id="161">
+				<include>Rev2List_ItemCountVars</include>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[31923]</label>
+				<visible>Container.Content(years)</visible>				
+			</control>-->			
+		
+		</control>
+	
+		
+	
+	<!-- Scrollbar -->
+		<control type="scrollbar" id="61"> 
+			<description>My first scroll bar control</description>
+			<posx>245</posx>
+			<posy>504</posy>
+			<width>41</width>
+			<height>210</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(61)</visible>
+			<include>Rev2Animation_HighListSlide</include>
+			<animation effect="slide" start="0,0" end="50,0" time="0" condition="Window.IsActive(25) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>
+			<texturesliderbackground>windows/scrollbarback_playlist.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>windows/scrollbarnub-focus.png</textureslidernib>
+			<textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
+			<pulseonselect></pulseonselect>
+			<orientation>vertical</orientation>
+			<showonepage>true</showonepage>
+			<onup>61</onup>
+			<ondown>61</ondown>
+			<onleft>7000</onleft>
+			<onright>50</onright>
+			<include>Animation_CommonFade</include>
+			<animation effect="fade" start="0" end="70" time="200">Focus</animation>
+			<visible>!Skin.HasSetting(highlist)</visible>
+		</control>
+		<control type="scrollbar" id="61"> 
+			<description>My first scroll bar control</description>
+			<posx>245</posx>
+			<posy>504</posy>
+			<width>41</width>
+			<height>320</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(61)</visible>
+			<include>Rev2Animation_HighListSlide</include>
+			<animation effect="slide" start="0,0" end="50,0" time="0" condition="Window.IsActive(25) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>
+			<texturesliderbackground>windows/scrollbarback_playlist.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>windows/scrollbarnub-focus.png</textureslidernib>
+			<textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
+			<pulseonselect></pulseonselect>
+			<orientation>vertical</orientation>
+			<showonepage>true</showonepage>
+			<onup>61</onup>
+			<ondown>61</ondown>
+			<onleft>7000</onleft>
+			<onright>50</onright>
+			<include>Animation_CommonFade</include>
+			<animation effect="fade" start="0" end="70" time="200">Focus</animation>
+			<visible>Skin.HasSetting(highlist)</visible>
+		</control>
+	
+	<!-- Beginning of List Detail Panels -->
+	
+		<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">LowList_MusicDetailPanels</include>
+				
+		<include condition="Window.IsActive(25)">LowList_MovieDetailPanels</include>
+		
+		<!-- Fanart detail panel -->
+		
+			<control type="group" id="7850">
+				<description>FANART detail panel</description>
+				<include>Rev2ListDetail_PanelVars</include>
+				<visible>Control.IsVisible(50) + !Control.HasFocus(7720) + [[Skin.HasSetting(musicfanartpanelon) + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [Skin.HasSetting(moviefanartpanelon) + Skin.HasSetting(moviethumborfanart) + Window.IsActive(25)]] + !Control.IsVisible(7898)</visible>
+				
+				<!--<control type="label">
+					<posx>10</posx>
+					<posy>15</posy>
+					<width>330</width>
+					<height>140</height>
+					<textcolor>44ffffff</textcolor>
+					<font>Font_MultiplexInfoLabel</font>	
+					<label>$LOCALIZE[31064] $LOCALIZE[161]</label>
+					<visible>Skin.HasSetting(highlist) + IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))</visible>
+					<include>Rev2Animation_HighListSlide</include>
+				</control>-->
+				<control type="largeimage">
+					<posx>5</posx>
+					<posy>10</posy>
+					<width>360</width>
+					<height>196</height>
+					<fadetime>400</fadetime>
+					<aspectratio>scale</aspectratio>
+					<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
+					<visible>!IsEmpty(Listitem.Property(Fanart_Image)) + [Container.Content(artists) | Container.Content(movies)]</visible>
+					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+					<animation effect="slide" start="0,0" end="0,-65" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
+					<!--<include>Rev2Animation_HighListSlide</include>-->
+					<include>Animation_BackgroundFade</include>
+				</control>
+				<control type="largeimage">
+					<posx>5</posx>
+					<posy>10</posy>
+					<width>360</width>
+					<height>196</height>
+					<fadetime>400</fadetime>
+					<aspectratio>scale</aspectratio>
+					<texture>$INFO[container.property(fanart_image)]</texture>
+					<visible>!IsEmpty(container.property(fanart_image)) + [Container.Content(albums) | Container.Content(songs)]</visible>
+					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+					<animation effect="slide" start="0,0" end="0,-65" time="200" condition="Skin.HasSetting(highlist)">Conditional</animation>
+					<!--<include>Rev2Animation_HighListSlide</include>-->
+					<include>Animation_BackgroundFade</include>
+				</control>
+				
+				<!--<control type="image">
+					<description>BLACK background overlay</description>
+					<posx>5</posx>
+					<posy>127</posy>
+					<width>360</width>
+					<height>79</height>
+					<texture>common/black.png</texture>
+					<colordiffuse>b6FFFFFF</colordiffuse>
+					<visible>![IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))] + ![IsEmpty(ListItem.Property(description)) + IsEmpty(ListItem.Comment)]</visible>
+					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="100">Visible</animation>
+					<include>Animation_BackgroundFade</include>
+					<include>Rev2Animation_HighListSlide</include>
+				</control>
+				
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>![IsEmpty(Listitem.Property(Fanart_Image)) + IsEmpty(container.property(fanart_image))]</visible>
+
+						<control type="textbox">
+							<description>DESCRIPTION SHORT text box</description>
+							<posy>127</posy>
+							<posx>10</posx>
+							<height>80</height>
+							<width>350</width>
+							<font>Font_MultiplexPlotSmall</font>	
+							<textcolor>d0ffffff</textcolor>
+							<include>Rev2ListDetail_Autoscroll</include>
+							<label fallback="-">$INFO[ListItem.Property(description)]</label>
+							<visible>!IsEmpty(ListItem.Property(description))</visible>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+						<control type="textbox">
+							<description>COMMENT SHORT text box</description>
+							<posy>127</posy>
+							<posx>10</posx>
+							<height>80</height>
+							<width>350</width>
+							<font>Font_MultiplexPlotSmall</font>	
+							<textcolor>d0ffffff</textcolor>
+							<include>Rev2ListDetail_Autoscroll</include>
+							<label fallback="-">$INFO[ListItem.comment]</label>
+							<visible>IsEmpty(ListItem.Property(description)) + !IsEmpty(ListItem.comment)</visible>
+							<include>Rev2Animation_HighListSlide</include>
+						</control>
+				</control>-->
+
+				
+				<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">LowList_ShortMusicLabel</include>
+				<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">Rev2ListDetail_Stars</include>			
+				<include condition="Window.IsActive(25)">LowList_ShortMovieLabel</include>			
+				<include>LowList_Detail_Separators</include>
+				
+			</control>
+			
+		<include>LowList_MediaFlags</include>
+		
+		<!-- Settings detail panel -->
+		
+			<control type="group" id="7898">
+				<description>SETTINGS detail panel</description>
+				<include>Rev2ListDetail_PanelVars</include>
+				<visible>Control.IsVisible(50) + [Control.HasFocus(7798) | ControlGroup(78980).HasFocus()]</visible>
+				
+				<control type="grouplist" id="78980">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>350</width>
+					<height>195</height>
+					<orientation>vertical</orientation>
+					<onleft>50</onleft>
+					<ondown>78980</ondown>
+					<onright>-</onright>
+					<onup>7003</onup>
+					
+					<control type="radiobutton" id="78981">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>$LOCALIZE[249] $LOCALIZE[535] $LOCALIZE[31072]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(musiclistfull)</onclick>
+						<selected>Skin.HasSetting(musiclistfull)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+					</control>
+					
+					<control type="radiobutton" id="78982">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>$LOCALIZE[20338] $LOCALIZE[535] $LOCALIZE[31072]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(movieslistfull)</onclick>
+						<selected>Skin.HasSetting(movieslistfull)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+						<visible>Container.Content(movies)</visible>
+					</control>
+									
+					<control type="radiobutton" id="78988">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>SINGLE $LOCALIZE[31045] FOR $LOCALIZE[133]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(artistrolleroff)</onclick>
+						<selected>Skin.HasSetting(artistrolleroff)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+						<visible>Container.Content(artists)</visible>
+					</control>
+					
+					<control type="radiobutton" id="78989">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>SINGLE $LOCALIZE[31045] FOR $LOCALIZE[132]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(albumrolleroff)</onclick>
+						<selected>Skin.HasSetting(albumrolleroff)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+						<visible>Container.Content(albums)</visible>
+					</control>
+					
+					<control type="radiobutton" id="789810">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>SINGLE $LOCALIZE[31045] FOR $LOCALIZE[134]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(songrolleroff)</onclick>
+						<selected>Skin.HasSetting(songrolleroff)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					
+					<control type="radiobutton" id="789811">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>$LOCALIZE[393] $LOCALIZE[535] $LOCALIZE[31077]/$LOCALIZE[31078]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(highlist)</onclick>
+						<selected>Skin.HasSetting(highlist)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+					
+					<control type="radiobutton" id="789812">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>$LOCALIZE[557] $LOCALIZE[536] $LOCALIZE[1405] $LOCALIZE[535]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(hidelistartisticons)</onclick>
+						<selected>!Skin.HasSetting(hidelistartisticons)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+						<visible>Container.Content(artists)</visible>
+					</control>
+					
+					<control type="radiobutton" id="789813">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>$LOCALIZE[558] $LOCALIZE[536] $LOCALIZE[1405] $LOCALIZE[535]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(hidelistalbumicons)</onclick>
+						<selected>!Skin.HasSetting(hidelistalbumicons)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+						<visible>Container.Content(albums)</visible>
+					</control>
+					
+					<control type="radiobutton" id="789814">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>$LOCALIZE[179] $LOCALIZE[536] $LOCALIZE[1405] $LOCALIZE[535]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(hidelistsongicons)</onclick>
+						<selected>!Skin.HasSetting(hidelistsongicons)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					
+					<control type="radiobutton" id="789850">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>$LOCALIZE[31079] $LOCALIZE[31077]/$LOCALIZE[31078]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(detailmenuishidden)</onclick>
+						<onclick>Skin.Reset(lowlistrsson)</onclick>
+						<selected>Skin.HasSetting(detailmenuishidden)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+					
+					<control type="radiobutton" id="789851">
+						<posx>10</posx>
+						<width>350</width>
+						<height>41</height>
+						<font>Font_ContextMenuButton</font>
+						<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
+						<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+						<textcolor>FF939597</textcolor>
+						<focusedcolor>FFFFFFFF</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>$LOCALIZE[13305]</label>
+						<radiowidth>94</radiowidth>
+						<radioposx>255</radioposx>
+						<radioheight>65</radioheight>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+						<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+						<include>fast-fade</include>
+						<onclick>Skin.ToggleSetting(lowlistrsson)</onclick>
+						<onclick>Skin.Reset(detailmenuishidden)</onclick>
+						<selected>Skin.HasSetting(lowlistrsson)</selected>
+						<include>Rev2Animation_HighListSlide</include>
+					</control>
+					
+				</control>
+				
+			</control>
+	
+	<!-- Detail menu bar -->
+	
+		<control type="group">
+			<posx>843</posx>
+			<posy>416</posy>
+			<width>437</width>
+			<height>87</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(50) + [ControlGroup(7003).HasFocus() | Control.IsVisible(7898) | !Skin.HasSetting(detailmenuishidden)]</visible>
+			<include>Rev2Animation_HighListSlide</include>
+			<include>Animation_CommonFade</include>
+			
+			<!-- Background and Default Labels -->
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1899</width>
+					<texture flipy="true">common/rssbar_mid.png</texture>
+					<include>Rev2Animation_DetailMenuSlideForRSS</include>
+				</control>
+				<control type="label">
+					<description>DEFAULT menu bar label</description>
+					<textcolor>cc000000</textcolor>
+					<focusedcolor>cc000000</focusedcolor>
+					<include>Rev2ListDetail_MenuButtonVars</include>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>!ControlGroup(7003).HasFocus() + !Skin.HasSetting(lowlistrsson) + !Container.Content(Songs) + !Control.IsVisible(7898)</visible>
+				</control>
+				<control type="label">
+					<description>SONGS menu bar label</description>
+					<textcolor>cc000000</textcolor>
+					<focusedcolor>cc000000</focusedcolor>
+					<include>Rev2ListDetail_MenuButtonVars</include>
+					<label>$INFO[ListItem.Title]</label>
+					<visible>!ControlGroup(7003).HasFocus() + !Skin.HasSetting(lowlistrsson) + Container.Content(Songs) + !Control.IsVisible(7898)</visible>
+				</control>
+				<control type="label">
+					<description>SETTINGS menu bar label</description>
+					<textcolor>cc000000</textcolor>
+					<focusedcolor>cc000000</focusedcolor>
+					<include>Rev2ListDetail_MenuButtonVars</include>
+					<label>5</label>
+					<visible>!ControlGroup(7003).HasFocus() + Control.IsVisible(7898)</visible>
+				</control>
+				<control type="rss" id="1">
+					<description>RSS TICKER menu bar</description>
+					<posx>-450</posx>
+					<posy>45</posy>
+					<width>895</width>
+					<include>Rev2ListDetail_MenuButtonVars</include>
+					<visible>!ControlGroup(7003).HasFocus() + Skin.HasSetting(lowlistrsson) + !Control.IsVisible(7898)</visible>
+					<include>Colour_RSS</include>
+					<urlset>1</urlset>
+					<include>Animation_CommonFade</include>
+				</control>
+			
+			<!-- Menu buttons -->
+				<control type="grouplist" id="7003">
+					<description>Detail menu BUTTONS</description>
+					<posx>75</posx>
+					<posy>47</posy>
+					<height>42</height>
+					<width>345</width>
+					<orientation>horizontal</orientation>
+					<onleft>7003</onleft>
+					<onright>7003</onright>
+					<onup>7000</onup>
+					<visible allowhiddenfocus="true">Control.IsVisible(50) + ControlGroup(7003).HasFocus()</visible>
+					
+					<!-- Music buttons -->
+						<control type="button" id="7701">
+							<description>MUSIC DESCRIPTION tracking button</description>
+							<include>Rev2ListDetail_MenuButtonVars</include>
+							<label>$LOCALIZE[21821]</label>
+							<onfocus>Skin.Reset(musicfanartpanelon)</onfocus>
+							<onfocus>Skin.SetBool(musicinfopaneloff)</onfocus>
+							<onfocus>Skin.SetBool(musicdescpanelon)</onfocus>
+							<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
+						</control>
+						<!--<control type="button" id="7702">
+							<description>MUSIC INFO tracking button</description>
+							<include>Rev2ListDetail_MenuButtonVars</include>
+							<label>$LOCALIZE[31070]</label>
+							<onfocus>Skin.Reset(musicdescpanelon)</onfocus>
+							<onfocus>Skin.Reset(musicfanartpanelon)</onfocus>
+							<onfocus>Skin.Reset(musicinfopaneloff)</onfocus>
+							<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
+						</control>-->
+						<control type="button" id="7703">
+							<description>MUSIC FANART tracking button</description>
+							<include>Rev2ListDetail_MenuButtonVars</include>
+							<label>$LOCALIZE[31044]</label>
+							<onfocus>Skin.Reset(musicdescpanelon)</onfocus>
+							<onfocus>Skin.SetBool(musicinfopaneloff)</onfocus>
+							<onfocus>Skin.SetBool(musicfanartpanelon)</onfocus>
+							<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
+						</control>
+					
+					<!-- Movie buttons -->
+						<control type="button" id="7711">
+							<description>MOVIE PLOT tracking button</description>
+							<include>Rev2ListDetail_MenuButtonVars</include>
+							<label>PLOT</label>
+							<onfocus>Skin.Reset(moviefanartpanelon)</onfocus>
+							<onfocus>Skin.Reset(movieinfopanelon)</onfocus>
+							<onfocus>Skin.Reset(movieplotpaneloff)</onfocus>
+							<onfocus>Skin.Reset(moviegallerypanelon)</onfocus>
+							<onclick>Skin.ToggleSetting(lowlistplotdetailfull)</onclick>
+							<visible>Window.IsActive(25)</visible>
+						</control>
+						<control type="button" id="7712">
+							<description>MOVIE INFO tracking button</description>
+							<include>Rev2ListDetail_MenuButtonVars</include>
+							<label>INFO</label>
+							<onfocus>Skin.SetBool(movieplotpaneloff)</onfocus>
+							<onfocus>Skin.Reset(moviefanartpanelon)</onfocus>
+							<onfocus>Skin.Reset(moviegallerypanelon)</onfocus>
+							<onfocus>Skin.SetBool(movieinfopanelon)</onfocus>
+							<visible>Window.IsActive(25)</visible>
+						</control>
+						<control type="togglebutton" id="7713">
+							<description>MOVIE GALLERY/FANART tracking button</description>
+							<include>Rev2ListDetail_MenuButtonVars</include>
+							<label>$LOCALIZE[31418]</label>
+							<altlabel>$LOCALIZE[31044]</altlabel>
+							<onfocus>Skin.SetBool(movieplotpaneloff)</onfocus>
+							<onfocus>Skin.Reset(moviefanartpanelon)</onfocus>
+							<onfocus>Skin.Reset(movieinfopanelon)</onfocus>
+							<onfocus>Skin.SetBool(moviegallerypanelon)</onfocus>
+							<onfocus>Skin.SetBool(moviefanartpanelon)</onfocus>
+							<onclick>Skin.SetBool(moviethumborfanart)</onclick>
+							<altclick>Skin.Reset(moviethumborfanart)</altclick>
+							<visible>Window.IsActive(25)</visible>
+						</control>
+						<control type="button" id="7720">
+							<description>MOVIE TRAILER tracking button</description>
+							<include>Rev2ListDetail_MenuButtonVars</include>
+							<label>$LOCALIZE[31409]</label>
+							<visible>Window.IsActive(25)</visible>
+							<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
+						</control>
+					
+					<!-- Common buttons -->
+						<control type="button" id="7798">
+							<description>SETTINGS tracking button</description>
+							<font>Font_SettingsMainLabelBig</font>
+							<textcolor>aa2e2e2e</textcolor>
+							<focusedcolor>aa2e2e2e</focusedcolor>
+							<disabledcolor>552e2e2e</disabledcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<posx>75</posx>
+							<posy>47</posy>
+							<height>41</height>
+							<width>345</width>
+							<label>$LOCALIZE[5]</label>
+							<onclick>SetFocus(78980)</onclick>
+							<ondown>SetFocus(78980)</ondown>
+						</control>
+						<!--<control type="togglebutton" id="7798">
+							<description>RSS tracking button</description>
+							<include>Rev2ListDetail_MenuButtonVars</include>
+							<label>RSS: $LOCALIZE[31078]</label>
+							<altlabel>RSS: $LOCALIZE[31077]</altlabel>
+							<onclick>Skin.SetBool(lowlistrsson)</onclick>
+							<onclick>Skin.Reset(detailmenuishidden)</onclick>
+							<altclick>Skin.SetBool(detailmenuishidden)</altclick>
+							<altclick>Skin.Reset(lowlistrsson)</altclick>
+						</control>-->
+				</control>
+			
+			<!-- Menu bar fade and arrows -->
+				<control type="image">
+					<posx>38</posx>
+					<posy>46</posy>
+					<width>193</width>
+					<height>41</height>
+					<texture flipy="true">common/rssbar_mid_fade.png</texture>
+					<colordiffuse>e3FFFFFF</colordiffuse>
+					<include>Rev2Animation_DetailMenuSlideForRSS</include>
+				</control>
+				<control type="image">
+					<posx>67</posx>
+					<posy>57</posy>
+					<width>357</width>
+					<height>21</height>
+					<texture>lowlist/lowlist_detailmenu_arrows.png</texture>
+					<visible>ControlGroup(7003).HasFocus()</visible>
+					<animation effect="fade" start="0" end="30" time="200">Visible</animation>
+					<animation effect="fade" start="30" end="0" time="200">Hidden</animation>
+				</control>
+			
+		</control>
+	
+	<!-- Media icon -->
+	
+		<control type="group"> 
+			<description>Media icon</description>
+			<posx>10</posx>
+			<posy>400</posy>
+			<visible>Control.IsVisible(50)</visible>
+			<animation effect="slide" start="0,0" end="-22,0" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(61)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-57" time="400" easing="inout" tween="cubic" condition="Control.IsVisible(20)">Conditional</animation>
+			<animation effect="slide" time="1000" start="-600,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
+			<animation effect="fade" time="400" start="0" end="100">Visible</animation>
+			<animation effect="fade" time="400" start="100" end="0">Hidden</animation>			
+			<animation effect="slide" delay="1500" time="400" start="0,0" end="0,-25" tween="cubic" easing="inout" condition="Player.HasAudio">Conditional</animation>			
+			
+				<control type="image">
+					<description>POSTER icon</description>
+					<include>Rev2ListIcon_PosterVars</include>
+					<include>MovieShowcaseThumbMain</include>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image"> 
+					<description>POSTER glass overlay</description>
+					<include>Rev2ListIcon_PosterVars</include>
+					<bordertexture border="-50">thumbs/poster_shadow.png</bordertexture>
+					<texture>thumbs/poster_glass_noedge.png</texture>
+				</control>
+				<control type="image">
+					<description>POSTER black overlay</description>
+					<include>Rev2ListIcon_PosterVars</include>
+					<include>MovieShowcaseOverlay</include>
+				</control>
+				<control type="image">
+					<description>POSTER icon reflection</description>
+					<posy>317</posy>
+					<include>Rev2ListIcon_PosterVars</include>
+					<colordiffuse>ddFFFFFF</colordiffuse>
+					<include>MovieShowcaseThumbReflectionMain</include>
+					<info>ListItem.Icon</info>
+				</control>
+				
+				
+				<include>LowList_SquareIconRoller</include>
+				
+				
+				<control type="image">
+					<description>LANDSCAPE black underlay</description>
+					<include>Rev2ListIcon_LandscapeVars</include>
+					<texture diffuse="multiplex/multiplex_tvmask.png">common/black.png</texture>
+				</control>
+				<control type="image">
+					<description>LANDSCAPE icon</description>
+					<include>Rev2ListIcon_LandscapeVars</include>
+					<texture diffuse="multiplex/multiplex_tvmask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<description>LANDSCAPE border</description>
+					<include>Rev2ListIcon_LandscapeVars</include>
+					<bordertexture border="-10">multiplex/multiplex_tvborder.png</bordertexture>
+					<texture>common/blank.png</texture>
+				</control>
+				<control type="image">
+					<description>LANDSCAPE glass</description>
+					<include>Rev2ListIcon_LandscapeVars</include>
+					<texture diffuse="multiplex/multiplex_tvmask.png">multiplex/multiplex_tvglass.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<description>LANDSCAPE softener</description>
+					<include>Rev2ListIcon_LandscapeVars</include>
+					<texture>common/blank.png</texture>
+					<colordiffuse>58FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<description>LANDSCAPE icon reflection</description>
+					<posy>275</posy>
+					<include>Rev2ListIcon_LandscapeVars</include>
+					<colordiffuse>aaFFFFFF</colordiffuse>
+					<texture flipy="true" diffuse="multiplex/multiplex_tvmaskreflect.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>
+				
+								
+				<control type="image">
+					<description>FREEFORM icon</description>
+					<include>Rev2ListIcon_FreeformVars</include>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture fallback="DefaultArtist.png" diffuse="thumbs/cdcover_mask.png">$INFO[ListItem.Icon]</texture>
+					<bordertexture border="-15,-10,-17,-10">thumbs/cd_shadow.png</bordertexture>
+					<visible>[Container.Content(artists) + Skin.HasSetting(artistrolleroff)]</visible>
+				</control>	
+				<!--<control type="image">
+					<description>ALBUM glass overlay</description>
+					<width>ListItem.Icon.width</width>
+					<height>ListItem.Icon.height</height>
+					<include>Rev2ListIcon_FreeformVars</include>
+					<aspectratio align="center" aligny="bottom">stretch</aspectratio>
+					<bordertexture border="-17">thumbs/cd_shadow.png</bordertexture>
+					<texture>thumbs/cd_glass.png</texture>
+					<visible>[Container.Content(artists) + Skin.HasSetting(artistrolleroff)]</visible>
+				</control>-->
+				<control type="image">
+					<description>FREEFORM icon reflection</description>
+					<posy>300</posy>
+					<include>Rev2ListIcon_FreeformVars</include>
+					<colordiffuse>a0FFFFFF</colordiffuse>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture flipy="true" fallback="DefaultArtist.png" diffuse="thumbs/cdcover_mask_reflect.png">$INFO[ListItem.Icon]</texture>
+					<visible>[Container.Content(artists) + Skin.HasSetting(artistrolleroff)]</visible>
+				</control>		
+		</control>
+		
+		
+
+	<control type="group"> <!--------- MUSIC PROGRESS BAR/LABEL ------------->
+		<posx>20</posx>
+		<posy>650</posy>
+		<width>290</width>
+		<height>18</height>
+		<animation effect="slide" start="0,0" end="-22,0" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(61)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="0,-30" time="150" condition="Skin.HasSetting(highlist)">Conditional</animation>
+		<animation effect="fade" delay="1500" start="0" end="100" time="400">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="100">Hidden</animation>
+		<visible>Control.IsVisible(50) + Player.HasAudio + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+		<control type="label">
+			<posx>-10</posx>
+			<posy>-22</posy>
+			<width>310</width>
+			<height>26</height>
+			<font>Font_List</font>
+			<textcolor>ffffffff</textcolor>
+			<scroll>false</scroll>
+			<align>center</align>
+			<label>[COLOR abffffff][UPPERCASE]$INFO[MusicPlayer.Artist][/COLOR][CR]"$INFO[MusicPlayer.Title]"[/UPPERCASE]</label>
+		</control>
+		<control type="progress" id="20">
+			<description>Progressbar</description>
+			<posx>50</posx>
+			<posy>36</posy>
+			<width>180</width>
+			<height>10</height>
+			<texturebg>list/progress_back.png</texturebg>
+			<lefttexture>list/progress_left.png</lefttexture>
+			<midtexture>list/progress_mid.png</midtexture>
+			<righttexture>list/progress_right.png</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<info>Player.Progress</info>
+		</control>
+		<control type="image">
+			<description>Progressbar overlay</description>
+			<posx>50</posx>
+			<posy>36</posy>
+			<width>180</width>
+			<height>10</height>
+			<bordertexture border="-53">multiplex/multiplex_iconframe.png</bordertexture>
+			<texture>-</texture>
+		</control>
+	</control>
+	
+	<control type="label" id="217">
+		<posx>0</posx>
+		<posy>198</posy>
+		<width>780</width>
+		<height>317</height>
+		<font>Font_ListDetailTV</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>98FFFFFF</textcolor>
+		<include condition="Window.IsActive(25)">EmptyLibraryLabelMovies</include>
+		<include condition="Window.IsActive(502)">EmptyLibraryLabelMusic</include>
+		<include>Animation_CommonFade</include>
+		<visible>[Window.IsActive(25) | Window.IsActive(502)] + Control.IsVisible(50) + stringcompare(container(50).numitems,0)</visible>
+	</control>
+	
+</include>
+
+</includes>

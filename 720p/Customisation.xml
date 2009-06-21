@@ -360,9 +360,16 @@
 			<label>32014</label>
 			<onclick>Skin.ToggleSetting(nomultiplexmodbuttons)</onclick>
 			<selected>!Skin.HasSetting(nomultiplexmodbuttons)</selected>
+		</control>
+
+		<control type="radiobutton" id="810">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>32016</label>
+			<onclick>Skin.ToggleSetting(nolistmodbuttons)</onclick>
+			<selected>!Skin.HasSetting(nolistmodbuttons)</selected>
 		</control>		
 		
-		<control type="radiobutton" id="810">
+		<control type="radiobutton" id="811">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>31249</label>
 			<onclick>Skin.ToggleSetting(nomediaflagsbutton)</onclick>

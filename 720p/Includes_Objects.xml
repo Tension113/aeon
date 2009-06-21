@@ -528,7 +528,7 @@
 			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)] + Control.IsVisible(52) + ![Skin.HasSetting(multiplexmodvideo) | Skin.HasSetting(oldmultiplex)]</visible>
 		</control>
-		
+
 		<control type="button" id="1121">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32012]</label>
@@ -546,8 +546,26 @@
 			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)] + Control.IsVisible(52) + Skin.HasSetting(oldmultiplex)</visible>
 		</control>
-		
-				
+	</include>
+
+	<include name="Objects_ListModButtons">
+		<control type="button" id="1220">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[32010]: $LOCALIZE[32011]</label>
+			<onclick>Skin.SetBool(listrev2)</onclick>
+			<onclick>Skin.Reset(listoriginal)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>[[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] | [Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)]]] + Control.IsVisible(50) + !Skin.HasSetting(listrev2)</visible>
+		</control>
+
+		<control type="button" id="1221">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[32010]: $LOCALIZE[32015]</label>
+			<onclick>Skin.SetBool(listoriginal)</onclick>
+			<onclick>Skin.Reset(listrev2)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>[[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] | [Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)]]] + Control.IsVisible(50) + Skin.HasSetting(listrev2)</visible>
+		</control>
 	</include>
 
 	<include name="Objects_ViewtypeClick">

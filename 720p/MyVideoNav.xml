@@ -84,6 +84,10 @@
 				<include condition="!Skin.HasSetting(nomultiplexstylebuttons)">Objects_MultiplexStyleButtons</include>
 
 				<include condition="!Skin.HasSetting(nomultiplexmodbuttons)">Objects_MultiplexModButtons</include>
+
+				<include condition="!Skin.HasSetting(nolistmodbuttons)">Objects_ListModButtons</include>
+
+				
 				
 				<control type="togglebutton" id="940">
 					<include>Objects_MediaMenuButton</include>				
@@ -94,6 +98,7 @@
 					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(50)</visible>
 				</control>
 				
+				<include condition="Skin.HasSetting(listrev2)">LowList_HighLoButton</include>	
 				<include>Objects_PanelDensityButton</include>				
 				
 				<control type="togglebutton" id="901">
@@ -161,7 +166,9 @@
 		</control>
 		
 		<include>Viewtype_Showcase</include>
-		<include>Viewtype_List</include>
+		<include condition="!Skin.HasSetting(listoriginal) + !Skin.HasSetting(listrev2)">Viewtype_List</include>
+		<include condition="Skin.HasSetting(listoriginal)">Viewtype_List</include>
+		<include condition="Skin.HasSetting(listrev2)">Viewtype_ListRev2</include>
 		<include condition="!Skin.HasSetting(oldmultiplex) + !Skin.HasSetting(multiplexmodvideo) + !Skin.HasSetting(multiplexorig)]">Viewtype_Multiplex</include>
 		<include condition="Skin.HasSetting(oldmultiplex)">Viewtype_MultiplexOld</include>
 		<include condition="Skin.HasSetting(multiplexmodvideo)">Viewtype_MultiplexModVideo</include>

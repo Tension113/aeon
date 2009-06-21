@@ -23,7 +23,9 @@
 <include file="Viewtype_MultiplexOld.xml" />
 <include file="Viewtype_MultiplexVideo.xml" />
 <include file="Viewtype_List.xml" />
+<include file="Viewtype_ListRev2.xml" />
 <include file="Viewtype_Wall.xml" />
+<include file="Includes_LowList.xml" />
 
 <!-- Text colours ================================== -->
 

@@ -10,7 +10,7 @@
 
 	<control type="largeimage" id="102">
 		<include>FullscreenDimensions</include>
-        <visible>!Control.IsVisible(103) + Control.IsVisible(57) + !IsEmpty(listitem.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
+        <visible>!Control.IsVisible(103) + [Control.IsVisible(57) | Control.IsVisible(50)] + !IsEmpty(listitem.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 		<include>Animation_FanartFade</include>
@@ -18,7 +18,7 @@
 
 	<control type="largeimage" id="103">
 		<include>FullscreenDimensions</include>
-        <visible>Control.IsVisible(57) + !IsEmpty(container.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
+        <visible>[Control.IsVisible(57) | Control.IsVisible(50)] + !IsEmpty(container.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[container.property(fanart_image)]</texture>
 		<include>Animation_FanartFade</include>
@@ -66,6 +66,8 @@
 					<include>Objects_MediaMenuButton</include>
 				</control>
 
+				<include condition="!Skin.HasSetting(nolistmodbuttons)">Objects_ListModButtons</include>
+
 				<control type="togglebutton" id="940">
 					<include>Objects_MediaMenuButton</include>				
 					<include>Objects_ListLayoutStrings</include>
@@ -74,6 +76,8 @@
 					<altclick>Skin.Reset(musiclistfull)</altclick>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
+
+				<include condition="Skin.HasSetting(listrev2)">LowList_HighLoButton</include>
 
 				<include>Objects_PanelDensityButton</include>
 				
@@ -103,7 +107,9 @@
 		</control>
 	
 		<include>Viewtype_Showcase</include>
-		<include>Viewtype_List</include>
+		<include condition="!Skin.HasSetting(listoriginal) + !Skin.HasSetting(listrev2)">Viewtype_List</include>
+		<include condition="Skin.HasSetting(listoriginal)">Viewtype_List</include>
+		<include condition="Skin.HasSetting(listrev2)">Viewtype_ListRev2</include>
 		
 	</control>
 
