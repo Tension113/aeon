@@ -2502,6 +2502,7 @@
                 <pagecontrol>60</pagecontrol>
                 <orientation>horizontal</orientation>
                 <scrolltime>250</scrolltime>
+		<preloaditems>2</preloaditems>
 				<include>Animation_HideShowcase</include>
                 <focusposition>3</focusposition>
 				<visible>![Window.IsActive(25) + Skin.HasSetting(videotv)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + Skin.HasSetting(unlockTVviews)]</visible>

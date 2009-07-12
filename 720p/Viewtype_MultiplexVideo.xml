@@ -951,6 +951,7 @@
 			<include condition="Skin.HasSetting(videomovies)">VideoMultiplexFocusMovies</include>
 			<include condition="Skin.HasSetting(videotv)">VideoMultiplexFocusTV</include>
 			<scrolltime>200</scrolltime>
+			<preloaditems>2</preloaditems>
 			<visible>Window.IsActive(25)</visible>
 			<include>Animation_HideMultiplex</include>
 			<itemlayout width="120" height="300" condition="Container.Content(movies)">

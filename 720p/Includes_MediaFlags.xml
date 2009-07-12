@@ -500,7 +500,7 @@
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/studios/warner.png</texture>
-					<visible>substring(listitem.studio,Warner)</visible>
+					<visible>substring(listitem.studio,Warner) + !substring(listitem.studio,Warner Independent)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -540,7 +540,7 @@
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/studios/sonypictures.png</texture>
-					<visible>substring(listitem.studio,Sony)</visible>
+					<visible>substring(listitem.studio,Sony) + !substring(listitem.studio,Sony Pictures Classics)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -962,6 +962,21 @@
     					<texture>flags/studios/saul_zaentz.png</texture>
     					<visible>substring(listitem.studio,Zaentz)</visible>
 				</control>
+				<control type="image" id="81">
+    					<include>Furniture_ShowcaseMediaFlagsVars</include>
+    					<texture>flags/studios/summit.png</texture>
+    					<visible>substring(listitem.studio,Summit)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>Furniture_ShowcaseMediaFlagsVars</include>
+    					<texture>flags/studios/bandapart.png</texture>
+    					<visible>substring(listitem.studio,Band Apart)</visible>
+				</control>
+				<control type="image" id="81">
+    					<include>Furniture_ShowcaseMediaFlagsVars</include>
+    					<texture>flags/studios/dc.png</texture>
+    					<visible>substring(listitem.studio,DC Comics)</visible>
+				</control>
 			</control>
 			<control type="group">
 				<posx>975</posx>
@@ -1175,7 +1190,7 @@
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/studios/warner.png</texture>
-					<visible>substring(listitem.studio,Warner)</visible>
+					<visible>substring(listitem.studio,Warner) + !substring(listitem.studio,Warner Independent)</visible>
 				</control>
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars</include>
@@ -1215,7 +1230,7 @@
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/studios/sonypictures.png</texture>
-					<visible>substring(listitem.studio,Sony)</visible>
+					<visible>substring(listitem.studio,Sony) + !substring(listitem.studio,Sony Pictures Classics)</visible>
 				</control>
 				<control type="image" id="91">
 					<include>Furniture_PanelMediaFlagsVars</include>
@@ -1636,6 +1651,21 @@
     					<include>Furniture_PanelMediaFlagsVars</include>
     					<texture>flags/studios/saul_zaentz.png</texture>
     					<visible>substring(listitem.studio,Zaentz)</visible>
+				</control>
+				<control type="image" id="91">
+    					<include>Furniture_PanelMediaFlagsVars</include>
+    					<texture>flags/studios/summit.png</texture>
+    					<visible>substring(listitem.studio,Summit)</visible>
+				</control>
+				<control type="image" id="91">
+    					<include>Furniture_PanelMediaFlagsVars</include>
+    					<texture>flags/studios/bandapart.png</texture>
+    					<visible>substring(listitem.studio,Band Apart)</visible>
+				</control>
+				<control type="image" id="91">
+    					<include>Furniture_PanelMediaFlagsVars</include>
+    					<texture>flags/studios/dc.png</texture>
+    					<visible>substring(listitem.studio,DC Comics)</visible>
 				</control>
 			</control>
 			<control type="group">
