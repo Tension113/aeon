@@ -711,6 +711,26 @@
 		<font>Font_FSInfoData</font>
 		<include>Colour_OffWhite</include>	
 	</include>
+
+	<include name="Infocast_Movies">
+		<posx>550</posx>
+        	<posy>410</posy>
+	</include>
+
+	<include name="Infocast_Tv">
+		<posx>550</posx>
+        	<posy>385</posy>
+	</include>
+
+	<include name="Actorimage_Movies">
+		<posx>920</posx>
+        	<posy>410</posy>
+	</include>
+
+	<include name="Actorimage_Tv">
+		<posx>920</posx>
+        	<posy>395</posy>
+	</include>
 	
 	<include name="Objects_BookmarkMenu">
 		<posx>3</posx>
