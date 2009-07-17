@@ -1621,7 +1621,7 @@
 			<visible>Window.IsActive(SystemSettings)</visible>
 			<include>Animations_SettingsButtonFade</include>
 			<control type="label">
-				<description>My Videos Sub Unfocused</description>
+				<description>Hardware Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31336</label>
 				<textcolor>FFf5f5f5</textcolor>
@@ -1629,7 +1629,7 @@
 				<visible>!ControlGroup(3).HasFocus(30)</visible>
 			</control>
 			<control type="label">
-				<description>My Videos Sub Unfocused</description>
+				<description>Hardware Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31336</label>
 				<textcolor>FF262728</textcolor>
@@ -1637,39 +1637,39 @@
 				<visible>ControlGroup(3).HasFocus(30)</visible>
 			</control>
 			<control type="label">
-				<description>My Music Sub Unfocused</description>
+				<description>Autoplay Sub Unfocused</description>
 				<posy>90</posy>
-				<label>31337</label>
+				<label>31338</label>
 				<textcolor>FFf5f5f5</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(31)</visible>
 			</control>
 			<control type="label">
-				<description>My Music Sub Unfocused</description>
+				<description>Autoplay Sub Unfocused</description>
 				<posy>90</posy>
-				<label>31337</label>
+				<label>31338</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(31)</visible>
 			</control>
 			<control type="label">
-				<description>My Programs Sub Unfocused</description>
+				<description>Audio Hardware Sub Unfocused</description>
 				<posy>148</posy>
-				<label>31338</label>
+				<label>31340</label>
 				<textcolor>FFf5f5f5</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(32)</visible>
 			</control>
 			<control type="label">
-				<description>My Programs Sub Unfocused</description>
+				<description>Audio Hardware Sub Unfocused</description>
 				<posy>148</posy>
-				<label>31338</label>
+				<label>31340</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(32)</visible>
 			</control>
 			<control type="label">
-				<description>My Pictures Sub Unfocused</description>
+				<description>Masterlock Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31339</label>
 				<textcolor>FFf5f5f5</textcolor>
@@ -1677,28 +1677,12 @@
 				<visible>!ControlGroup(3).HasFocus(33)</visible>
 			</control>
 			<control type="label">
-				<description>My Pictures Sub Unfocused</description>
+				<description>Masterlock Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31339</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31341</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(34)</visible>
-			</control>
-			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31341</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(34)</visible>
 			</control>
 		</control>
 		
