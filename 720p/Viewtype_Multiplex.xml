@@ -803,8 +803,8 @@
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture>multiplex/multiplex_glass.png</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<include>Animation_MultiplexFocusZoom</include>		
-					<colordiffuse>66FFFFFF</colordiffuse>					
+					<include>Animation_MultiplexFocusZoom</include>
+					<colordiffuse>66FFFFFF</colordiffuse>						
 				</control>				
 				<control type="image">
 					<include>MultiplexIconDimensionsWrapReflect</include>

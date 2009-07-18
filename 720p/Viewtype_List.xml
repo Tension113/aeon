@@ -197,9 +197,9 @@
 			<posy>583</posy>
 			<texture>list/list_spot.png</texture>
 			<visible>Control.IsVisible(50)</visible>
-			<colordiffuse>66FFFFFF</colordiffuse>			
+			<colordiffuse>66FFFFFF</colordiffuse>				
 		</control>
-		
+	
 		<control type="group">
 	
 			<control type="image">
@@ -1138,7 +1138,7 @@
 				<fadetime>400</fadetime>			
 				<texture>list/list_musicicon_glass.png</texture>
 				<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
-				<colordiffuse>8eFFFFFF</colordiffuse>
+				<colordiffuse>8eFFFFFF</colordiffuse>				
 			</control>
 		</control>
 
