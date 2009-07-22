@@ -72,23 +72,16 @@
 					<visible>!Skin.HasSetting(videotv) | [Skin.HasSetting(videotv) + Skin.HasSetting(unlockTVviews)]</visible>
 				</control>
 
-				<include>Objects_FlattenFlowButton</include>
-				
-				<control type="button" id="3">
-					<label>103</label>
-					<include>Objects_MediaMenuButton</include>
-				</control>
-
-				<include condition="!Skin.HasSetting(nomultiplexinfobuttons)">Objects_MultiplexInfoButtons</include>			
-				
-				<include condition="!Skin.HasSetting(nomultiplexstylebuttons)">Objects_MultiplexStyleButtons</include>
-
 				<include condition="!Skin.HasSetting(nomultiplexmodbuttons)">Objects_MultiplexModButtons</include>
 
 				<include condition="!Skin.HasSetting(nolistmodbuttons)">Objects_ListModButtons</include>
 
+				<include>Objects_FlattenFlowButton</include>
 				
+				<include condition="!Skin.HasSetting(nomultiplexinfobuttons)">Objects_MultiplexInfoButtons</include>			
 				
+				<include condition="!Skin.HasSetting(nomultiplexstylebuttons)">Objects_MultiplexStyleButtons</include>
+
 				<control type="togglebutton" id="940">
 					<include>Objects_MediaMenuButton</include>				
 					<include>Objects_ListLayoutStrings</include>
@@ -144,6 +137,11 @@
 					<altlabel>$LOCALIZE[31058]: $LOCALIZE[31077]</altlabel>
 					<include>Objects_MediaMenuButton</include>
 					<visible>[Skin.HasSetting(videomovies) + !Skin.HasSetting(nomenumoviewatched)] | [Skin.HasSetting(videotv) + !Skin.HasSetting(nomenutvwatched)]</visible>
+				</control>
+
+				<control type="button" id="3">
+					<label>103</label>
+					<include>Objects_MediaMenuButton</include>
 				</control>
 				
 				<control type="button" id="8">
