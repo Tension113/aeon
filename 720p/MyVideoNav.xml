@@ -90,6 +90,15 @@
 					<altclick>Skin.Reset(movieslistfull)</altclick>
 					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(50)</visible>
 				</control>
+
+				<control type="togglebutton" id="941">
+					<include>Objects_MediaMenuButton</include>				
+					<include>Objects_ListLayoutStrings</include>
+					<usealttexture>Skin.HasSetting(tvlistfull)</usealttexture>
+					<onclick>Skin.SetBool(tvlistfull)</onclick>
+					<altclick>Skin.Reset(tvlistfull)</altclick>
+					<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(50)</visible>
+				</control>
 				
 				<include condition="Skin.HasSetting(listrev2)">LowList_HighLoButton</include>	
 				<include>Objects_PanelDensityButton</include>				
