@@ -99,7 +99,8 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<animation effect="slide" start="60,0" end="60,0" time="0" condition="Container.Content(episodes)">Conditional</animation>			
-		<animation effect="slide" start="60,-10" end="60,-10" time="0" condition="Container.Content(episodes) + [[IsEmpty(ListItem.Writer) + !IsEmpty(ListItem.Plot)] | [!IsEmpty(ListItem.Writer) + IsEmpty(ListItem.Plot)]]">Conditional</animation>		
+		<animation effect="slide" start="60,-10" end="60,-10" time="0" condition="Container.Content(episodes) + [[IsEmpty(ListItem.Writer) + !IsEmpty(ListItem.Plot)] | [!IsEmpty(ListItem.Writer) + IsEmpty(ListItem.Plot)]]">Conditional</animation>
+		<animation effect="slide" start="0,10" end="0,10" time="0" condition="Container.Content(seasons)">Conditional</animation>		
 	</include>	
 	
 	<include name="Showmix_ListLabel_Main_Playlist">
@@ -656,7 +657,7 @@
                 <width>100</width>
                 <height>547</height>
                 <texture>list/showmix/listpanel_detailwide.png</texture>
-                <visible>Window.IsActive(2)] + [Window.IsActive(25) + Container.Content(movies) + Skin.HasSetting(movieslistfull_showmix)] | [Window.IsActive(25) + Container.Content(tvshows)] | [Window.IsActive(25) + Container.Content(episodes) + Skin.HasSetting(tvepisodeslistfull)] | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(years) + !Container.Content(genres) + Skin.HasSetting(musicalbumslistfull) + Container.Content(albums)] | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(years) + !Container.Content(genres) + Skin.HasSetting(musicsongslistfull) + Container.Content(songs)]</visible>			
+                <visible>Window.IsActive(2) | [Window.IsActive(25) + Container.Content(movies) + Skin.HasSetting(movieslistfull_showmix)] | [Window.IsActive(25) + Container.Content(tvshows)] | [Window.IsActive(25) + Container.Content(episodes) + Skin.HasSetting(tvepisodeslistfull)] | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(years) + !Container.Content(genres) + Skin.HasSetting(musicalbumslistfull) + Container.Content(albums)] | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(years) + !Container.Content(genres) + Skin.HasSetting(musicsongslistfull) + Container.Content(songs)]</visible>			
             </control>
         </control>
 
@@ -684,7 +685,7 @@
                 <width>100</width>
                 <height>547</height>
                 <texture>list/showmix/listpanel_detailwide.png</texture>
-                <visible>Window.IsActive(2)] + [Window.IsActive(25) + Skin.HasSetting(videomovies) + Skin.HasSetting(movieslistfull_showmix)] | [Window.IsActive(25) + Container.Content(tvshows)] | [Window.IsActive(25) + Container.Content(episodes) + Skin.HasSetting(tvepisodeslistfull)] | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(years) + !Container.Content(genres) + Skin.HasSetting(musicalbumslistfull) + Container.Content(albums)] | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(years) + !Container.Content(genres) + Skin.HasSetting(musicsongslistfull) + Container.Content(songs)]</visible>			
+                <visible>Window.IsActive(2) | [Window.IsActive(25) + Skin.HasSetting(videomovies) + Skin.HasSetting(movieslistfull_showmix)] | [Window.IsActive(25) + Container.Content(tvshows)] | [Window.IsActive(25) + Container.Content(episodes) + Skin.HasSetting(tvepisodeslistfull)] | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(years) + !Container.Content(genres) + Skin.HasSetting(musicalbumslistfull) + Container.Content(albums)] | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(years) + !Container.Content(genres) + Skin.HasSetting(musicsongslistfull) + Container.Content(songs)]</visible>			
             </control>
 
 <!-- TV FULLSCREEN BANNER-->
@@ -1338,7 +1339,7 @@
                 </control>
                 <control type="label">
                     <include>Showmix_ListLabel_SubTV</include>
-                    <include>subcolornofocus</include>	
+                    <include>subcolornofocus</include>
                     <label>$INFO[ListItem.Episode] $LOCALIZE[31938]</label>
                     <visible>!IsEmpty(ListItem.Episode) + !Container.Content(episodes)</visible>
                 </control>
@@ -2581,7 +2582,7 @@
                     <aspectratio scalediffuse="false">stretch</aspectratio>
                     <info>ListItem.Icon</info>
                     <bordertexture border="-20">list/showmix/list_movieicon_frame.png</bordertexture>
-                    <visible>[Window.IsActive(1) + !Skin.HasSetting(listgamessquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(tvshows) + !Container.Content(musicvideos)]</visible>
+                    <visible>[Window.IsActive(1) + !Skin.HasSetting(listgamessquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)]</visible>
                 </control>
                 
                 <control type="largeimage">
@@ -2597,7 +2598,7 @@
                     <height>450</height>
                     <fadetime>400</fadetime>			
                     <texture diffuse="list/showmix/list_movieicon_mask.png">$INFO[listitem.path,,folder.jpg]</texture>
-                    <visible>[Container.Content(tvshows) + Skin.HasSetting(tvposterview)] | [Container.Content(seasons) + Skin.HasSetting(tvposterview)]</visible>				
+                    <visible>Container.Content(tvshows) + Skin.HasSetting(tvposterview)</visible>				
                 </control> 
 
                 <control type="image">
@@ -2647,7 +2648,7 @@
                     <height>346</height>
                     <fadetime>400</fadetime>			
                     <texture diffuse="list/showmix/list_movieicon_mask.png">$INFO[listitem.path,,folder.jpg]</texture>
-                    <visible>[Container.Content(tvshows) + !Skin.HasSetting(tvposterview)] | [Container.Content(seasons) + !Skin.HasSetting(tvposterview)]</visible>				
+                    <visible>Container.Content(tvshows) + !Skin.HasSetting(tvposterview)</visible>				
                 </control> 
 
                 <control type="image">
