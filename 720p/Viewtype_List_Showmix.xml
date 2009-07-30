@@ -254,32 +254,32 @@
 	
 	<include name="Showmix_WatchedOverlay">
 		<posx>690</posx>
-		<posy>7</posy>
+		<posy>0</posy>
 		<width>80</width>
 		<height>37</height>
 	</include>
 	
 	<include name="Showmix_WatchedOverlay2">
 		<posx>690</posx>
-		<posy>16</posy>
+		<posy>7</posy>
 		<width>80</width>
 		<height>37</height>
 	</include>
 	<include name="Showmix_WatchedOverlayTV">
 		<posx>690</posx>
-		<posy>28</posy>
+		<posy>20</posy>
 		<width>80</width>
 		<height>37</height>
 	</include>
 
 	<include name="Showmix_WatchedOverlayFS">
-		<posx>757</posx>
-		<posy>7</posy>
+		<posx>758</posx>
+		<posy>1</posy>
 		<width>80</width>
 		<height>37</height>
 	</include>
 	<include name="Showmix_WatchedOverlay2FS">
-		<posx>757</posx>
+		<posx>758</posx>
 		<posy>22</posy>
 		<width>80</width>
 		<height>37</height>
@@ -689,7 +689,7 @@
 
 <!-- TV FULLSCREEN BANNER-->
             <control type="label">
-                <include>Showmix_ListLabel_MainBannerBottomTV</include>
+                <include>Showmix_ListLabel_MainBannerTopTV</include>
                 <label>[UPPERCASE]$INFO[ListItem.TVShowTitle][/UPPERCASE]</label>
                 <visible>Container.Content(seasons)</visible>
             </control>
@@ -769,7 +769,7 @@
                 <control type="label">
                     <include>Showmix_ListLabel_Track</include>
                     <include>listcolornofocus</include>
-                    <label>$INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+                    <label>$INFO[ListItem.Episode]</label>
                     <visible>Container.Content(episodes)</visible>
                 </control>					
                 <control type="label">
@@ -865,7 +865,7 @@
                     <include>Showmix_ListLabel_Track</include>
                     <include>listcolornofocus</include>
                     <include>Animation_ButtonFocusFade_fix</include>
-                    <label>$INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+                    <label>$INFO[ListItem.Episode]</label>
                     <visible>Container.Content(episodes)</visible>
                 </control>					
                 <control type="label">
@@ -929,7 +929,7 @@
                     <include>Showmix_ListLabel_Track</include>
                     <include>listcolorfocus</include>				
                     <include>Animation_ButtonFocusFade</include>
-                    <label>$INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+                    <label>$INFO[ListItem.Episode]</label>
                     <visible>Container.Content(episodes)</visible>
                 </control>					
                 <control type="label">
@@ -1321,7 +1321,7 @@
                 <control type="label">
                     <include>Showmix_ListLabel_Track</include>
                     <include>listcolornofocus</include>
-                    <label>$INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+                    <label>$INFO[ListItem.Episode]</label>
                     <visible>Container.Content(episodes)</visible>
                 </control>					
                 <control type="label">
@@ -1390,7 +1390,7 @@
                     <visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(seasons)]</visible>
                 </control>
                 <control type="image">
-                    <include>Showmix_WatchedOverlay2</include>
+                    <include>Showmix_WatchedOverlayTV</include>
                     <include>detailcolorfocus</include>
                     <visible>[[!Skin.HasSetting(nooverlays) + Container.Content(movies)] | [!Skin.HasSetting(notvoverlays) + Container.Content(episodes)]] + !IsEmpty(ListItem.Overlay)</visible>
                     <info>ListItem.Overlay</info>
@@ -1485,7 +1485,7 @@
                     <include>Showmix_ListLabel_Track</include>
                     <include>listcolorfocus</include>
                     <include>Animation_ButtonFocusFade</include>						
-                    <label>$INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+                    <label>$INFO[ListItem.Episode]</label>
                     <visible>Container.Content(episodes)</visible>
                 </control>						
                 <control type="label">

@@ -59,6 +59,33 @@
 			</control>
 		</include>
 
+		<include name="Showmix_PosterThumbButtons">
+			<control type="togglebutton" id="30307">
+				<include>Objects_MediaMenuButton</include>
+				<label>$LOCALIZE[31056]</label>
+				<altlabel>$LOCALIZE[31059]</altlabel>
+				<onclick>Skin.ToggleSetting(listvideosquare)</onclick>
+				<selected>!Skin.HasSetting(listvideosquare)</selected>
+				<visible>Control.IsVisible(50) + Window.IsActive(24)</visible>
+			</control>
+			<control type="togglebutton" id="30308">
+				<include>Objects_MediaMenuButton</include>
+				<label>$LOCALIZE[31056]</label>
+				<altlabel>$LOCALIZE[31059]</altlabel>
+				<onclick>Skin.ToggleSetting(listgamessquare)</onclick>
+				<selected>!Skin.HasSetting(listgamessquare)</selected>
+				<visible>Control.IsVisible(50) + Window.IsActive(35)</visible>
+			</control>
+			<control type="togglebutton" id="30309">
+				<include>Objects_MediaMenuButton</include>
+				<label>$LOCALIZE[31056]</label>
+				<altlabel>$LOCALIZE[31059]</altlabel>
+				<onclick>Skin.ToggleSetting(tvposterview)</onclick>
+				<selected>Skin.HasSetting(tvposterview)</selected>
+				<visible>Skin.HasSetting(videotv)</visible>
+			</control>
+		</include>
+
 
 	<!----------------------------- Includes_Furniture -------------------------------------------->
 

@@ -105,7 +105,9 @@
 				<include condition="Skin.HasSetting(listrev2)">LowList_HighLoButton</include>	
 				<include>Objects_PanelDensityButton</include>
 
-				<include condition="Skin.HasSetting(listshowmix)">Showmix_Objects_FullscreenButton</include>				
+				<include condition="Skin.HasSetting(listshowmix)">Showmix_Objects_FullscreenButton</include>
+
+				<include condition="Skin.HasSetting(listshowmix)">Showmix_PosterThumbButtons</include>				
 				
 				<control type="togglebutton" id="901">
 					<include>Objects_MediaMenuButton</include>				
