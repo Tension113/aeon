@@ -6,8 +6,8 @@
 
 	<font>
 	  <name>Font_RSS</name>
-	  <filename>scoutlight.ttf</filename>
-	  <size>16</size>
+	  <filename>aeon_rss.ttf</filename>
+	  <size>14</size>
 	</font>
 	
 	<font>
@@ -18,8 +18,8 @@
 	
 	<font>
 	  <name>Font_Time</name>
-	  <filename>scout.ttf</filename>
-	  <size>18</size>
+	  <filename>aeon_rss.ttf</filename>
+	  <size>16</size>
 	</font>
 	
 	<font>
@@ -45,8 +45,8 @@
 
 	<font>
 		<name>Font_MainMenu</name>
-		<filename>scoutcond.ttf</filename>
-		<size>87</size>
+		<filename>aeon_main.ttf</filename>
+		<size>78</size>
 	</font>
 	
 	<font>
@@ -71,7 +71,7 @@
 	  <name>Font_ListPlaying</name>
 	  <filename>aeon_player.ttf</filename>
 	  <size>17</size>
-	  <linespacing>1.05</linespacing>	
+	  <linespacing>1.05</linespacing>
 	</font>	
 	
 	<font>
@@ -97,25 +97,25 @@
 
 	<font>
 	  <name>Font_MediaWindowTitle</name>
-	  <filename>scoutlight.ttf</filename>
+	  <filename>aeon_title.ttf</filename>
 	  <size>24</size>
 	</font>
 
 	<font>
 		<name>Font_MediaWindowMenu</name>
-		<filename>scout.ttf</filename>
-		<size>19</size>
+		<filename>aeon_title.ttf</filename>
+		<size>18</size>
 	</font>
 	
 	<font>
 		<name>Font_List</name>
-		<filename>scoutlight.ttf</filename>
+		<filename>aeon_title.ttf</filename>
 		<size>22</size>
 	</font>
 	
 	<font>
 		<name>Font_ListSmall</name>
-		<filename>scoutlight.ttf</filename>
+		<filename>aeon_title.ttf</filename>
 		<size>19</size>
 	</font>	
 	
@@ -127,31 +127,31 @@
 
 	<font>
 		<name>Font_ListDetail</name>
-		<filename>scout.ttf</filename>
+		<filename>aeon_title.ttf</filename>
 		<size>18</size>
 	</font>
 	
 	<font>
 		<name>Font_ListDetailTV</name>
-		<filename>scout.ttf</filename>
+		<filename>aeon_title.ttf</filename>
 		<size>16</size>
 	</font>
 
 	<font>
 		<name>Font_ListTrack</name>
-		<filename>scoutcond.ttf</filename>
-		<size>52</size>
+		<filename>aeon_title.ttf</filename>
+		<size>47</size>
 	</font>
 	
 	<font>
 		<name>Font_ListSub</name>
-		<filename>scout.ttf</filename>
+		<filename>aeon_title.ttf</filename>
 		<size>18</size>
 	</font>	
 	
 	<font>
 		<name>Font_ListObjects</name>
-		<filename>scoutlight.ttf</filename>
+		<filename>aeon_title.ttf</filename>
 		<size>17</size>
 	</font>	
 	
@@ -165,14 +165,14 @@
 	
 	<font>
 	  <name>Font_SettingsSectionMenuButton</name>
-	  <filename>scoutcond.ttf</filename>
+	  <filename>aeon_settings.ttf</filename>
 	  <size>27</size>
 	</font>
 	
 	<font>
 	  <name>Font_SettingsSectionMenuButtonSubtitle</name>
-	  <filename>scoutcond.ttf</filename>
-	  <size>20</size>
+	  <filename>aeon_settings.ttf</filename>
+	  <size>16</size>
 	</font>
 	
 	<font>
@@ -183,15 +183,14 @@
 	
 	<font>
 	  <name>Font_SettingsMainLabelBig</name>
-	  <filename>scoutcond.ttf</filename>
-	  <size>45</size>
+	  <filename>aeon_settings.ttf</filename>
+	  <size>40</size>
 	</font>
 	
 	<font>
 	  <name>Font_SettingsMainLabelSmall</name>
-	  <filename>scoutcond.ttf</filename>
-	  <size>26</size>
-	  <linespacing>0.8</linespacing>
+	  <filename>aeon_settings.ttf</filename>
+	  <size>22</size>
 	</font>
 	
 <!-- Virtual Home page -->
@@ -248,8 +247,8 @@
 
 	<font>
 	  <name>Font_ProgressLabel</name>
-	  <filename>scout.ttf</filename>
-	  <size>22</size>
+	  <filename>aeon_title.ttf</filename>
+	  <size>16</size>
 	</font>
 	
 	<font>
@@ -314,14 +313,14 @@
 	
     <font>
       <name>Font_ShowcaseMainLabel</name>
-      <filename>scoutlight.ttf</filename>
-      <size>30</size>
+      <filename>aeon_list.ttf</filename>
+      <size>22</size>
     </font>
 	
     <font>
       <name>Font_ShowcaseDetailLabel</name>
-      <filename>scoutlight.ttf</filename>
-      <size>20</size>
+      <filename>aeon_list.ttf</filename>
+      <size>16</size>
     </font>
 
 <!-- StripShow -->
@@ -398,28 +397,28 @@
 
     <font>
       <name>Font_MultiplexPlot</name>
-      <filename>scoutlightnc.ttf</filename>
-      <size>23</size>
-	  <linespacing>1</linespacing>	  
+      <filename>aeon_player.ttf</filename>
+      <size>21</size>
+	  <linespacing>1.26</linespacing>	  
     </font>
 	
     <font>
       <name>Font_MultiplexPlotSmall</name>
-      <filename>scoutlightnc.ttf</filename>
-      <size>21</size>
-	  <linespacing>1</linespacing>	  
+      <filename>aeon_player.ttf</filename>
+      <size>19</size>
+	  <linespacing>1.28</linespacing>	  
     </font>
 	
     <font>
       <name>Font_MultiplexInfoLabel</name>
-      <filename>scoutlight.ttf</filename>
-      <size>18</size>
+      <filename>aeon_rss.ttf</filename>
+      <size>15</size>
     </font>	
 	
     <font>
       <name>Font_MultiplexInfoValue</name>
-      <filename>scout.ttf</filename>
-      <size>18</size>
+      <filename>aeon_rss.ttf</filename>
+      <size>16</size>
     </font>	
 
 - <!--  Multiplex Old  --> 
@@ -460,8 +459,8 @@
 
     <font>
       <name>Font_FSInfoTitle</name>
-      <filename>scoutcond.ttf</filename>
-      <size>65</size>
+      <filename>aeon_settings.ttf</filename>
+      <size>55</size>
     </font>
 	
     <font>
@@ -478,8 +477,8 @@
 
     <font>
       <name>Font_FSInfoGenre</name>
-      <filename>scout.ttf</filename>
-      <size>24</size>
+      <filename>aeon_edit.ttf</filename>
+      <size>20</size>
     </font>
 	
     <font>
@@ -490,22 +489,22 @@
 	
     <font>
       <name>Font_FSInfoLabel</name>
-      <filename>scout.ttf</filename>
-      <size>18</size>
+      <filename>aeon_edit.ttf</filename>
+      <size>16</size>
     </font>
 	
     <font>
       <name>Font_FSInfoData</name>
-      <filename>scout.ttf</filename>
-      <size>22</size>
-	  <linespacing>0.8</linespacing>
+      <filename>aeon_edit.ttf</filename>
+      <size>19</size>
+	  <linespacing>1.1</linespacing>
     </font>
 	
     <font>
       <name>Font_FSInfoPlot</name>
-      <filename>scoutnocaps.ttf</filename>
-      <size>22</size>
-	  <linespacing>1</linespacing>	  
+      <filename>aeon_player.ttf</filename>
+      <size>21</size>
+	  <linespacing>1.1</linespacing>	  
     </font>
 
     <font>
