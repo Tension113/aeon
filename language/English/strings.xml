@@ -508,4 +508,41 @@
 	<string id="32014">MULTIPLEX MOD TOGGLE</string>
 	<string id="32015">REV2</string>
 	<string id="32016">LIST MOD TOGGLE</string>
+	<string id="32017">SHOWMIX</string>
+
+<!-- ShowMix -->
+
+	<string id="31042">FLOOR: LIGHT</string>
+	<string id="31043">FLOOR: NIGHT</string>
+	<string id="31044">ART</string>
+	<string id="31045">THUMB</string>
+	<string id="31046">PLOT</string>
+	<string id="31047">STYLE</string>
+	<string id="31048">TRIGGER</string>
+	<string id="31049">AUTO</string>
+
+	<string id="31951">FAVS</string>  <!-- FAVOURITES -->
+	<string id="31952">WINDOW</string>
+	<string id="31953">LIGHT</string>
+	<string id="31954">NIGHT</string>
+	<string id="31955">SHADE</string>
+	<string id="31956">GREEN</string>
+	<string id="31957">GREY</string>
+	<string id="31958">BLACK</string>
+	<string id="31959">TRANSPARENCY</string>
+	<string id="31960">POSTER</string>
+	<string id="31961">FULLSCREEN MULTIPLEX</string>
+	<string id="31962">TV PREVIEW</string>
+	<string id="31963">MOVIE TRAILERS</string>
+	<string id="31964">CERTIFICATION FLAG</string>
+	<string id="31965">IMDB FLAG</string>
+	<string id="31966">TV POSTER VIEW</string>
+	<string id="31969">ON/OFF</string>
+	<string id="31967">MISCELLANEOUS</string>
+	<string id="31968">FULLSCREEN</string>
+	<string id="31970">CURRENT</string>
+	<string id="31971">VIEWTYPE OPTIONS</string>
+	<string id="31972">VERTICAL MENU</string>
+	<string id="31973">MOVIE FOLDER LOCATION</string>
+	<string id="31974">DYNAMIC FLOW</string>
 </strings>

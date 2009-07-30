@@ -555,16 +555,135 @@
 			<onclick>Skin.SetBool(listrev2)</onclick>
 			<onclick>Skin.Reset(listoriginal)</onclick>
 			<onclick>XBMC.ReloadSkin</onclick>
-			<visible>[[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] | [Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)]]] + Control.IsVisible(50) + !Skin.HasSetting(listrev2)</visible>
+			<visible>[[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] | [Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)]]] + Control.IsVisible(50) + ![Skin.HasSetting(listrev2) | Skin.HasSetting(listshowmix)]</visible>
 		</control>
 
 		<control type="button" id="1221">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32015]</label>
-			<onclick>Skin.SetBool(listoriginal)</onclick>
+			<onclick>Skin.SetBool(listshowmix)</onclick>
 			<onclick>Skin.Reset(listrev2)</onclick>
 			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>[[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] | [Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)]]] + Control.IsVisible(50) + Skin.HasSetting(listrev2)</visible>
+		</control>
+
+		<control type="button" id="1222">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[32010]: $LOCALIZE[32017]</label>
+			<onclick>Skin.SetBool(listoriginal)</onclick>
+			<onclick>Skin.Reset(listshowmix)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>[[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] | [Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)]]] + Control.IsVisible(50) + Skin.HasSetting(listshowmix)</visible>
+		</control>
+	</include>
+
+	<include name="List_FullButtons">
+			<control type="togglebutton" id="30277">
+				<include>Objects_MediaMenuButton</include>
+				<include>Objects_ListLayoutStrings</include>
+				<onclick>Skin.ToggleSetting(movieslistfull_showmix)</onclick>
+				<selected>Skin.HasSetting(movieslistfull_showmix)</selected>
+				<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(50) + Skin.HasSetting(listshowmix)</visible>
+			</control>
+			<control type="togglebutton" id="30278">
+				<include>Objects_MediaMenuButton</include>				
+				<include>Objects_ListLayoutStrings</include>
+				<usealttexture>Skin.HasSetting(movieslistfull)</usealttexture>
+				<onclick>Skin.SetBool(movieslistfull)</onclick>
+				<altclick>Skin.Reset(movieslistfull)</altclick>
+				<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(50) + Skin.HasSetting(listoriginal)</visible>
+			</control>
+			<control type="togglebutton" id="30279">
+				<include>Objects_MediaMenuButton</include>				
+				<include>Objects_ListLayoutStrings</include>
+				<usealttexture>Skin.HasSetting(tvlistfull)</usealttexture>
+				<onclick>Skin.SetBool(tvlistfull)</onclick>
+				<altclick>Skin.Reset(tvlistfull)</altclick>
+				<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(50) + Skin.HasSetting(listoriginal)</visible>
+			</control>
+			<control type="togglebutton" id="30280">
+				<include>Objects_MediaMenuButton</include>
+				<include>Objects_ListLayoutStrings</include>
+				<onclick>Skin.ToggleSetting(tvshowslistfull)</onclick>
+				<selected>Skin.HasSetting(tvshowslistfull)</selected>
+				<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(50) + Skin.HasSetting(listshowmix) + Container.Content(tvshows)</visible>
+			</control>
+			<control type="togglebutton" id="30281">
+				<include>Objects_MediaMenuButton</include>
+				<include>Objects_ListLayoutStrings</include>
+				<onclick>Skin.ToggleSetting(tvseasonslistfull)</onclick>
+				<selected>Skin.HasSetting(tvseasonslistfull)</selected>
+				<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(50) + Skin.HasSetting(listshowmix) + Container.Content(seasons)]</visible>
+			</control>
+			<control type="togglebutton" id="30282">
+				<include>Objects_MediaMenuButton</include>
+				<include>Objects_ListLayoutStrings</include>
+				<onclick>Skin.ToggleSetting(tvepisodeslistfull)</onclick>
+				<selected>Skin.HasSetting(tvepisodeslistfull)</selected>
+				<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(50) + Skin.HasSetting(listshowmix) + Container.Content(episodes)</visible>
+			</control>
+			<control type="togglebutton" id="30283">
+				<include>Objects_MediaMenuButton</include>
+				<include>Objects_ListLayoutStrings</include>
+				<onclick>Skin.ToggleSetting(musicalbumslistfull)</onclick>
+				<selected>Skin.HasSetting(musicalbumslistfull)</selected>
+				<visible>Control.IsVisible(50) + Container.Content(albums) + !Window.IsActive(MyMusic)</visible>
+			</control>
+			<control type="togglebutton" id="30284">
+				<include>Objects_MediaMenuButton</include>
+				<include>Objects_ListLayoutStrings</include>
+				<onclick>Skin.ToggleSetting(musicsongslistfull)</onclick>
+				<selected>Skin.HasSetting(musicsongslistfull)</selected>
+				<visible>Control.IsVisible(50) + Container.Content(songs) + !Window.IsActive(MyMusic)</visible>
+			</control>-->
+<!--			<!--<control type="togglebutton" id="30285">
+				<include>Objects_MediaMenuButton</include>
+				<include>Objects_ListLayoutStrings</include>
+				<onclick>Skin.ToggleSetting(musiclistfull)</onclick>
+				<selected>Skin.HasSetting(musiclistfull)</selected>
+				<visible>Control.IsVisible(50)</visible>
+			</control>-->
+
+        	</include>
+
+		<include name="Objects_LightDarkWindows">
+			<control type="togglebutton" id="30270">
+				<include>Objects_MediaMenuButton</include>				
+                		<label>$LOCALIZE[31952]: $LOCALIZE[31953]</label>
+                		<altlabel>$LOCALIZE[31952]: $LOCALIZE[31954]</altlabel>
+                		<usealttexture>Skin.HasSetting(darkwindow)</usealttexture>
+                		<onclick>Skin.ToggleSetting(darkwindow)</onclick>
+                		<onclick>XBMC.ReloadSkin</onclick>
+                		<visible>Control.IsVisible(50)</visible>
+            		</control>
+        	</include>
+
+		<include name="Objects_WindowShade">
+		<control type="button" id="30500">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31955]: $LOCALIZE[31956]</label>
+			<onclick>Skin.SetBool(shadegrey)</onclick>
+			<onclick>Skin.Reset((shadegreen)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>[[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] | [Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)]]] + Control.IsVisible(50) + ![Skin.HasSetting(shadegrey) | Skin.HasSetting(shadeblack)]</visible>
+		</control>
+
+		<control type="button" id="30501">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31955]: $LOCALIZE[31957]</label>
+			<onclick>Skin.SetBool(shadeblack)</onclick>
+			<onclick>Skin.Reset(shadegrey)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>[[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] | [Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)]]] + Control.IsVisible(50) + Skin.HasSetting(shadegrey)</visible>
+		</control>
+
+		<control type="button" id="30502">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31955]: $LOCALIZE[31958]</label>
+			<onclick>Skin.SetBool(shadegreen)</onclick>
+			<onclick>Skin.Reset(shadeblack)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>[[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] | [Window.IsActive(25) + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)]]] + Control.IsVisible(50) + Skin.HasSetting(shadeblack)</visible>
 		</control>
 	</include>
 
