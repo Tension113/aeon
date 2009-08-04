@@ -22,6 +22,7 @@
 <include file="Viewtype_Multiplex.xml" />
 <include file="Viewtype_MultiplexOld.xml" />
 <include file="Viewtype_MultiplexVideo.xml" />
+<include file="Viewtype_MultiplexVideo3.xml" />
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_ListRev2.xml" />
 <include file="Viewtype_List_Showmix.xml" />

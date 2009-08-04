@@ -49,10 +49,11 @@
 		<include condition="Skin.HasSetting(listrev2)">Viewtype_ListRev2</include>
 		<include condition="Skin.HasSetting(listshowmix)">Viewtype_List_Showmix</include>
 
-		<include condition="!Skin.HasSetting(oldmultiplex) + !Skin.HasSetting(multiplexmodvideo) + !Skin.HasSetting(multiplexorig)]">Viewtype_Multiplex</include>
+		<include condition="!Skin.HasSetting(oldmultiplex) + !Skin.HasSetting(multiplexmodvideo) + !Skin.HasSetting(multiplexorig) + !Skin.HasSetting(multiplexvideo3)]">Viewtype_Multiplex</include>
 		<include condition="Skin.HasSetting(oldmultiplex)">Viewtype_MultiplexOld</include>
 		<include condition="Skin.HasSetting(multiplexmodvideo)">Viewtype_MultiplexModVideo</include>
 		<include condition="Skin.HasSetting(multiplexorig)">Viewtype_Multiplex</include>
+		<include condition="Skin.HasSetting(multiplexvideo3)">Viewtype_MultiplexVideo3</include>
 
 		<include>Objects_ShowcaseMenuPanel</include>
 		<include>Furniture_Time</include>
@@ -198,6 +199,7 @@
 	<include condition="Skin.HasSetting(videomovies)">Furniture_ShowcaseMediaFlags</include>
 	<include condition="Skin.HasSetting(videotv)">Furniture_EpisodeMediaFlags</include>
 	<include condition="Skin.HasSetting(listshowmix)">Showmix_Furniture_ListMediaFlags</include>
+	<include condition="Skin.HasSetting(multiplexvideo3)">Video3_Furniture_MultiplexMediaFlags</include>
 	
 	<include>Furniture_DarkGradient</include>
 	<include>ViewChange</include>
