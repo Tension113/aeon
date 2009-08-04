@@ -49,11 +49,21 @@
 		<include condition="Skin.HasSetting(listrev2)">Viewtype_ListRev2</include>
 		<include condition="Skin.HasSetting(listshowmix)">Viewtype_List_Showmix</include>
 
-		<include condition="!Skin.HasSetting(oldmultiplex) + !Skin.HasSetting(multiplexmodvideo) + !Skin.HasSetting(multiplexorig) + !Skin.HasSetting(multiplexvideo3)]">Viewtype_Multiplex</include>
-		<include condition="Skin.HasSetting(oldmultiplex)">Viewtype_MultiplexOld</include>
-		<include condition="Skin.HasSetting(multiplexmodvideo)">Viewtype_MultiplexModVideo</include>
-		<include condition="Skin.HasSetting(multiplexorig)">Viewtype_Multiplex</include>
-		<include condition="Skin.HasSetting(multiplexvideo3)">Viewtype_MultiplexVideo3</include>
+		<!--- Multiplex Movie Mods --->
+
+		<include condition="Skin.HasSetting(videomovies) + !Skin.HasSetting(oldmultiplex) + !Skin.HasSetting(multiplexmodvideo) + !Skin.HasSetting(multiplexorig) + !Skin.HasSetting(multiplexvideo3)]">Viewtype_Multiplex</include>
+		<include condition="Skin.HasSetting(videomovies) + Skin.HasSetting(oldmultiplex)">Viewtype_MultiplexOld</include>
+		<include condition="Skin.HasSetting(videomovies) + Skin.HasSetting(multiplexmodvideo)">Viewtype_MultiplexModVideo</include>
+		<include condition="Skin.HasSetting(videomovies) + Skin.HasSetting(multiplexorig)">Viewtype_Multiplex</include>
+		<include condition="Skin.HasSetting(videomovies) + Skin.HasSetting(multiplexvideo3)">Viewtype_MultiplexVideo3</include>
+
+		<!--- Multiplex Tv Mods --->
+
+		<include condition="Skin.HasSetting(videotv) + !Skin.HasSetting(oldmultiplextv) + !Skin.HasSetting(multiplexmodvideotv) + !Skin.HasSetting(multiplexorigtv) + !Skin.HasSetting(multiplexvideo3tv)]">Viewtype_Multiplex</include>
+		<include condition="Skin.HasSetting(videotv) + Skin.HasSetting(oldmultiplextv)">Viewtype_MultiplexOld</include>
+		<include condition="Skin.HasSetting(videotv) + Skin.HasSetting(multiplexmodvideotv)">Viewtype_MultiplexModVideo</include>
+		<include condition="Skin.HasSetting(videotv) + Skin.HasSetting(multiplexorigtv)">Viewtype_Multiplex</include>
+		<include condition="Skin.HasSetting(videotv) + Skin.HasSetting(multiplexvideo3tv)">Viewtype_MultiplexVideo3</include>
 
 		<include>Objects_ShowcaseMenuPanel</include>
 		<include>Furniture_Time</include>
@@ -92,7 +102,8 @@
 					<visible>!Skin.HasSetting(videotv) | [Skin.HasSetting(videotv) + Skin.HasSetting(unlockTVviews)]</visible>
 				</control>
 
-				<include condition="!Skin.HasSetting(nomultiplexmodbuttons)">Objects_MultiplexModButtons</include>
+				<include condition="!Skin.HasSetting(nomultiplexmodbuttons)">Objects_MultiplexModMovieButtons</include>
+				<include condition="!Skin.HasSetting(nomultiplexmodbuttons)">Objects_MultiplexModTvButtons</include>
 				<include condition="!Skin.HasSetting(nolistmodbuttons)">Objects_ListModButtons</include>
 					
 				<include>Objects_FlattenFlowButton</include>
