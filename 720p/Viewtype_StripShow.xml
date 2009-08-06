@@ -107,7 +107,7 @@
 			<onup>900</onup>
 			<ondown>60</ondown>
 			<orientation>horizontal</orientation>
-			<visible>Window.IsActive(2)</visible>
+			<visible>Window.IsActive(2) + Skin.HasSetting(pictures)</visible>
 			<include>Animation_HideStripShow</include>			
 			<itemlayout width="192" height="192" condition="!Skin.HasSetting(stripshowmax)">
 				<control type="image">

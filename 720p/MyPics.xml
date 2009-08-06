@@ -78,19 +78,25 @@
 	<control type="group">
 		<include>FullscreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
-		<include>Furniture_Time</include>
 		<include>Furniture_MediaPanel</include>
 
-		<include>Viewtype_Wall</include>		
+		<include>Viewtype_Showcase</include>		
 		<include>Viewtype_StripShow</include>
-		<include>Viewtype_Showcase</include>
-		<include>Viewtype_List</include>		
-
-		<include>Objects_ShowcaseMenuPanel</include>
-		<include>Furniture_WallTime</include>
-		<include>Furniture_WallRSS</include>		
+		<include>Viewtype_Wall</include>
 		
-		<control type="group" id="7000">
+		<include condition="!Skin.HasSetting(listoriginal) + !Skin.HasSetting(listrev2) + !Skin.HasSetting(listshowmix)">Viewtype_List</include>
+		<include condition="Skin.HasSetting(listoriginal)">Viewtype_List</include>
+		<include condition="Skin.HasSetting(listrev2)">Viewtype_ListRev2</include>
+		<include condition="Skin.HasSetting(listshowmix)">Viewtype_List_Showmix</include>
+				
+
+		<!--<include>Objects_ShowcaseMenuPanel</include>-->
+		<include>Furniture_Time</include>
+		<include>Furniture_WallTime</include>
+		<include>Furniture_WallRSS</include>
+		<include>VerticalMenu</include>		
+		
+		<!--<control type="group" id="7000">
 
 			<control type="label">
 				<label>31031</label>
@@ -203,12 +209,12 @@
 				
 				<include>Objects_MediaDebugButtons</include>
 			</control>
-		</control>
+		</control>-->
 
 	</control>
 
 	<include>Furniture_DarkGradient</include>	
-	<include>ViewChange</include>	
+	<!--<include>ViewChange</include>-->	
 	<!--<include>Background_ContextBlack</include>-->
 	<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
 	

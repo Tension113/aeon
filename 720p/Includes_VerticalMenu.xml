@@ -178,7 +178,7 @@
 						<control type="image">
 							<include>VerticalMenu_ViewChangeImage</include>
 							<texture>viewselect/vs_icon_stripshow_focus.png</texture>
-							<visible>Control.IsVisible(51) + Window.IsActive(2)</visible>
+							<visible>Control.IsVisible(51) + Window.IsActive(2) + Skin.HasSetting(pictures)</visible>
 						</control>
 						<control type="image">
 							<include>VerticalMenu_ViewChangeImage</include>
@@ -216,7 +216,7 @@
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<onclick>Container.SetViewMode(52)</onclick>
 							<onclick>XBMC.ReloadSkin</onclick>
-							<visible>![Control.IsVisible(52) | Control.IsVisible(54)]</visible>
+							<visible>![Control.IsVisible(52) | Control.IsVisible(54) | Window.IsActive(2)]</visible>
 						</control>
 
 						<!--<control type="button" id="30001">
@@ -236,7 +236,7 @@
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<onclick>Container.SetViewMode(51)</onclick>
 							<onclick>XBMC.ReloadSkin</onclick>
-							<visible>!Control.IsVisible(51) + Window.IsActive(2)</visible>
+							<visible>!Control.IsVisible(51) + Window.IsActive(2) + Skin.HasSetting(pictures)</visible>
 						</control>
 						
 						<control type="button" id="30003">
@@ -945,6 +945,7 @@
 				<onclick>Skin.ToggleSetting(nomediaflags)</onclick>
 				<selected>!Skin.HasSetting(nomediaflags)</selected>
 				<visible>[Control.IsVisible(57) | Control.IsVisible(52) | Control.IsVisible(54) | Control.IsVisible(50)] + [Skin.HasSetting(videomovies) | Skin.HasSetting(videotv)]</visible>
+				<visible>!Window.IsActive(2)</visible>
 			</control>
 		</include>
 		
@@ -1076,14 +1077,14 @@
 				<selected>Skin.HasSetting(FullscreenMusicMultiplex)</selected>
 				<visible>[Control.IsVisible(59) | Control.IsVisible(54) | [Control.IsVisible(50) + Skin.HasSetting(listshowmix)]] + Skin.HasSetting(music)</visible>
 			</control>
-			<control type="radiobutton" id="30276">
+			<!--<control type="radiobutton" id="30276">
 				<include>VerticalMenu_RadioButton</include>
 				<label>$LOCALIZE[31968]</label>
 				<onclick>Skin.ToggleSetting(FullscreenCommonMultiplex)</onclick>
 				<onclick>XBMC.ReloadSkin</onclick>
 				<selected>Skin.HasSetting(FullscreenCommonMultiplex)</selected>
 				<visible>[Control.IsVisible(59) | Control.IsVisible(54) | [Control.IsVisible(50) + Skin.HasSetting(listshowmix)]] + ![Skin.HasSetting(music) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Window.IsActive(28)] | Skin.HasSetting(videofiles)</visible>
-			</control>
+			</control>-->
 		</include>
 
 
@@ -1429,7 +1430,6 @@
 		
 			<!-- Movies/TvShows VideoNav Menu-->
 			<control type="group">
-<!--				<visible>!Skin.HasSetting(noverticalmenu)</visible>-->
 				
 				<!-- Second Columns -->
 				<include>VerticalMenu_SecondColumnViewChange</include>
@@ -1530,7 +1530,13 @@
 				<control type="label">
 					<label>31031</label>
 					<include>VerticalMenu_Label</include>
-					<visible>Window.IsActive(2)</visible>
+					<visible>Window.IsActive(2) + Skin.HasSetting(pictures)</visible>
+				</control>
+				<!-- Menu Title: Comics-->
+				<control type="label">
+					<label>32001</label>
+					<include>VerticalMenu_Label</include>
+					<visible>Window.IsActive(2) + Skin.HasSetting(comics)</visible>
 				</control>
 				<!-- Menu Title: Games-->
 				<control type="label">
@@ -1573,7 +1579,7 @@
 					
 		
 					<include condition="!Skin.HasSetting(nolistmodbuttons)">Objects_ListModButtons</include>
-			
+					<include>Objects_ListModPictureComicButtons</include>
 					<include condition="!Skin.HasSetting(nomultiplexmodbuttons)">Objects_MultiplexModMovieButtons</include>
 					<include condition="!Skin.HasSetting(nomultiplexmodbuttons)">Objects_MultiplexModTvButtons</include>
 

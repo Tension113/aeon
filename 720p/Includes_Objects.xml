@@ -615,6 +615,26 @@
 		</control>
 	</include>
 
+	<include name="Objects_ListModPictureComicButtons">
+		<control type="button" id="1223">
+			<include>VerticalMenu_Button</include>				
+			<label>$LOCALIZE[32010]: $LOCALIZE[32011]</label>
+			<onclick>Skin.SetBool(listshowmix)</onclick>
+			<onclick>Skin.Reset(listoriginal)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>[Window.IsActive(2) + Control.IsVisible(50)] + !Skin.HasSetting(listshowmix)</visible>
+		</control>
+
+		<control type="button" id="1224">
+			<include>VerticalMenu_Button</include>				
+			<label>$LOCALIZE[32010]: $LOCALIZE[32017]</label>
+			<onclick>Skin.SetBool(listoriginal)</onclick>
+			<onclick>Skin.Reset(listshowmix)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>[Window.IsActive(2) + Control.IsVisible(50)] + Skin.HasSetting(listshowmix)</visible>
+		</control>
+	</include>
+
 	<include name="List_FullButtons">
 			<control type="togglebutton" id="30277">
 				<include>Objects_MediaMenuButton</include>
