@@ -618,7 +618,7 @@
 				<posy>15</posy>
 	<!--		<width>650</width>
 				<scroll>true</scroll>  -->
-				<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]: $INFO[ListItem.Title]</label>
+				<label>$INFO[ListItem.Episode]: $INFO[ListItem.Title]</label>
 				<font>headline2</font>	
 				<visible>Container.Content(episodes)</visible>					
 			</control>	
@@ -1025,11 +1025,12 @@
 					<include>Animation_MultiplexFocusZoom</include>					
 				</control>		
 				<control type="image">
-					<posx>71</posx>
+					<posx>65</posx>
 					<posy>70</posy>
 					<width>48</width>
 					<height>52</height>
 					<info>ListItem.Overlay</info>
+					<include>Animation_MultiplexFocusZoom</include>
 					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>					
 			</focusedlayout>
@@ -1089,7 +1090,7 @@
 					<width>185</width>
 					<height>60</height>
 					<align>center</align>
-					<label>EPISODE $INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+					<label>EPISODE $INFO[ListItem.Episode]</label>
 					<font>Font_MultiplexInfoLabel</font>
 					<visible>Container.Content(episodes)</visible>
 				</control>
@@ -1153,21 +1154,12 @@
 					<include>Animation_MultiplexTVFocusZoom</include>					
 				</control>					
 				<control type="image">
-					<posx>181</posx>
+					<posx>160</posx>
 					<posy>39</posy>
 					<width>48</width>
 					<height>52</height>
 					<info>ListItem.Overlay</info>
-					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
-					<include>Animation_VisibleChange200</include>
-					<visible>false</visible>
-				</control>
-				<control type="image">
-					<posx>170</posx>
-					<posy>39</posy>
-					<width>48</width>
-					<height>52</height>
-					<info>ListItem.Overlay</info>
+					<include>Animation_MultiplexTVFocusZoom</include>
 					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</focusedlayout>			
@@ -1242,7 +1234,7 @@
 				<visible>!Container.Content(episodes) + [[!Container.Content(movies) | Window.IsActive(24)] | [Container.Content(movies) + Skin.HasSetting(nomediaflags)]]</visible>					
 			</control>
 			<control type="label">
-				<label>[UPPERCASE]$INFO[ListItem.Season].$INFO[ListItem.Episode]: $INFO[ListItem.Title][/UPPERCASE]</label>
+				<label>[UPPERCASE]$INFO[ListItem.Episode]: $INFO[ListItem.Title][/UPPERCASE]</label>
 				<include>ShowcaseMainLabelWide</include>
 				<visible>Container.Content(episodes)</visible>					
 			</control>			

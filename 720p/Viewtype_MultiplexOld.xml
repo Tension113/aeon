@@ -823,6 +823,15 @@
 					<include>OldMultiplexIconDimensionsWrap</include>
 					<texture>common/black.png</texture>
 					<colordiffuse>58FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>55</posx>
+					<posy>39</posy>
+					<width>37</width>
+					<height>41</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<include>Animation_VisibleChange200</include>
 				</control>					
 			</itemlayout>
 			<focusedlayout width="89" height="129" condition="Container.Content(movies)">
@@ -844,6 +853,16 @@
 					<texture>common/blank.png</texture>
 					<animation effect="zoom" center="45,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>					
 					<visible>!Container(52).Column(12)</visible>					
+				</control>
+				<control type="image">
+					<posx>55</posx>
+					<posy>39</posy>
+					<width>37</width>
+					<height>41</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<include>Animation_VisibleChange200</include>
+					<animation effect="zoom" center="45,75" start="100" end="120" time="300" easing="out" tween="cubic" reversible="false">Focus</animation>					
 				</control>			
 			</focusedlayout>
 			

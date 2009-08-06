@@ -262,7 +262,7 @@
 	
 	<include name="Showmix_WatchedOverlay2">
 		<posx>690</posx>
-		<posy>7</posy>
+		<posy>10</posy>
 		<width>80</width>
 		<height>37</height>
 	</include>
@@ -1304,7 +1304,7 @@
                     <include>Animation_ButtonFocusFade</include>						
                 </control>					
                 <control type="image">
-                    <include>Showmix_WatchedOverlayTV</include>
+                    <include>Showmix_WatchedOverlay2</include>
                     <include>detailcolorfocus</include>
                     <visible>[[!Skin.HasSetting(nooverlays) + Container.Content(movies)] | [!Skin.HasSetting(notvoverlays) + Container.Content(episodes)]] + !IsEmpty(ListItem.Overlay)</visible>
                     <info>ListItem.Overlay</info>

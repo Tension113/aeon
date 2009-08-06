@@ -822,11 +822,12 @@
 					<include>Animation_MultiplexFocusZoom</include>					
 				</control>
 				<control type="image">
-					<posx>71</posx>
+					<posx>65</posx>
 					<posy>70</posy>
 					<width>48</width>
 					<height>52</height>
 					<info>ListItem.Overlay</info>
+					<include>Animation_MultiplexFocusZoom</include>
 					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>					
 			</focusedlayout>
