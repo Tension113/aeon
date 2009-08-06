@@ -510,6 +510,7 @@
 	<string id="32016">LIST MOD TOGGLE</string>
 	<string id="32017">SHOWMIX</string>
 	<string id="32018">VIDEO3</string>
+	<string id="32019">LIST HEIGHT</string>
 
 <!-- ShowMix -->
 
@@ -522,7 +523,7 @@
 	<string id="31048">TRIGGER</string>
 	<string id="31049">AUTO</string>
 
-	<string id="31951">FAVS</string>  <!-- FAVOURITES -->
+	<string id="31951">FAVS</string> 
 	<string id="31952">WINDOW</string>
 	<string id="31953">LIGHT</string>
 	<string id="31954">NIGHT</string>

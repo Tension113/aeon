@@ -521,7 +521,7 @@
 
 	<include name="Objects_MultiplexModMovieButtons">
 		<control type="button" id="1120">
-			<include>Objects_MediaMenuButton</include>				
+			<include>VerticalMenu_Button</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32011]</label>
 			<onclick>Skin.SetBool(multiplexmodvideo)</onclick>
 			<onclick>Skin.Reset(multiplexorig)</onclick>
@@ -530,7 +530,7 @@
 		</control>
 
 		<control type="button" id="1121">
-			<include>Objects_MediaMenuButton</include>				
+			<include>VerticalMenu_Button</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32012]</label>
 			<onclick>Skin.SetBool(oldmultiplex)</onclick>
 			<onclick>Skin.Reset(multiplexmodvideo)</onclick>
@@ -539,7 +539,7 @@
 		</control>
 
 		<control type="button" id="1122">
-			<include>Objects_MediaMenuButton</include>				
+			<include>VerticalMenu_Button</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32013]</label>
 			<onclick>Skin.SetBool(multiplexvideo3)</onclick>
 			<onclick>Skin.Reset(oldmultiplex)</onclick>
@@ -548,7 +548,7 @@
 		</control>
 
 		<control type="button" id="1123">
-			<include>Objects_MediaMenuButton</include>				
+			<include>VerticalMenu_Button</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32018]</label>
 			<onclick>Skin.SetBool(multiplexorig)</onclick>
 			<onclick>Skin.Reset(multiplexvideo3)</onclick>
@@ -559,7 +559,7 @@
 
 	<include name="Objects_MultiplexModTvButtons">
 		<control type="button" id="1320">
-			<include>Objects_MediaMenuButton</include>				
+			<include>VerticalMenu_Button</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32011]</label>
 			<onclick>Skin.SetBool(multiplexmodvideotv)</onclick>
 			<onclick>Skin.Reset(multiplexorigtv)</onclick>
@@ -568,7 +568,7 @@
 		</control>
 
 		<control type="button" id="1321">
-			<include>Objects_MediaMenuButton</include>				
+			<include>VerticalMenu_Button</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32012]</label>
 			<onclick>Skin.SetBool(oldmultiplextv)</onclick>
 			<onclick>Skin.Reset(multiplexmodvideotv)</onclick>
@@ -577,7 +577,7 @@
 		</control>
 
 		<control type="button" id="1322">
-			<include>Objects_MediaMenuButton</include>				
+			<include>VerticalMenu_Button</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32013]</label>
 			<onclick>Skin.SetBool(multiplexorigtv)</onclick>
 			<onclick>Skin.Reset(oldmultiplextv)</onclick>
@@ -588,7 +588,7 @@
 
 	<include name="Objects_ListModButtons">
 		<control type="button" id="1220">
-			<include>Objects_MediaMenuButton</include>				
+			<include>VerticalMenu_Button</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32011]</label>
 			<onclick>Skin.SetBool(listrev2)</onclick>
 			<onclick>Skin.Reset(listoriginal)</onclick>
@@ -597,7 +597,7 @@
 		</control>
 
 		<control type="button" id="1221">
-			<include>Objects_MediaMenuButton</include>				
+			<include>VerticalMenu_Button</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32015]</label>
 			<onclick>Skin.SetBool(listshowmix)</onclick>
 			<onclick>Skin.Reset(listrev2)</onclick>
@@ -606,7 +606,7 @@
 		</control>
 
 		<control type="button" id="1222">
-			<include>Objects_MediaMenuButton</include>				
+			<include>VerticalMenu_Button</include>				
 			<label>$LOCALIZE[32010]: $LOCALIZE[32017]</label>
 			<onclick>Skin.SetBool(listoriginal)</onclick>
 			<onclick>Skin.Reset(listshowmix)</onclick>

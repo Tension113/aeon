@@ -65,14 +65,16 @@
 		<include condition="Skin.HasSetting(videotv) + Skin.HasSetting(multiplexorigtv)">Viewtype_Multiplex</include>
 		<include condition="Skin.HasSetting(videotv) + Skin.HasSetting(multiplexvideo3tv)">Viewtype_MultiplexVideo3</include>
 
-		<include>Objects_ShowcaseMenuPanel</include>
+		<include>VerticalMenu</include>
+		<!--<include>Objects_ShowcaseMenuPanel</include>-->
 		<include>Furniture_Time</include>
 		<include>Furniture_WallTime</include>
 		<include>Furniture_WallRSS</include>
+		
 
 			
 		
-		<control type="group">
+		<!--<control type="group">
 	
 			<control type="image">
 				<include>Objects_MediaLogo</include>
@@ -199,7 +201,7 @@
 				
 				<include>Objects_MediaDebugButtons</include>			
 			</control>
-		</control>
+		</control>-->
 		
 		
 		
@@ -213,7 +215,7 @@
 	<include condition="Skin.HasSetting(multiplexvideo3)">Video3_Furniture_MultiplexMediaFlags</include>
 	
 	<include>Furniture_DarkGradient</include>
-	<include>ViewChange</include>
+	<!--<include>ViewChange</include>-->
 	<!--<include>Background_ContextBlack</include>-->
 	<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
 	

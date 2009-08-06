@@ -777,6 +777,14 @@
 					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>65</posx>
+					<posy>70</posy>
+					<width>48</width>
+					<height>52</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>				
 			</itemlayout>
 			<focusedlayout width="120" height="300" condition="Container.Content(movies)">
@@ -812,6 +820,14 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<info>ListItem.Icon</info>
 					<include>Animation_MultiplexFocusZoom</include>					
+				</control>
+				<control type="image">
+					<posx>71</posx>
+					<posy>70</posy>
+					<width>48</width>
+					<height>52</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>					
 			</focusedlayout>
 			

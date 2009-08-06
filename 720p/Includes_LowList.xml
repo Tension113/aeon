@@ -849,7 +849,7 @@
 		<width>90</width>
 		<height>59</height>
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(50) + Window.IsActive(25) + [[Container.Content(movies) + !Control.HasFocus(7720) + [Skin.HasSetting(movieinfopanelon) | !Skin.HasSetting(movieplotpaneloff)]] | Skin.HasSetting(highlist)]</visible>
+		<visible>Control.IsVisible(50) + Window.IsActive(25) + [[Container.Content(movies) + !Control.HasFocus(7720) + [Skin.HasSetting(movieinfopanelon) | !Skin.HasSetting(movieplotpaneloff)]] | Skin.HasSetting(highlist)] + !Skin.HasSetting(nomediaflags)</visible>
 	</include>
 	
 	<include name="LowList_AudioFlagVars">
@@ -858,7 +858,7 @@
 		<width>90</width>
 		<height>59</height>
 		<include>Animation_CommonFade</include>
-		<visible>Container.Content(songs) + ![!Skin.HasSetting(highlist) + Skin.HasSetting(musicinfopaneloff)]</visible>
+		<visible>Container.Content(songs) + ![!Skin.HasSetting(highlist) + Skin.HasSetting(musicinfopaneloff)] + !Skin.HasSetting(nomediaflags)</visible>
 	</include>
 	
 	<include name="LowList_MediaFlags">		
